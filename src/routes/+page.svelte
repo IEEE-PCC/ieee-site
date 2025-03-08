@@ -87,12 +87,12 @@
 				>
 					<h4 class="text-xl font-semibold">Sign Up for Dr. Emily Jones’ Lecture</h4>
 					<p class="">Smart Grid Technologies</p>
-					<a href="#_fixme" class="font-medium">Learn More</a>
+					<a href="#TODO" class="font-medium">Learn More</a>
 				</li>
 				<li class="duration-250 rounded-xl border-l-8 p-6 shadow-lg transition-colors">
 					<h4 class="text-xl font-semibold">IEEE PES ISGT Asia Conference</h4>
 					<p class="">Apply for Travel Grants</p>
-					<a href="#_fixme" class="font-medium">Learn More</a>
+					<a href="#TODO" class="font-medium">Learn More</a>
 				</li>
 			</ul>
 		</section>
@@ -101,10 +101,10 @@
 	<footer class="mt-12 border-t-4 p-6 text-center shadow-md">
 		<ul class="mb-3 flex justify-center space-x-6 text-lg font-medium">
 			<li><a href="/" class="">Home</a></li>
-			<li><a href="/sitemap" class="">Sitemap</a></li>
-			<li><a href="/access" class="">Accessibility</a></li>
-			<li><a href="/privacy" class="">Privacy Policy</a></li>
-			<li><a href="/contactus" class="">Contact Us</a></li>
+			<li><a href="#TODO" class="">Sitemap</a></li>
+			<li><a href="#TODO" class="">Accessibility</a></li>
+			<li><a href="#TODO" class="">Privacy Policy</a></li>
+			<li><a href="#TODO" class="">Contact Us</a></li>
 		</ul>
 		<p class="text-sm">&copy; 2025 PLACEHOLDER – All rights reserved.</p>
 	</footer>
