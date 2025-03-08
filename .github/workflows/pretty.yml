@@ -25,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      - name: Pretty Check
+        run: bun run lint
+
       - name: Save Bun dependencies to cache
         id: cache-bun-save
         uses: actions/cache/save@v4
