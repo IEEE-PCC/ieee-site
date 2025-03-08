@@ -8,7 +8,7 @@
 
 <div class="flex max-w-md items-center rounded-lg bg-white p-4 shadow-md">
 	<div class="mr-4 flex h-12 w-12 items-center justify-center">
-		<Avatar src={ imageUrl } width="w-32" rounded="rounded-full" />
+		<Avatar src={imageUrl} width="w-32" rounded="rounded-full" />
 	</div>
 	<div class="flex-grow">
 		<h2 class="text-lg font-semibold">{name}</h2>

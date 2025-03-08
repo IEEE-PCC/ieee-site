@@ -4,7 +4,6 @@ Everything you need to build a Svelte project, powered by [`create-svelte`](http
 
 ## Getting Bun
 
-
 ```bash
 # To dev, install bun
 
@@ -15,10 +14,12 @@ curl -fsSL https://bun.sh/install | bash # Macos/Linux
 ```
 
 # Update Path
+
 ```bash
-# Check if bun is installed 
+# Check if bun is installed
 & "$env:USERPROFILE\.bun\bin\bun" --version
 ```
+
 If bun is found, run to add it to your path
 
 ```bash
@@ -32,15 +33,17 @@ If bun is found, run to add it to your path
 ## Developing
 
 Install dependencies (only required once)
+
 ```bash
 bun i
 ```
 
 ## Dev
+
 ```bash
 bun dev --open
 ```
 
 ---
-If you did things right, you should hopefully see the page, if not, find help
 
+If you did things right, you should hopefully see the page, if not, find help
