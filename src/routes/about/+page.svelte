@@ -63,8 +63,8 @@
 		{#each people as person}
 			<NameCard name={person.name} jobTitle={person.jobTitle} imageUrl={person.imageUrl}>
 				{#snippet description()}
-								<p >{person.description}</p>
-							{/snippet}
+					<p>{person.description}</p>
+				{/snippet}
 			</NameCard>
 		{/each}
 	</div>

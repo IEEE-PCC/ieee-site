@@ -65,32 +65,31 @@
 		{/each}
 	</nav>
 	{#snippet trail()}
-	
-			<div class="flex space-x-4">
-				<nav class="rounded-container grid w-full grid-cols-1 gap-1 overflow-hidden md:grid-cols-3">
-					<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="discord"
-						><i class="fa-brands fa-discord"></i></a
-					>
-					<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="instagram"
-						><i class="fa-brands fa-instagram"></i></a
-					>
-					<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="search"
-						><i class="fa-solid fa-magnifying-glass"></i></a
-					>
-				</nav>
-				<button
-					class="text-theme-font-color-base dark:text-theme-font-color-base rounded-lg p-2 dark:bg-gray-700"
-					onclick={toggleDarkMode}
+		<div class="flex space-x-4">
+			<nav class="rounded-container grid w-full grid-cols-1 gap-1 overflow-hidden md:grid-cols-3">
+				<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="discord"
+					><i class="fa-brands fa-discord"></i></a
 				>
-					{#if darkMode}
-						☀️
-					{:else}
-						🌙
-					{/if}
-				</button>
-				<button class="rounded-lg p-2 md:hidden" onclick={toggleMenu} aria-label="menu">
-					<i class="fa-solid fa-bars"></i>
-				</button>
-			</div>
+				<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="instagram"
+					><i class="fa-brands fa-instagram"></i></a
+				>
+				<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="search"
+					><i class="fa-solid fa-magnifying-glass"></i></a
+				>
+			</nav>
+			<button
+				class="text-theme-font-color-base dark:text-theme-font-color-base rounded-lg p-2 dark:bg-gray-700"
+				onclick={toggleDarkMode}
+			>
+				{#if darkMode}
+					☀️
+				{:else}
+					🌙
+				{/if}
+			</button>
+			<button class="rounded-lg p-2 md:hidden" onclick={toggleMenu} aria-label="menu">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+		</div>
 	{/snippet}
 </AppBar>

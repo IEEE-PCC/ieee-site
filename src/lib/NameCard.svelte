@@ -8,12 +8,7 @@
 		description?: import('svelte').Snippet;
 	}
 
-	let {
-		name = '',
-		jobTitle = '',
-		imageUrl = '',
-		description
-	}: Props = $props();
+	let { name = '', jobTitle = '', imageUrl = '', description }: Props = $props();
 </script>
 
 <div class="flex max-w-md items-center rounded-lg bg-white p-4 shadow-md">
