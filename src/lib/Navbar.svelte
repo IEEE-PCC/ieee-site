@@ -49,9 +49,9 @@
 	slotTrail="place-content-end"
 	background="bg-[url('/images/header-bkg-blue.png')] bg-repeat w-full h-25"
 >
-	<svelte:fragment slot="lead"
-		><img class="h-10 w-auto" src="/images/ieee-mb-black.png" alt="IEEE logo" /></svelte:fragment
-	>
+	{#snippet lead()}
+		<img class="h-10 w-auto" src="/images/ieee-mb-black.png" alt="IEEE logo" />
+	{/snippet}
 
 	<nav class="flex hidden h-full justify-items-center space-x-4 md:inline-flex">
 		{#each routes as route}
@@ -64,32 +64,33 @@
 			>
 		{/each}
 	</nav>
-	<svelte:fragment slot="trail">
-		<div class="flex space-x-4">
-			<nav class="rounded-container grid w-full grid-cols-1 gap-1 overflow-hidden md:grid-cols-3">
-				<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="discord"
-					><i class="fa-brands fa-discord"></i></a
+	{#snippet trail()}
+	
+			<div class="flex space-x-4">
+				<nav class="rounded-container grid w-full grid-cols-1 gap-1 overflow-hidden md:grid-cols-3">
+					<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="discord"
+						><i class="fa-brands fa-discord"></i></a
+					>
+					<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="instagram"
+						><i class="fa-brands fa-instagram"></i></a
+					>
+					<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="search"
+						><i class="fa-solid fa-magnifying-glass"></i></a
+					>
+				</nav>
+				<button
+					class="text-theme-font-color-base dark:text-theme-font-color-base rounded-lg p-2 dark:bg-gray-700"
+					onclick={toggleDarkMode}
 				>
-				<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="instagram"
-					><i class="fa-brands fa-instagram"></i></a
-				>
-				<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="search"
-					><i class="fa-solid fa-magnifying-glass"></i></a
-				>
-			</nav>
-			<button
-				class="text-theme-font-color-base dark:text-theme-font-color-base rounded-lg p-2 dark:bg-gray-700"
-				onclick={toggleDarkMode}
-			>
-				{#if darkMode}
-					☀️
-				{:else}
-					🌙
-				{/if}
-			</button>
-			<button class="rounded-lg p-2 md:hidden" onclick={toggleMenu} aria-label="menu">
-				<i class="fa-solid fa-bars"></i>
-			</button>
-		</div></svelte:fragment
-	>
+					{#if darkMode}
+						☀️
+					{:else}
+						🌙
+					{/if}
+				</button>
+				<button class="rounded-lg p-2 md:hidden" onclick={toggleMenu} aria-label="menu">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+			</div>
+	{/snippet}
 </AppBar>

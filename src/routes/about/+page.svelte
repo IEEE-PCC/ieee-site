@@ -62,7 +62,9 @@
 	<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 		{#each people as person}
 			<NameCard name={person.name} jobTitle={person.jobTitle} imageUrl={person.imageUrl}>
-				<p slot="description">{person.description}</p>
+				{#snippet description()}
+								<p >{person.description}</p>
+							{/snippet}
 			</NameCard>
 		{/each}
 	</div>
