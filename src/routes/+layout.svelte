@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../app.postcss';
+	import '../app.css';
 	import { initializeStores, Toast } from '@skeletonlabs/skeleton';
 	import Footer from '$lib/Footer.svelte';
 	interface Props {

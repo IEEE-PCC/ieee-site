@@ -17,10 +17,5 @@ export default {
 	plugins: [
 		forms,
 		typography,
-		skeleton({
-			themes: {
-				custom: [ieeetheme]
-			}
-		})
 	]
 } satisfies Config;
