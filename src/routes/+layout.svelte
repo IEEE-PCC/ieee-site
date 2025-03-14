@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import { initializeStores, Toast } from '@skeletonlabs/skeleton';
+	import { ToastProvider } from '@skeletonlabs/skeleton-svelte';
 	import Footer from '$lib/Footer.svelte';
 	interface Props {
 		children?: import('svelte').Snippet;
@@ -11,7 +11,7 @@
 	initializeStores();
 </script>
 
-<Toast />
+<ToastProvider />
 
 {@render children?.()}
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Avatar } from '@skeletonlabs/skeleton';
+	import { Avatar } from '@skeletonlabs/skeleton-svelte';
 
 	interface Props {
 		name?: string;

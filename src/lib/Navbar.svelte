@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { AppBar } from '@skeletonlabs/skeleton';
+	import { AppBar } from '@skeletonlabs/skeleton-svelte';
 	import { onMount } from 'svelte';
 
 	let { page } = $props();
