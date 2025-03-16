@@ -50,7 +50,7 @@
 			name: 'Ethan Black',
 			jobTitle: 'Cybersecurity Analyst',
 			imageUrl: 'https://via.placeholder.com/50',
-			description: 'Keeps data safe.'
+			description: 'Keeps data safer.'
 		}
 	];
 </script>
