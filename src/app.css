@@ -2,7 +2,7 @@
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
 @import '@skeletonlabs/skeleton/themes/nouveau';
-
+@import './ieeetheme.css';
 /*
   Add your theme import for your theme: "ieeetheme" here
 */
