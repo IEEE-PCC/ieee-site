@@ -1,5 +1,5 @@
 <script>
-	import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 
 	let { targetDate } = $props();
 
@@ -19,7 +19,7 @@
 			days: Math.floor(difference / (1000 * 60 * 60 * 24)),
 			hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
 			minutes: Math.floor((difference / (1000 * 60)) % 60),
-			seconds: Math.floor((difference / 1000) % 60),
+			seconds: Math.floor((difference / 1000) % 60)
 		};
 	}
 
@@ -37,26 +37,29 @@
 	});
 </script>
 
-<style>
-    @keyframes glow {
-        0% {
-            text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red;
-        }
-        100% {
-            text-shadow: none;
-        }
-    }
-
-    .animate-glow {
-        animation: glow 0.2s ease-in-out;
-    }
-</style>
-
-<div class="flex flex-col items-center justify-center bg-gray-900 text-white text-xl">
+<div class="flex flex-col items-center justify-center bg-gray-900 text-xl text-white">
 	<div class="font-mono">
-		<span class="{animate ? 'animate-glow' : ''}">{timeLeft.days}</span>d
-		<span class="{animate ? 'animate-glow' : ''}">{timeLeft.hours}</span>h
-		<span class="{animate ? 'animate-glow' : ''}">{timeLeft.minutes}</span>m
-		<span class="{animate ? 'animate-glow' : ''}">{timeLeft.seconds}</span>s
+		<span class={animate ? 'animate-glow' : ''}>{timeLeft.days}</span>d
+		<span class={animate ? 'animate-glow' : ''}>{timeLeft.hours}</span>h
+		<span class={animate ? 'animate-glow' : ''}>{timeLeft.minutes}</span>m
+		<span class={animate ? 'animate-glow' : ''}>{timeLeft.seconds}</span>s
 	</div>
 </div>
+
+<style>
+	@keyframes glow {
+		0% {
+			text-shadow:
+				0 0 5px red,
+				0 0 10px red,
+				0 0 15px red;
+		}
+		100% {
+			text-shadow: none;
+		}
+	}
+
+	.animate-glow {
+		animation: glow 0.2s ease-in-out;
+	}
+</style>
