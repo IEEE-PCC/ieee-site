@@ -1,17 +1,15 @@
 <script lang="ts">
-	import '../app.postcss';
-	import { initializeStores, Toast } from '@skeletonlabs/skeleton';
+	import '../app.css';
+	import { ToastProvider } from '@skeletonlabs/skeleton-svelte';
 	import Footer from '$lib/Footer.svelte';
 	interface Props {
 		children?: import('svelte').Snippet;
 	}
 
 	let { children }: Props = $props();
-
-	initializeStores();
 </script>
 
-<Toast />
+<ToastProvider />
 
 {@render children?.()}
 
