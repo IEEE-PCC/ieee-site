@@ -1,14 +1,20 @@
 <script>
 	import NameCard from '$lib/NameCard.svelte';
 	import Navbar from '$lib/Navbar.svelte';
+	import { base } from '$app/paths';
 
-	const people = [
+	const officers = [
+		{
+			name: 'Alexander Jackson',
+			jobTitle: 'Chair',
+			imageUrl: base + '/officers/alexander.png',
+			description: 'Lorem, ipsum dolor sit amet.'
+		},
 		{
 			name: 'Elizabeth Horne',
 			jobTitle: 'Secretary',
-			imageUrl:
-				'https://eaglesnest.pcci.edu/MasterPages/Includes/GetImage.axd?imageID=MTUzNDY0&t=Y',
-			description: 'Loves coding and coffee.'
+			imageUrl: base + '/officers/elizabeth.png',
+			description: 'Lorem, ipsum dolor sit amet.'
 		},
 		{
 			name: 'Jane Smith',
@@ -44,26 +50,22 @@
 			name: 'Ethan Black',
 			jobTitle: 'Cybersecurity Analyst',
 			imageUrl: 'https://via.placeholder.com/50',
-			description: 'Keeps data safer.'
-		},
-		{
-			name: 'Fiona Blue',
-			jobTitle: 'AI Researcher',
-			imageUrl: 'https://via.placeholder.com/50',
-			description: 'Exploring the future of AI and how they will take over the world.'
+			description: 'Keeps data safe.'
 		}
 	];
 </script>
 
 <Navbar page="Officers" />
 
-<div class="container mx-auto p-6">
-	<h1 class="mb-8 text-center text-3xl font-bold">Meet Our Officers</h1>
+<section class="mb-12">
+	<h2 class="mb-8 text-center text-3xl font-bold">Chapter Officers</h2>
 	<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-		{#each people as person}
-			<NameCard name={person.name} jobTitle={person.jobTitle} imageUrl={person.imageUrl}>
-				<p slot="description">{person.description}</p>
+		{#each officers as officer}
+			<NameCard name={officer.name} jobTitle={officer.jobTitle} imageUrl={officer.imageUrl}>
+				{#snippet description()}
+					<p>{officer.description}</p>
+				{/snippet}
 			</NameCard>
 		{/each}
 	</div>
-</div>
+</section>
