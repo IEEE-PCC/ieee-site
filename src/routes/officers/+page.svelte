@@ -59,7 +59,7 @@
 
 <div class="container mx-auto p-6">
 	<h1 class="mb-8 text-center text-3xl font-bold">Meet Our Officers</h1>
-	<div class="grid grid-cols-1  gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+	<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 		{#each people as person}
 			<NameCard name={person.name} jobTitle={person.jobTitle} imageUrl={person.imageUrl}>
 				<p slot="description">{person.description}</p>
