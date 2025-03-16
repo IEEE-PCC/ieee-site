@@ -1,13 +1,19 @@
 <script>
 	import NameCard from '$lib/NameCard.svelte';
+	import Navbar from '$lib/Navbar.svelte';
 
 	const people = [
 		{
+			name: 'Alexander Jackson',
+			jobTitle: 'Chair',
+			imageUrl: '/officers/alexander.png',
+			description: 'Lorem, ipsum dolor sit amet.'
+		},
+		{
 			name: 'Elizabeth Horne',
 			jobTitle: 'Secretary',
-			imageUrl:
-				'https://eaglesnest.pcci.edu/MasterPages/Includes/GetImage.axd?imageID=MTUzNDY0&t=Y',
-			description: 'Loves coding and coffee.'
+			imageUrl: '/officers/elizabeth.png',
+			description: 'Lorem, ipsum dolor sit amet.'
 		},
 		{
 			name: 'Jane Smith',
@@ -44,22 +50,20 @@
 			jobTitle: 'Cybersecurity Analyst',
 			imageUrl: 'https://via.placeholder.com/50',
 			description: 'Keeps data safe.'
-		},
-		{
-			name: 'Fiona Blue',
-			jobTitle: 'AI Researcher',
-			imageUrl: 'https://via.placeholder.com/50',
-			description: 'Exploring the future of AI.'
 		}
 	];
 </script>
+
+<Navbar page="About" />
 
 <div class="container mx-auto p-6">
 	<h1 class="mb-8 text-center text-3xl font-bold">Meet Our Team</h1>
 	<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 		{#each people as person}
 			<NameCard name={person.name} jobTitle={person.jobTitle} imageUrl={person.imageUrl}>
-				<p slot="description">{person.description}</p>
+				{#snippet description()}
+					<p class={person.style ? person.style : ''}>{person.description}</p>
+				{/snippet}
 			</NameCard>
 		{/each}
 	</div>
