@@ -4,4 +4,6 @@
 
 <Navbar page="Officers" />
 
-<main>Things Should GO here</main>
+<main class="text-secondary-500 dark:text-success-500 dark:hover:text-yellow-500">
+	Things Should GO here
+</main>
