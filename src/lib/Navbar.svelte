@@ -2,6 +2,7 @@
 	import { AppBar, Switch } from '@skeletonlabs/skeleton-svelte';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
+	import Countdown from '$lib/Countdown.svelte';
 
 	let { page } = $props();
 
@@ -46,6 +47,7 @@
 <AppBar background="bg-[url('{base}/images/header-bkg-blue.png')] bg-repeat w-full h-16">
 	{#snippet lead()}
 		<img class="h-10 w-auto" src="{base}/images/ieee-mb-black.png" alt="IEEE logo" />
+		<Countdown targetDate="2025-03-26T00:00:00" />
 	{/snippet}
 
 	<nav class="flex hidden h-full justify-items-center space-x-4 md:inline-flex">
