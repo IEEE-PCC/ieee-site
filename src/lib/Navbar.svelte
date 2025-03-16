@@ -67,11 +67,15 @@
 					href="https://discord.gg/yuGwMKaPAJ"
 					aria-label="discord"><i class="fa-brands fa-discord"></i></a
 				>
-				<a class="hb rounded-none p-4 py-2 text-center text-black" href="{base}/" aria-label="instagram"
-					><i class="fa-brands fa-instagram"></i></a
+				<a
+					class="hb rounded-none p-4 py-2 text-center text-black"
+					href="{base}/"
+					aria-label="instagram"><i class="fa-brands fa-instagram"></i></a
 				>
-				<a class="hb rounded-none p-4 py-2 text-center text-black" href="{base}/" aria-label="search"
-					><i class="fa-solid fa-magnifying-glass"></i></a
+				<a
+					class="hb rounded-none p-4 py-2 text-center text-black"
+					href="{base}/"
+					aria-label="search"><i class="fa-solid fa-magnifying-glass"></i></a
 				>
 			</nav>
 			<Switch
