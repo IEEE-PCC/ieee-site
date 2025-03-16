@@ -1,5 +1,6 @@
 <script>
 	import NameCard from '$lib/NameCard.svelte';
+	import Navbar from '$lib/Navbar.svelte';
 
 	const people = [
 		{
@@ -53,6 +54,8 @@
 		}
 	];
 </script>
+
+<Navbar page="About" />
 
 <div class="container mx-auto p-6">
 	<h1 class="mb-8 text-center text-3xl font-bold">Meet Our Team</h1>
