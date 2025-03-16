@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <main>
 	<footer class="mt-14 bg-[#1e73ae] p-6 shadow-md">
 		<div class="flex items-start gap-16">
@@ -44,7 +41,7 @@
 
 		<!-- Copyright -->
 		<p class="mt-6 w-full text-center text-sm text-white">
-			&copy; 2025 PLACEHOLDER – All rights reserved.
+			© 2025 PLACEHOLDER – All rights reserved.
 		</p>
 	</footer>
 </main>
