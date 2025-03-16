@@ -1,7 +1,9 @@
 @import 'tailwindcss';
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
+@import '@skeletonlabs/skeleton/themes/cerberus';
 @import '@skeletonlabs/skeleton/themes/nouveau';
+@import './ieeetheme.css';
 
 /*
   Add your theme import for your theme: "ieeetheme" here
@@ -131,4 +133,36 @@ p {
 
 .hb:hover {
 	animation: pop_out 0.2s ease-out forwards;
+}
+
+.nav-link {
+	@apply relative tracking-wide transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-blue-400 focus:text-blue-400;
+}
+
+.nav-link-active {
+	@apply text-blue-500;
+}
+
+/* Underline Effect: Starts in the middle and expands outward */
+.nav-link::after {
+	content: '';
+	@apply absolute bottom-0 left-1/2 h-0.5 w-0 origin-center bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 transition-all duration-500 ease-out;
+	transform: translateX(-50%) scaleX(0);
+}
+
+.nav-link:hover::after,
+.nav-link-active::after {
+	@apply w-full scale-x-100;
+	transform: translateX(-50%) scaleX(1);
+}
+
+/* Glowing Hover Effect */
+.nav-link::before {
+	content: '';
+	@apply absolute inset-0 -z-10 scale-75 rounded-lg bg-gradient-to-r from-blue-500/20 via-transparent to-blue-500/20 opacity-0 blur-md transition-all duration-500;
+}
+
+.nav-link:hover::before,
+.nav-link-active::before {
+	@apply scale-100 opacity-100;
 }
