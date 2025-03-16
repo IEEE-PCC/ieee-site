@@ -18,6 +18,15 @@ const config = {
 		}),
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		},
+		prerender: {
+			handleHttpError: ({ status, path }) => {
+				if (status === 404) {
+					console.warn(`Ignoring 404 for: ${path}`);
+					return { ignore: true };
+				}
+				throw new Error(`Pre-rendering failed for ${path} with status ${status}`);
+			}
 		}
 	}
 };

@@ -1,18 +1,19 @@
 <script>
 	import NameCard from '$lib/NameCard.svelte';
 	import Navbar from '$lib/Navbar.svelte';
+	import { base } from '$app/paths';
 
 	const people = [
 		{
 			name: 'Alexander Jackson',
 			jobTitle: 'Chair',
-			imageUrl: '/officers/alexander.png',
+			imageUrl: base + '/officers/alexander.png',
 			description: 'Lorem, ipsum dolor sit amet.'
 		},
 		{
 			name: 'Elizabeth Horne',
 			jobTitle: 'Secretary',
-			imageUrl: '/officers/elizabeth.png',
+			imageUrl: base + '/officers/elizabeth.png',
 			description: 'Lorem, ipsum dolor sit amet.'
 		},
 		{
