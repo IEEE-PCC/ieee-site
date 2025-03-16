@@ -37,7 +37,7 @@
 	});
 </script>
 
-<div class="flex flex-col items-center justify-center bg-gray-900 text-xl text-white">
+<div class="flex flex-col px-3 space-x-2 items-center rounded-4xl border-orange-500 border-4 justify-center bg-gray-900 text-2xl text-white h-3/4 ">
 	<div class="font-mono">
 		<span class={animate ? 'animate-glow' : ''}>{timeLeft.days}</span>d
 		<span class={animate ? 'animate-glow' : ''}>{timeLeft.hours}</span>h
@@ -60,6 +60,6 @@
 	}
 
 	.animate-glow {
-		animation: glow 0.2s ease-in-out;
+		animation: glow 0.3s ease-in-out;
 	}
 </style>

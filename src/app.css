@@ -134,3 +134,38 @@ p {
 .hb:hover {
 	animation: pop_out 0.2s ease-out forwards;
 }
+
+.nav-link {
+	@apply relative tracking-wide transition-all duration-300 ease-in-out
+	hover:text-blue-400 focus:text-blue-400 hover:-translate-y-1;
+}
+
+.nav-link-active {
+	@apply text-blue-500;
+}
+
+/* Underline Effect: Starts in the middle and expands outward */
+.nav-link::after {
+	content: "";
+	@apply absolute left-1/2 bottom-0 h-0.5 w-0 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400
+	transition-all duration-500 ease-out origin-center;
+	transform: translateX(-50%) scaleX(0);
+}
+
+.nav-link:hover::after,
+.nav-link-active::after {
+	@apply w-full scale-x-100;
+	transform: translateX(-50%) scaleX(1);
+}
+
+/* Glowing Hover Effect */
+.nav-link::before {
+	content: "";
+	@apply absolute inset-0 -z-10 scale-75 opacity-0 bg-gradient-to-r from-blue-500/20 via-transparent to-blue-500/20
+	rounded-lg transition-all duration-500 blur-md;
+}
+
+.nav-link:hover::before,
+.nav-link-active::before {
+	@apply scale-100 opacity-100;
+}
