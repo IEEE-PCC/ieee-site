@@ -37,7 +37,9 @@
 	});
 </script>
 
-<div class="flex flex-col px-3 space-x-2 items-center rounded-4xl border-orange-500 border-4 justify-center bg-gray-900 text-2xl text-white h-3/4 ">
+<div
+	class="flex h-3/4 flex-col items-center justify-center space-x-2 rounded-4xl border-4 border-orange-500 bg-gray-900 px-3 text-2xl text-white"
+>
 	<div class="font-mono">
 		<span class={animate ? 'animate-glow' : ''}>{timeLeft.days}</span>d
 		<span class={animate ? 'animate-glow' : ''}>{timeLeft.hours}</span>h

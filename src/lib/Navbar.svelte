@@ -44,13 +44,16 @@
 	};
 </script>
 
-<AppBar base="border-primary-500  border-b-4" background=" bg-[url('/images/header-bkg-blue.png')] dark:bg-[url('/images/header-bkg-red.png')] bg-repeat w-full h-16 sticky top-0 overflow-hidden">
+<AppBar
+	base="border-primary-500  border-b-4"
+	background=" bg-[url('/images/header-bkg-blue.png')] dark:bg-[url('/images/header-bkg-red.png')] bg-repeat w-full h-16 sticky top-0 overflow-hidden"
+>
 	{#snippet lead()}
 		<img class="h-8 w-auto dark:invert" src="{base}/images/ieee-mb-black.png" alt="IEEE logo" />
 		<Countdown targetDate="2025-03-26T00:00:00" />
 	{/snippet}
 
-	<nav class="hidden h-full md:flex items-center space-x-6 justify-center">
+	<nav class="hidden h-full items-center justify-center space-x-6 md:flex">
 		{#each routes as route}
 			<a
 				id={route.name}
@@ -70,15 +73,11 @@
 					href="https://discord.gg/yuGwMKaPAJ"
 					aria-label="discord"><i class="fa-brands fa-discord"></i></a
 				>
-				<a
-					class="hb rounded-none p-4 py-2 text-center"
-					href="{base}/"
-					aria-label="instagram"><i class="fa-brands fa-instagram"></i></a
+				<a class="hb rounded-none p-4 py-2 text-center" href="{base}/" aria-label="instagram"
+					><i class="fa-brands fa-instagram"></i></a
 				>
-				<a
-					class="hb rounded-none p-4 py-2 text-center"
-					href="{base}/"
-					aria-label="search"><i class="fa-solid fa-magnifying-glass"></i></a
+				<a class="hb rounded-none p-4 py-2 text-center" href="{base}/" aria-label="search"
+					><i class="fa-solid fa-magnifying-glass"></i></a
 				>
 			</nav>
 			<Switch

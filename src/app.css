@@ -136,8 +136,7 @@ p {
 }
 
 .nav-link {
-	@apply relative tracking-wide transition-all duration-300 ease-in-out
-	hover:text-blue-400 focus:text-blue-400 hover:-translate-y-1;
+	@apply relative tracking-wide transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-blue-400 focus:text-blue-400;
 }
 
 .nav-link-active {
@@ -146,9 +145,8 @@ p {
 
 /* Underline Effect: Starts in the middle and expands outward */
 .nav-link::after {
-	content: "";
-	@apply absolute left-1/2 bottom-0 h-0.5 w-0 bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400
-	transition-all duration-500 ease-out origin-center;
+	content: '';
+	@apply absolute bottom-0 left-1/2 h-0.5 w-0 origin-center bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 transition-all duration-500 ease-out;
 	transform: translateX(-50%) scaleX(0);
 }
 
@@ -160,9 +158,8 @@ p {
 
 /* Glowing Hover Effect */
 .nav-link::before {
-	content: "";
-	@apply absolute inset-0 -z-10 scale-75 opacity-0 bg-gradient-to-r from-blue-500/20 via-transparent to-blue-500/20
-	rounded-lg transition-all duration-500 blur-md;
+	content: '';
+	@apply absolute inset-0 -z-10 scale-75 rounded-lg bg-gradient-to-r from-blue-500/20 via-transparent to-blue-500/20 opacity-0 blur-md transition-all duration-500;
 }
 
 .nav-link:hover::before,
