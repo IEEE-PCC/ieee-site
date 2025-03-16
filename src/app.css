@@ -1,7 +1,40 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind variants;
+@import 'tailwindcss';
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/optional/presets';
+@import '@skeletonlabs/skeleton/themes/nouveau';
+
+/*
+  Add your theme import for your theme: "ieeetheme" here
+*/
+@source "../node_modules/@skeletonlabs/skeleton-svelte/dist";
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@source '../node_modules/@skeletonlabs/skeleton/dist/**/*.{html,js,svelte,ts}';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
+}
+
+@layer utilities {
+}
 
 body {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -88,4 +121,14 @@ p {
 #ieee-meta-a a:hover {
 	color: #fff;
 	text-decoration: underline;
+}
+
+@keyframes pop_out {
+	100% {
+		transform: scale(1.4);
+	}
+}
+
+.hb:hover {
+	animation: pop_out 0.2s ease-out forwards;
 }
