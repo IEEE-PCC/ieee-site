@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Navbar from '$lib/Navbar.svelte';
 </script>
 
@@ -23,12 +24,12 @@
 				>
 					<h4 class="text-xl font-semibold">Sign Up for Dr. Emily Jones’ Lecture</h4>
 					<p class="">Smart Grid Technologies</p>
-					<a href="/" class="font-medium">Learn More</a>
+					<a href="{base}/" class="font-medium">Learn More</a>
 				</li>
 				<li class="rounded-xl border-l-8 p-6 shadow-lg transition-colors duration-250">
 					<h4 class="text-xl font-semibold">IEEE PES ISGT Asia Conference</h4>
 					<p class="">Apply for Travel Grants</p>
-					<a href="/" class="font-medium">Learn More</a>
+					<a href="{base}/" class="font-medium">Learn More</a>
 				</li>
 			</ul>
 		</section>
