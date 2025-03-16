@@ -50,7 +50,7 @@
 			name: 'Fiona Blue',
 			jobTitle: 'AI Researcher',
 			imageUrl: 'https://via.placeholder.com/50',
-			description: 'Exploring the future of AI.'
+			description: 'Exploring the future of AI and how they will take over the world.'
 		}
 	];
 </script>
