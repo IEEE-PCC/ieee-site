@@ -1,17 +1,11 @@
-<script lang=ts>
-
+<script lang="ts">
 </script>
 
-
 <main>
-    <h2 style = "text-align:center;color: black;">
-		March 2025
-	</h2>
+	<h2 style="text-align:center;color: black;">March 2025</h2>
 	<br />
-	<table bgcolor="lightgrey" align="center"
-		cellspacing="21" cellpadding="21">
-		<caption style="text-align:top">
-		</caption>
+	<table bgcolor="lightgrey" align="center" cellspacing="21" cellpadding="21">
+		<caption style="text-align:top"> </caption>
 		<thead>
 			<tr>
 				<th>Sunday</th>
