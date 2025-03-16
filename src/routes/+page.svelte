@@ -5,7 +5,9 @@
 <Navbar page="Home" />
 <div class="flex min-h-screen flex-col transition-colors duration-250">
 	<main class="container mx-auto flex-1 p-6">
-		<section class="rounded-xl border-t-4 p-8 text-center shadow-lg transition-all duration-250">
+		<section
+			class="border-primary-500 rounded-xl border-t-4 p-8 text-center shadow-lg transition-all duration-250"
+		>
 			<h2 class="mb-4 text-3xl font-semibold">Register Today for the Next Meeting</h2>
 			<p class="text-lg">January 12th at 7pm, ABC Hall. Light Refreshments to be Served.</p>
 			<button class="mt-6 rounded-lg px-6 py-3 text-lg font-bold shadow-md transition-all"

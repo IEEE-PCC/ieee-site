@@ -13,7 +13,7 @@
 
 <div class="flex max-w-md items-center rounded-lg bg-white p-4 shadow-md">
 	<div class="mr-4 flex h-12 w-12 items-center justify-center">
-		<Avatar src={imageUrl} width="w-32" rounded-sm="rounded-full" />
+		<Avatar src={imageUrl} {name} size="md" rounded="rounded-lg" shadow="sm" />
 	</div>
 	<div class="grow">
 		<h2 class="text-lg font-semibold">{name}</h2>

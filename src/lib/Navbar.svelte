@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { AppBar } from '@skeletonlabs/skeleton-svelte';
+	import { AppBar, Switch } from '@skeletonlabs/skeleton-svelte';
 	import { onMount } from 'svelte';
 
 	let { page } = $props();
@@ -17,38 +17,31 @@
 
 	// On mount, check if there's a stored dark mode preference, else use system preference
 	onMount(() => {
-		const savedDarkMode = localStorage.getItem('darkMode');
-		if (savedDarkMode !== null) {
-			darkMode = savedDarkMode === 'true';
-			updateDarkModeClass();
+		let storedTheme = localStorage.getItem('darkMode') === 'true';
+		let systemTheme =
+			window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+		darkMode = localStorage.getItem('darkMode') !== null ? storedTheme || systemTheme : systemTheme;
+	});
+
+	$effect(() => {
+		if (darkMode) {
+			document.documentElement.classList.add('dark');
 		} else {
-			// Respect system preference only on first load
-			darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-			updateDarkModeClass();
+			document.documentElement.classList.remove('dark');
 		}
 	});
+
+	function toggleTheme(checked: boolean) {
+		darkMode = checked;
+	}
 
 	const toggleMenu = () => {
 		menuOpen = !menuOpen;
 	};
-	const toggleDarkMode = () => {
-		darkMode = !darkMode;
-		localStorage.setItem('darkMode', darkMode.toString());
-		updateDarkModeClass();
-	};
-	const updateDarkModeClass = () => {
-		return darkMode
-			? document.documentElement.classList.add('dark')
-			: document.documentElement.classList.remove('dark');
-	};
 </script>
 
-<AppBar
-	gridColumns="grid-cols-3"
-	slotDefault="place-self-center"
-	slotTrail="place-content-end"
-	background="bg-[url('/images/header-bkg-blue.png')] bg-repeat w-full h-25"
->
+<AppBar background="bg-[url('/images/header-bkg-blue.png')] bg-repeat w-full h-16">
 	{#snippet lead()}
 		<img class="h-10 w-auto" src="/images/ieee-mb-black.png" alt="IEEE logo" />
 	{/snippet}
@@ -67,26 +60,27 @@
 	{#snippet trail()}
 		<div class="flex space-x-4">
 			<nav class="rounded-container grid w-full grid-cols-1 gap-1 overflow-hidden md:grid-cols-3">
-				<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="discord"
-					><i class="fa-brands fa-discord"></i></a
+				<a
+					class="hb rounded-none p-4 py-2 text-center text-black"
+					href="https://discord.gg/yuGwMKaPAJ"
+					aria-label="discord"><i class="fa-brands fa-discord"></i></a
 				>
-				<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="instagram"
+				<a class="hb rounded-none p-4 py-2 text-center text-black" href="/" aria-label="instagram"
 					><i class="fa-brands fa-instagram"></i></a
 				>
-				<a class="rounded-none p-4 py-2 text-center text-black" href="/" aria-label="search"
+				<a class="hb rounded-none p-4 py-2 text-center text-black" href="/" aria-label="search"
 					><i class="fa-solid fa-magnifying-glass"></i></a
 				>
 			</nav>
-			<button
-				class="text-theme-font-color-base dark:text-theme-font-color-base rounded-lg p-2 dark:bg-gray-700"
-				onclick={toggleDarkMode}
+			<Switch
+				name="Toggle Dark Mode"
+				controlActive="bg-surface-200"
+				checked={darkMode}
+				onCheckedChange={(e) => toggleTheme(e.checked)}
 			>
-				{#if darkMode}
-					☀️
-				{:else}
-					🌙
-				{/if}
-			</button>
+				{#snippet inactiveChild()}<i class="hb fa-solid fa-moon"></i>{/snippet}
+				{#snippet activeChild()}<i class="hb fa-solid fa-sun"></i>{/snippet}
+			</Switch>
 			<button class="rounded-lg p-2 md:hidden" onclick={toggleMenu} aria-label="menu">
 				<i class="fa-solid fa-bars"></i>
 			</button>
