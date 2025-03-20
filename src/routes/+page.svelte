@@ -5,15 +5,17 @@
 <Navbar page="Home" />
 <div class="flex min-h-screen flex-col transition-colors duration-250">
 	<main class="container mx-auto flex-1 p-6">
-		<section
-			class="border-primary-500 rounded-xl border-t-4 p-8 text-center shadow-lg transition-all duration-250"
-		>
-			<h2 class="mb-4 text-3xl font-semibold">Register Today for the Next Meeting</h2>
-			<p class="text-lg">January 12th at 7pm, ABC Hall. Light Refreshments to be Served.</p>
-			<button class="mt-6 rounded-lg px-6 py-3 text-lg font-bold shadow-md transition-all"
-				>Reserve Your Spot</button
-			>
-		</section>
+		<section class="relative flex items-center justify-center h-[400px] text-white">
+         <div class="text-center border-2 border-white p-6 rounded-lg">
+           <h2 class="text-xl font-semibold uppercase tracking-wide dark:bg-blue-800">Welcome to the</h2>
+           <h3 class="text-5xl font-bold mt-1">IEEE PCC BRANCH</h3>
+           <div class="mt-4 flex justify-center">
+             <button class="px-6 py-3 border-2 border-white text-lg font-semibold bg-blue-600 hover:bg-blue-700 transition-all">
+               ABOUT US
+             </button>
+           </div>
+         </div>
+       </section>
 
 		<section class="mt-12">
 			<h3 class="text-center text-2xl font-semibold">Featured Events</h3>

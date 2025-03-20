@@ -5,11 +5,11 @@
 	let { page } = $props();
 
 	const routes = [
-		{ name: 'Home', path: '/' },
-		{ name: 'Calendar', path: '/calendar' },
-		{ name: 'Officers', path: '/officers' },
-		{ name: 'About', path: '/about' },
-		{ name: 'Membership', path: '/membership' },
+		{ name: 'HOME', path: '/' },
+		{ name: 'CALENDAR', path: '/calendar' },
+		{ name: 'OFFICERS', path: '/officers' },
+		{ name: 'ABOUT', path: '/about' },
+		{ name: 'MEMBERSHIP', path: '/membership' },
 		{ name: 'IEEE', path: '/ieee' }
 	];
 	let menuOpen = $state(false);
