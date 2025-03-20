@@ -8,7 +8,7 @@
 	<main class="container mx-auto flex-1 p-6">
 		<section class="relative flex items-center justify-center h-[400px] text-white">
          <div class="text-center border-2 border-white p-6 rounded-lg">
-           <h2 class="text-xl font-semibold uppercase tracking-wide dark:bg-blue-800">Welcome to the</h2>
+           <h2 class="text-xl font-semibold uppercase tracking-wide bg-blue-800">Welcome to the</h2>
            <h3 class="text-5xl font-bold mt-1">IEEE PCC BRANCH</h3>
            <div class="mt-4 flex justify-center">
              <button class="px-6 py-3 border-2 border-white text-lg font-semibold bg-blue-600 hover:bg-blue-700 transition-all">
