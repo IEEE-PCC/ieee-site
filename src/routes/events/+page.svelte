@@ -1,84 +1,66 @@
-<script lang=ts>
-
+<script lang="ts">
+	let month = "March 2025";
 </script>
 
+<!-- Full-page container -->
+<div class="min-h-screen flex flex-col items-center justify-center bg-white p-4">
+	<!-- Month Title -->
+	<h2 class="text-4xl font-bold text-black border-b-4 border-blue-500 pb-2 mb-6">{month}</h2>
 
-<main>
-    <h2 style = "text-align:center;color: black;">
-		March 2025
-	</h2>
-	<br />
-	<table bgcolor="lightgrey" align="center"
-		cellspacing="21" cellpadding="21">
-		<caption style="text-align:top">
-		</caption>
-		<thead>
-			<tr>
-				<th>Sunday</th>
-				<th>Monday</th>
-				<th>Tuesday</th>
-				<th>Wednesday</th>
-				<th>Thursday</th>
-				<th>Friday</th>
-				<th>Saturday</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>1</td>
-			</tr>
-			<tr></tr>
-			<tr>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-				<td>6</td>
-				<td>7</td>
-				<td>8</td>
-			</tr>
-			<tr>
-				<td>9</td>
-				<td>10</td>
-				<td>11</td>
-				<td>12</td>
-				<td>13</td>
-				<td>14</td>
-				<td>15</td>
-			</tr>
-			<tr>
-				<td>16</td>
-				<td>17</td>
-				<td>18</td>
-				<td>19</td>
-				<td>20</td>
-				<td>21</td>
-				<td>22</td>
-			</tr>
-			<tr>
-				<td>23</td>
-				<td>24</td>
-				<td>25</td>
-				<td>26</td>
-				<td>27</td>
-				<td>28</td>
-				<td>29</td>
-			</tr>
-			<tr>
-				<td>30</td>
-				<td>31</td>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-			</tr>
-		</tbody>
-	</table>
-</main>
+	<!-- Calendar Grid with border around the whole calendar -->
+	<div class="border-4 border-blue-500 p-4 w-full max-w-5xl">
+		<!-- Days of the week -->
+		<div class="grid grid-cols-7 gap-2 mb-4">
+			<div class="font-bold text-center text-black">Sun</div>
+			<div class="font-bold text-center text-black">Mon</div>
+			<div class="font-bold text-center text-black">Tue</div>
+			<div class="font-bold text-center text-black">Wed</div>
+			<div class="font-bold text-center text-black">Thu</div>
+			<div class="font-bold text-center text-black">Fri</div>
+			<div class="font-bold text-center text-black">Sat</div>
+		</div>
+
+		<!-- Empty spaces before March 1st (March starts on a Saturday) -->
+		<div class="grid grid-cols-7 gap-2">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+
+			<!-- Hardcoded Days -->
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">1</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">2</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">3</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">4</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">5</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">6</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">7</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">8</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">9</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">10</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">11</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">12</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">13</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">14</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">15</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">16</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">17</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">18</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">19</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">20</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">21</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">22</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">23</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">24</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">25</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">26</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">27</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">28</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">29</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">30</div>
+			<div class="w-full h-24 flex items-top  border-2 border-blue-500 bg-white text-black text-xl font-semibold">31</div>
+		</div>
+	</div>
+</div>
