@@ -10,9 +10,7 @@
 		{ name: 'Home', path: '/' },
 		{ name: 'Calendar', path: '/calendar' },
 		{ name: 'Officers', path: '/officers' },
-		{ name: 'About', path: '/about' },
-		{ name: 'Membership', path: '/membership' },
-		{ name: 'IEEE', path: '/ieee' }
+		{ name: 'About', path: '/about' }
 	];
 	let menuOpen = $state(false);
 	let darkMode = $state(false);
@@ -49,7 +47,7 @@
 	background=" bg-[url('/images/header-bkg-blue.png')] dark:bg-[url('/images/header-bkg-red.png')] bg-repeat w-full h-16 sticky top-0 overflow-hidden"
 >
 	{#snippet lead()}
-		<img class="h-8 w-auto dark:invert" src="{base}/images/ieee-mb-black.png" alt="IEEE logo" />
+		<img class="h-8 w-auto" src="{base}/images/ieee-pcc.png" alt="IEEE logo" />
 		<Countdown targetDate="2025-03-26T00:00:00" />
 	{/snippet}
 
@@ -73,12 +71,9 @@
 					href="https://discord.gg/yuGwMKaPAJ"
 					aria-label="discord"><i class="fa-brands fa-discord"></i></a
 				>
-				<a class="hb rounded-none p-4 py-2 text-center" href="{base}/" aria-label="instagram"
-					><i class="fa-brands fa-instagram"></i></a
-				>
-				<a class="hb rounded-none p-4 py-2 text-center" href="{base}/" aria-label="search"
+				<!-- a class="hb rounded-none p-4 py-2 text-center" href="{base}/" aria-label="search"
 					><i class="fa-solid fa-magnifying-glass"></i></a
-				>
+				-->
 			</nav>
 			<Switch
 				name="Toggle Dark Mode"
