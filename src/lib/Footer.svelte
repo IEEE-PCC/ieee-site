@@ -1,9 +1,13 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <main>
 	<footer class="mt-14 bg-[#1e73ae] p-6 shadow-md">
 		<div class="flex items-start gap-16">
 			<!-- Logo -->
 			<img
-				src="/images/ieee-mb-white.png"
+				src="{base}/images/ieee-mb-white.png"
 				alt="ieee-mb-white"
 				class="h-32 justify-self-start pr-8"
 			/>
@@ -11,10 +15,10 @@
 			<!-- First Column -->
 			<ul class="flex flex-col space-y-2 text-lg font-medium text-white">
 				<li><a href="/" class="hover:underline">HOME</a></li>
-				<li><a href="/calendar" class="hover:underline">CALENDAR</a></li>
-				<li><a href="/officers" class="hover:underline">OFFICERS</a></li>
-				<li><a href="/about" class="hover:underline">ABOUT</a></li>
-				<li><a href="/membership" class="hover:underline">MEMBERSHIP</a></li>
+				<li><a href="{base}/calendar" class="hover:underline">CALENDAR</a></li>
+				<li><a href="{base}/officers" class="hover:underline">OFFICERS</a></li>
+				<li><a href="{base}/about" class="hover:underline">ABOUT</a></li>
+				<li><a href="{base}/membership" class="hover:underline">MEMBERSHIP</a></li>
 			</ul>
 
 			<!-- Second Column (Empty for now) -->
