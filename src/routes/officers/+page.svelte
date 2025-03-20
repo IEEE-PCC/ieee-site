@@ -10,7 +10,7 @@
 			year: 'Junior',
 			major: 'Mechanical Engineering',
 			imageUrl: base + '/officers/alexander.png',
-			description: 'Lorem, ipsum dolor sit amet.'
+			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.'
 		},
 		{
 			name: 'Elizabeth Horne',

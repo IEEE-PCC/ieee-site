@@ -40,7 +40,7 @@
 <div class="max-w-xs rounded rounded-lg border-2 border-blue-500 shadow-lg">
 	<div class="flex h-30 w-full items-center justify-center">
 		<!-- Placeholder for profile picture -->
-		<div class="flex h-20 w-20 items-center justify-center">
+		<div class="flex lg:w-20 lg:h-20 justify-center">
 			<Avatar src={imageUrl} {name} size="md" rounded="rounded-full" shadow="sm" />
 		</div>
 	</div>
@@ -48,7 +48,7 @@
 		{name}
 		<p class="text-blue-500">{jobTitle}</p>
 	</div>
-	<div class="items-center px-10 py-5">
+	<div class="items-center p-10">
 		<p><strong>YEAR:</strong> {year}</p>
 		<p><strong>MAJOR:</strong> {major}</p>
 		<p><strong>BIO:</strong> {@render description?.()}</p>
