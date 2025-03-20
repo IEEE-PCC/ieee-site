@@ -45,7 +45,7 @@
 </script>
 
 <AppBar
-	base="border-primary-500  border-b-4"
+	base="border-primary-500  border-b-4 z-10"
 	background=" bg-[url('/images/header-bkg-blue.png')] dark:bg-[url('/images/header-bkg-red.png')] bg-repeat w-full h-16 sticky top-0 overflow-hidden"
 >
 	{#snippet lead()}
