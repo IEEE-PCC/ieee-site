@@ -37,20 +37,23 @@
 
 -->
 
-<div class="max-w-xs rounded rounded-lg border-2 border-blue-500 shadow-lg">
+<div class="max-w-xs rounded rounded-lg border-3 border-blue-500 shadow-lg">
 	<div class="flex h-30 w-full items-center justify-center">
 		<!-- Placeholder for profile picture -->
-		<div class="flex lg:w-20 lg:h-20 justify-center">
+		<div class="relative mt-15 flex w-25 items-center justify-center">
 			<Avatar src={imageUrl} {name} size="md" rounded="rounded-full" shadow="sm" />
 		</div>
 	</div>
+	<br />
+	<br />
 	<div class="mb-2 text-center text-xl font-bold">
 		{name}
 		<p class="text-blue-500">{jobTitle}</p>
 	</div>
-	<div class="items-center p-10">
-		<p><strong>YEAR:</strong> {year}</p>
-		<p><strong>MAJOR:</strong> {major}</p>
-		<p><strong>BIO:</strong> {@render description?.()}</p>
+	<div class="items-center px-8 py-2">
+		<p class="py-1"><strong>YEAR:</strong> {year}</p>
+		<p class="py-1"><strong>MAJOR:</strong> {major}</p>
+		<p class="py-1"><strong>BIO:</strong> {@render description?.()}</p>
+		<br />
 	</div>
 </div>
