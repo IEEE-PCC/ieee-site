@@ -20,7 +20,9 @@
 		class="relative rounded-4xl border border-8 border-white px-8 py-12 text-center shadow-lg md:px-16 md:py-20 lg:px-140
            lg:py-50 dark:border-white"
 	>
-		<div class="bg-transparent pb-6 text-3xl font-bold">{@render title?.()}</div>
-		{@render description?.()}
+		<div class="font-arial bg-transparent pb-6 text-6xl font-bold">{@render title?.()}</div>
+		<div class="font-arial text-lg">
+			{@render description?.()}
+		</div>
 	</div>
 </div>

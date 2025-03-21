@@ -123,14 +123,16 @@
 </script>
 
 <Navbar page="Officers" />
+
 <HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
 	{#snippet title()}
-		<p>Default Content</p>
+		<p>Officers</p>
 	{/snippet}
 	{#snippet description()}
 		<p>Lorem Ipsum yada yada yada</p>
 	{/snippet}
 </HeroHeader>
+
 <section class="mb-12">
 	<br />
 	<h2 class="mb-8 text-center text-3xl font-bold">Executive Committee Officers</h2>
@@ -152,6 +154,7 @@
 		{/each}
 	</div>
 
+	<br />
 	<br />
 	<br />
 
