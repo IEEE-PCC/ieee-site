@@ -1,9 +1,19 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import Navbar from '$lib/Navbar.svelte';
+	import HeroHeader from '$lib/HeroHeader.svelte';
 </script>
 
 <Navbar page="Home" />
+<HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
+	{#snippet title()}
+		<p>Default Content</p>
+	{/snippet}
+	{#snippet description()}
+		<p>Lorem Ipsum yada yada yada</p>
+	{/snippet}
+</HeroHeader>
+
 <div class="flex min-h-screen flex-col transition-colors duration-250">
 	<main class="container mx-auto flex-1 p-6">
 		<section

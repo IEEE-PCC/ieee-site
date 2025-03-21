@@ -2,6 +2,7 @@
 	import NameCard from '$lib/NameCard.svelte';
 	import Navbar from '$lib/Navbar.svelte';
 	import { base } from '$app/paths';
+	import HeroHeader from '$lib/HeroHeader.svelte';
 
 	const execOfficers = [
 		{
@@ -122,7 +123,14 @@
 </script>
 
 <Navbar page="Officers" />
-
+<HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
+	{#snippet title()}
+		<p>Default Content</p>
+	{/snippet}
+	{#snippet description()}
+		<p>Lorem Ipsum yada yada yada</p>
+	{/snippet}
+</HeroHeader>
 <section class="mb-12">
 	<br />
 	<h2 class="mb-8 text-center text-3xl font-bold">Executive Committee Officers</h2>
