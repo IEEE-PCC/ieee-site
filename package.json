@@ -41,7 +41,10 @@
 		"@floating-ui/dom": "1.6.13",
 		"@fortawesome/fontawesome-free": "^6.7.2",
 		"@tailwindcss/vite": "^4.0.14",
+		"clsx": "^2.1.1",
 		"fontawesome-free": "^1.0.4",
-		"prettier-plugin-tailwindcss": "^0.6.11"
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"svelte-motion": "^0.12.2",
+		"tailwind-merge": "^3.0.2"
 	}
 }

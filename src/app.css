@@ -166,3 +166,9 @@ p {
 .nav-link-active::before {
 	@apply scale-100 opacity-100;
 }
+
+html {
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+}
