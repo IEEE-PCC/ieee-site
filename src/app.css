@@ -1,0 +1,174 @@
+@import 'tailwindcss';
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/optional/presets';
+@import '@skeletonlabs/skeleton/themes/cerberus';
+@import '@skeletonlabs/skeleton/themes/nouveau';
+@import './ieeetheme.css';
+
+/*
+  Add your theme import for your theme: "ieeetheme" here
+*/
+@source "../node_modules/@skeletonlabs/skeleton-svelte/dist";
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@source '../node_modules/@skeletonlabs/skeleton/dist/**/*.{html,js,svelte,ts}';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
+}
+
+@layer utilities {
+}
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+.meta-nav {
+	min-height: 40px;
+	background: #000000;
+	color: #ffffff;
+	padding: 0;
+	margin: 0;
+}
+
+#meta-ieee-logo {
+	margin: 0;
+	float: right;
+}
+
+#meta-ieee-logo .joinIEEE {
+	float: right;
+	color: #fff;
+	padding: 11px 16px;
+}
+
+#meta-ieee-logo .joinIEEE:link,
+#meta-ieee-logo .joinIEEE:visited,
+#meta-ieee-logo .joinIEEE:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+#meta-ieee-logo .joinIEEE:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#meta-ieee-logo img {
+	float: right;
+}
+
+#meta-ieee-logo img {
+	padding: 5px 36px 0 0;
+}
+
+@media (max-width: 800px) {
+	.meta-nav {
+		min-height: 100px;
+		background: #000000;
+		color: #ffffff;
+		padding: 0;
+		margin: 0;
+	}
+	.meta-ieee-logo {
+		padding: 20px 0 0 0;
+		float: right;
+		max-width: 100px;
+	}
+}
+
+p {
+	font-family: inherit;
+	font-size: 0.9em;
+	line-height: 125%;
+	border: 0;
+	margin: 0;
+}
+
+#ieee-meta-a {
+	color: #fff;
+	text-align: left;
+	padding: 11px 36px;
+	float: left;
+}
+
+#ieee-meta-a a:link,
+#ieee-meta-a a:visited,
+#ieee-meta-a a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+#ieee-meta-a a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+@keyframes pop_out {
+	100% {
+		transform: scale(1.4);
+	}
+}
+
+.hb:hover {
+	animation: pop_out 0.2s ease-out forwards;
+}
+
+.nav-link {
+	@apply relative tracking-wide transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-blue-400 focus:text-blue-400;
+}
+
+.nav-link-active {
+	@apply text-blue-500;
+}
+
+/* Underline Effect: Starts in the middle and expands outward */
+.nav-link::after {
+	content: '';
+	@apply absolute bottom-0 left-1/2 h-0.5 w-0 origin-center bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400 transition-all duration-500 ease-out;
+	transform: translateX(-50%) scaleX(0);
+}
+
+.nav-link:hover::after,
+.nav-link-active::after {
+	@apply w-full scale-x-100;
+	transform: translateX(-50%) scaleX(1);
+}
+
+/* Glowing Hover Effect */
+.nav-link::before {
+	content: '';
+	@apply absolute inset-0 -z-10 scale-75 rounded-lg bg-gradient-to-r from-blue-500/20 via-transparent to-blue-500/20 opacity-0 blur-md transition-all duration-500;
+}
+
+.nav-link:hover::before,
+.nav-link-active::before {
+	@apply scale-100 opacity-100;
+}
+
+html {
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+}
