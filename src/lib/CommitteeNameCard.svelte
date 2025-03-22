@@ -4,20 +4,11 @@
 	interface Props {
 		name?: string;
 		jobTitle?: string;
-		year?: string;
-		major?: string;
 		imageUrl?: string;
 		description?: import('svelte').Snippet;
 	}
 
-	let {
-		name = '',
-		jobTitle = '',
-		year = '',
-		major = '',
-		imageUrl = '',
-		description
-	}: Props = $props();
+	let { name = '', jobTitle = '', imageUrl = '', description }: Props = $props();
 </script>
 
 <div class="border-primary-500 relative flex rounded rounded-lg border-3 shadow-lg">
