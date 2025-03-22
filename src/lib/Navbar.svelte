@@ -8,11 +8,10 @@
 
 	const routes = [
 		{ name: 'Home', path: '/' },
-		{ name: 'Calendar', path: '/calendar' },
+		{ name: 'Events', path: '/events' },
 		{ name: 'Officers', path: '/officers' },
 		{ name: 'About', path: '/about' },
-		{ name: 'Membership', path: '/membership' },
-		{ name: 'IEEE', path: '/ieee' }
+		{ name: 'History', path: '/history' }
 	];
 	let menuOpen = $state(false);
 	let darkMode = $state(false);

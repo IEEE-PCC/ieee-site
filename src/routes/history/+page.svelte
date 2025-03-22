@@ -1,16 +1,15 @@
-<script lang="ts">
-	import Navbar from '$lib/Navbar.svelte';
+<script>
 	import { base } from '$app/paths';
+	import Navbar from '$lib/Navbar.svelte';
 	import HeroHeader from '$lib/HeroHeader.svelte';
 </script>
 
-<Navbar page="Calendar" />
+<Navbar page="History" />
 <HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
 	{#snippet title()}
-		<p>Default Content</p>
+		<p>Our History</p>
 	{/snippet}
 	{#snippet description()}
-		<p>Lorem Ipsum yada yada yada</p>
+		<p>The History of Pensacola Christian College's IEEE Student Branch</p>
 	{/snippet}
 </HeroHeader>
-<main>Things Should GO here</main>
