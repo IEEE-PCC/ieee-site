@@ -2,7 +2,7 @@
 	import { AppBar, Switch } from '@skeletonlabs/skeleton-svelte';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
-	import Countdown from '$lib/Countdown.svelte';
+	//import Countdown from '$lib/Countdown.svelte';
 
 	let { page } = $props();
 
