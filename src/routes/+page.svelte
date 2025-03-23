@@ -114,7 +114,7 @@
 
 			<a href={base + '/history'} class="inline-block">
 				<button class="bg-primary-500 hover:bg-primary-700 mt-10 w-35 py-2 font-bold text-white">
-					View More
+					Learn More
 				</button>
 			</a>
 		</div>
