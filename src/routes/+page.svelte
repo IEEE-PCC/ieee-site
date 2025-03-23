@@ -31,6 +31,86 @@
 	<div class="bg-primary-500 mr-20 mb-5 h-2 flex-grow rounded"></div>
 </div>
 
+<div class="flex items-center gap-2 ml-20">
+	<table class="table-fixed text-black">
+		<tbody>
+			<tr>
+				<td class="p-4">
+					<div class="flex items-center gap-2">
+						<i class="fas fa-globe text-xl text-blue-500"></i>
+						<p class="text-lg font-semibold">Event Name</p>
+					</div>
+					PCC Student Meeting
+				</td>
+				<td class="p-4">
+					<div class="flex items-center gap-2">
+						<i class="fas fa-calendar-alt text-xl text-blue-500"></i>
+						<p class="text-lg font-semibold">DATE</p>
+					</div>
+					March 22, 2025
+				</td>
+				<td class="p-4">
+					<div class="flex items-center gap-2">
+						<i class="fas fa-map-marker-alt text-xl text-blue-500"></i>
+						<p class="text-lg font-semibold">LOCATION</p>
+					</div>
+					Pensacola Christian College
+				</td>
+			</tr>
+		</tbody>
+		<tbody>
+			<tr>
+				<td class="p-4">
+					<div class="flex items-center gap-2">
+						<i class="fas fa-globe text-xl text-blue-500"></i>
+						<p class="text-lg font-semibold">EVENT NAME</p>
+					</div>
+					PCC Student Meeting</td
+				>
+				<td class="p-4">
+					<div class="flex items-center gap-2">
+						<i class="fas fa-calendar-alt text-xl text-blue-500"></i>
+						<p class="text-lg font-semibold">DATE</p>
+					</div>
+					March 22, 2025</td
+				>
+				<td class="p-4">
+					<div class="flex items-center gap-2">
+						<i class="fas fa-map-marker-alt text-xl text-blue-500"></i>
+						<p class="text-lg font-semibold">LOCATION</p>
+					</div>
+					Pensacola Christian College</td
+				>
+			</tr>
+			<tr>
+				<td class="p-4">
+					<div class="flex items-center gap-2">
+						<i class="fas fa-globe text-xl text-blue-500"></i>
+						<p class="text-lg font-semibold">Event Name</p>
+					</div>
+					PCC Student Meeting
+				</td>
+				<td class="p-4">
+					<div class="flex items-center gap-2">
+						<i class="fas fa-calendar-alt text-xl text-blue-500"></i>
+						<p class="text-lg font-semibold">DATE</p>
+					</div>
+					March 22, 2025
+				</td>
+				<td class="p-4">
+					<div class="flex items-center gap-2">
+						<i class="fas fa-map-marker-alt text-xl text-blue-500"></i>
+						<p class="text-lg font-semibold">LOCATION</p>
+					</div>
+					Pensacola Christian College
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+
 <!--
 <div class="flex min-h-screen flex-col transition-colors duration-250">
 	<main class="container mx-auto flex-1 p-6">
