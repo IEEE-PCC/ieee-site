@@ -16,7 +16,9 @@
 	let { events }: Props = $props();
 	let currentMonth: number = $state(new Date().getMonth());
 	let currentYear: number = $state(new Date().getFullYear());
-	let currentDay: number = new Date().getDate();
+	let currentDay: number = $state(new Date().getDate());
+	let showModal: boolean = $state(false);
+	let eventModal: Event = $state({ date: '', title: '', location: '' });
 
 	const monthYear = $derived(
 		new Date(currentYear, currentMonth).toLocaleDateString('en-US', {
@@ -82,6 +84,7 @@
 						</button>
 						<div class="absolute bottom-0 left-0 w-full p-1">
 							{#each eventsForDay(i) as event}
+
 								<Tooltip
 									triggerClasses="w-full max-w-full rounded-sm text-white overflow-hidden whitespace-nowrap text-ellipsis inline-block"
 									positioning={{ placement: 'top' }}
@@ -92,6 +95,7 @@
 									{#snippet trigger()}
 										<button
 											class="mt-1 inline-block w-full max-w-full overflow-hidden bg-blue-500 px-2 py-0 text-sm text-ellipsis whitespace-nowrap text-white"
+											onclick={() => { eventModal = event; showModal = true; }}
 										>
 											{event.title}
 										</button>
@@ -99,11 +103,18 @@
 									{#snippet content()}
 										<div class="p-2">
 											<p class="font-bold">{event.title}</p>
-											<p class="text-sm">{event.location}</p>
+											{#if /^https?:\/\/\S+$/i.test(event.location)}
+												<a href="{event.location}" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 underline">
+													{event.location.length > 30 ? event.location.slice(0, 27) + '...' : event.location}
+												</a>
+											{:else}
+												<p class="text-sm">{event.location}</p>
+											{/if}
 											<p class="text-xs text-gray-500">{event.date}</p>
 										</div>
 									{/snippet}
 								</Tooltip>
+
 							{/each}
 						</div>
 					{/if}
@@ -121,3 +132,21 @@
 		</footer>
 	</div>
 </main>
+
+{#if showModal}
+	<div class="fixed inset-0 flex items-center justify-center z-50">
+		<div class="absolute inset-0 bg-black opacity-50"></div>
+		<div class="relative bg-white rounded-lg p-4 w-96">
+			<p class="font-bold">{eventModal.title}</p>
+			{#if /^https?:\/\/\S+$/i.test(eventModal.location)}
+				<a href="{eventModal.location}" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 underline">
+					{eventModal.location.length > 30 ? eventModal.location.slice(0, 27) + '...' : eventModal.location}
+				</a>
+			{:else}
+				<p class="text-sm">{eventModal.location}</p>
+			{/if}
+			<p class="text-xs text-gray-500">{eventModal.date}</p>
+			<button class="mt-4 bg-blue-500 text-white rounded px-4 py-2" onclick={() => showModal = false}>Close</button>
+		</div>
+	</div>
+{/if}

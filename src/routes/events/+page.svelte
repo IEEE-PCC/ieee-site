@@ -26,7 +26,7 @@
 
 <!-- Full-page container -->
 <div class="flex min-h-screen flex-col items-center justify-center p-4">
-	<h1 class="mb-6 border-b-4 border-blue-500 pb-2 pl-6 text-6xl font-bold text-black">
+	<h1 class="mb-6 border-b-4 border-blue-500 pb-2 pl-6 text-6xl ">
 		UPCOMING EVENTS
 	</h1>
 	<!-- Month Title -->
