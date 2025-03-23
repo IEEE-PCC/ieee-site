@@ -44,7 +44,7 @@
 		{#each timeline as { date, title, description, icon, color }}
 			<TimelineItem>
 				<TimelineOppositeContent slot="opposite-content">
-					<p>{date}</p>
+					<div class="">{date}</div>
 				</TimelineOppositeContent>
 				<TimelineSeparator>
 					<TimelineDot style="background-color: {color};">
@@ -64,15 +64,15 @@
 		class="bg-primary-500 grid min-h-148 w-full items-center justify-center px-8 md:grid-cols-3"
 	>
 		<img
-			class="place-self-center self-stretch p-20"
-			src={base + '/officers/josephCoffey.jpg'}
+			class="place-self-center p-8"
+			src={base + '/images/pcc_charter_plaque.png'}
 			alt="a man"
 		/>
 		<div class="col-span-2 flex-col gap-6 space-y-8">
-			<Blockquote class="text-2xl"
-				>"Lorem, ipsum dolor sit amet consectetur adipisicing elit."</Blockquote
+			<Blockquote class="text-2xl text-white"
+				>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. "</Blockquote
 			>
-			<div>
+			<div class="text-white">
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto aspernatur veritatis
 				debitis atque odio praesentium! Sunt dolorum blanditiis, deleniti tenetur veniam dicta odit,
 				reiciendis ipsum velit placeat ullam, cum officiis! Lorem ipsum dolor sit amet consectetur
