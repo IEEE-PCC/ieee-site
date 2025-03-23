@@ -25,6 +25,12 @@
 	{/snippet}
 </HeroHeader>
 
+<!-- Event Highlights Section -->
+<div class="flex items-center">
+	<h2 class="text-primary-500 mr-4 mb-8 ml-20 text-4xl font-bold font-bold">Event Highlights</h2>
+	<div class="bg-primary-500 mr-20 mb-5 h-2 flex-grow rounded"></div>
+</div>
+
 <!--
 <div class="flex min-h-screen flex-col transition-colors duration-250">
 	<main class="container mx-auto flex-1 p-6">
