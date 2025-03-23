@@ -18,13 +18,14 @@
 		<div class="flex items-center">
 			<div class="flex-grow h-px bg-white mx-4 border-3 rounded px-30"></div>
 			<a href="\about" class="inline-block">
-				<button class="bg-primary-500 hover:bg-primary-700 py-2 border-4 border-white w-50 font-bold">ABOUT US</button>
+				<button class="bg-primary-500 hover:bg-primary-700 py-2 border-4 border-white w-35 font-bold">ABOUT US</button>
 			</a>
 			<div class="flex-grow h-px bg-white mx-4 border-3 rounded px-30"></div>
 		</div>
 	{/snippet}
 </HeroHeader>
 
+<!--
 <div class="flex min-h-screen flex-col transition-colors duration-250">
 	<main class="container mx-auto flex-1 p-6">
 		<section
@@ -56,3 +57,6 @@
 		</section>
 	</main>
 </div>
+-->
+
+
