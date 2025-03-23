@@ -7,9 +7,9 @@
 	import { onMount } from 'svelte';
 
 	interface Leaders {
-		execOfficers: Officer[],
-		committeeOfficers: Officer[],
-		councilor: Officer[]
+		execOfficers: Officer[];
+		committeeOfficers: Officer[];
+		councilor: Officer[];
 	}
 
 	interface Officer {
@@ -52,7 +52,7 @@
 		<div class="bg-primary-500 mr-42 mb-5 h-2 flex-grow rounded"></div>
 	</div>
 	<div
-		class="md:px-20 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 lg:grid-cols-4 lg:px-40"
+		class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 md:px-20 lg:grid-cols-4 lg:px-40"
 	>
 		{#each officers.execOfficers as execOfficer}
 			<ExecutiveNameCard
@@ -94,8 +94,8 @@
 						<strong>Publicity Committee</strong> - Designs the aesthetics and publicizes the branch.
 					</li>
 					<li>
-						<strong>Membership Committee</strong> - Supports student efforts such as study halls and other
-						questions a member might have about the IEEE PCC branch.
+						<strong>Membership Committee</strong> - Supports student efforts such as study halls and
+						other questions a member might have about the IEEE PCC branch.
 					</li>
 					<li>
 						<strong>History Committee</strong> - Keeps everything the IEEE PCC branch has done preserved
@@ -110,7 +110,7 @@
 		</div>
 	</section>
 
-	<div class="md:px-20 grid grid-cols-1 gap-6 sm:px-10 lg:px-40">
+	<div class="grid grid-cols-1 gap-6 sm:px-10 md:px-20 lg:px-40">
 		{#each officers.committeeOfficers as committeeOfficer}
 			<CommitteeNameCard
 				name={committeeOfficer.name}

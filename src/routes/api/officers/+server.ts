@@ -14,8 +14,6 @@ function readEventsData() {
 	return JSON.parse(eventsData);
 }
 
-
-
 export async function GET() {
 	try {
 		// Read events data from file
