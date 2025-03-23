@@ -1,144 +1,147 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 body {
-	display: flex;
-	align-items: center;
-	padding: 0 10px;
-	justify-content: center;
-	min-height: 100vh;
-	background: #01437d; /* Light blue background */
-}
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: center;
+    min-height: 100vh;
+    background: #01437d; /* Light blue background */
+  }
 .wrapper {
-	width: 1200px; /* Adjust width as needed */
-	height: 800px; /* Set the desired height for the calendar */
-	background: #ffffff;
-	border-radius: 10px;
-	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-	overflow: hidden; /* Ensures content doesn't overflow the wrapper */
+    width: 1200px; /* Adjust width as needed */
+    height: 800px; /* Set the desired height for the calendar */
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    overflow: hidden; /* Ensures content doesn't overflow the wrapper */
+  }
+  .wrapper header {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px 5px; /* Reduce bottom padding to lessen the gap */
+    justify-content: space-between;
+  }
+header .icons{
+  display: flex;
 }
-.wrapper header {
-	display: flex;
-	align-items: center;
-	padding: 15px 30px 5px; /* Reduce bottom padding to lessen the gap */
-	justify-content: space-between;
+header .icons span{
+  height: 100px;
+  width: 100px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 80px;
+  font-size: 2.5rem;
+  user-select: none;
+  border-radius: 50%;
 }
-header .icons {
-	display: flex;
+.icons span:last-child{
+  margin-right: -10px;
 }
-header .icons span {
-	height: 100px;
-	width: 100px;
-	margin: 0 1px;
-	cursor: pointer;
-	color: #878787;
-	text-align: center;
-	line-height: 80px;
-	font-size: 2.5rem;
-	user-select: none;
-	border-radius: 50%;
+header .icons span:hover{
+  background: #f2f2f2;
 }
-.icons span:last-child {
-	margin-right: -10px;
+header .current-date{
+  font-size: 2rem;
+  font-weight: 500;
 }
-header .icons span:hover {
-	background: #f2f2f2;
+.calendar{
+  padding: 10px;
 }
-header .current-date {
-	font-size: 2rem;
-	font-weight: 500;
-}
-.calendar {
-	padding: 10px;
-}
-.calendar ul {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	text-align: center;
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
 }
 .calendar-title {
-	text-align: center;
-	font-size: 2.5rem; /* Adjust font size as needed */
-	font-weight: 600;
-	margin-bottom: 20px; /* Add spacing below the title */
-	color: #ffffff; /* Set the text color */
-}
+    text-align: center;
+    font-size: 2.5rem; /* Adjust font size as needed */
+    font-weight: 600;
+    margin-bottom: 20px; /* Add spacing below the title */
+    color: #ffffff; /* Set the text color */
+  }
 .calendar .days {
-	display: grid;
-	grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
-	grid-template-rows: repeat(6, 1fr); /* Always 6 rows for consistent size */
-	gap: 0; /* Remove gaps between cells */
-	margin-bottom: 20px;
-	height: 600px; /* Set a fixed height for the calendar grid */
-}
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    grid-template-rows: repeat(6, 1fr); /* Always 6 rows for consistent size */
+    gap: 0; /* Remove gaps between cells */
+    margin-bottom: 20px;
+    height: 600px; /* Set a fixed height for the calendar grid */
+  }
 
-.calendar li {
-	color: #333;
-	font-size: 1.5rem;
-	text-align: center;
-}
+  
+  .calendar li {
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .calendar .weeks {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    gap: 10px; /* Adjust this value to change spacing between days */
+    text-align: center;
+    margin-bottom: 10px;
+    background: #90a8c5; /* Light gray background for the weekdays row */
+    padding: 10px 0; /* Add vertical padding for better spacing */
+    border-bottom: 1px solid #ccc; /* Optional: Add a border below the weekdays row */
+  }
+  .calendar .days li {
+    position: relative; /* Ensure the ::before pseudo-element is positioned relative to this element */
+    color: #333;
+    font-size: 1.0rem; /* Adjust font size for numbers */
+    text-align: left; /* Align text to the left */
+    vertical-align: top; /* Align text to the top */
+    border: 1px solid #ccc; /* Adds a border around each box */
+    padding: 10px; /* Adds spacing inside the boxes */
+    box-sizing: border-box; /* Ensures padding is included in the element's size */
+    display: flex;
+    align-items: flex-start; /* Align content to the top */
+    justify-content: flex-start; /* Align content to the left */
+  }
 
-.calendar .weeks {
-	display: grid;
-	grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
-	gap: 10px; /* Adjust this value to change spacing between days */
-	text-align: center;
-	margin-bottom: 10px;
-	background: #90a8c5; /* Light gray background for the weekdays row */
-	padding: 10px 0; /* Add vertical padding for better spacing */
-	border-bottom: 1px solid #ccc; /* Optional: Add a border below the weekdays row */
-}
-.calendar .days li {
-	position: relative; /* Ensure the ::before pseudo-element is positioned relative to this element */
-	color: #333;
-	font-size: 1rem; /* Adjust font size for numbers */
-	text-align: left; /* Align text to the left */
-	vertical-align: top; /* Align text to the top */
-	border: 1px solid #ccc; /* Adds a border around each box */
-	padding: 10px; /* Adds spacing inside the boxes */
-	box-sizing: border-box; /* Ensures padding is included in the element's size */
-	display: flex;
-	align-items: flex-start; /* Align content to the top */
-	justify-content: flex-start; /* Align content to the left */
-}
-
-.days li.inactive {
-	color: #aaa; /* Light gray for inactive days */
-}
-.days li.active {
-	color: #000; /* Black for the current date */
-	font-weight: bold; /* Highlight the current date */
-}
-.days li::before {
-	position: absolute;
-	content: '';
-	left: 50%;
-	top: 50%;
-	height: 40px;
-	width: 40px;
-	z-index: -1;
-	border-radius: 50%;
-	transform: translate(-50%, -50%);
-}
-.days li.active::before {
-	background: rgba(173, 216, 230, 0.5); /* Light blue with transparency for shading */
-	position: absolute;
-	content: '';
-	left: 50%;
-	top: 50%;
-	height: 40px;
-	width: 40px;
-	z-index: -1;
-	border-radius: 50%; /* Makes the background a circle */
-	transform: translate(-50%, -60%);
-	box-shadow: 0 4px 8px rgba(154, 197, 223, 0.2); /* Adds a subtle shadow for the circle */
-}
-.days li:not(.active):hover::before {
-	background: #f2f2f2;
-}
+  
+  .days li.inactive {
+    color: #aaa; /* Light gray for inactive days */
+  }
+  .days li.active {
+    color: #000; /* Black for the current date */
+    font-weight: bold; /* Highlight the current date */
+  }
+  .days li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .days li.active::before {
+    background: rgba(173, 216, 230, 0.5); /* Light blue with transparency for shading */
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%; /* Makes the background a circle */
+    transform: translate(-50%, -60%);
+    box-shadow: 0 4px 8px rgba(154, 197, 223, 0.2); /* Adds a subtle shadow for the circle */
+  }
+  .days li:not(.active):hover::before{
+    background: #f2f2f2;
+  }
+  
