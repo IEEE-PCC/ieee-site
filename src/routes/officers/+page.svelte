@@ -1,146 +1,61 @@
-<script>
-	import NameCard from '$lib/NameCard.svelte';
+<script lang="ts">
+	import ExecutiveNameCard from '$lib/ExecutiveNameCard.svelte';
+	import CommitteeNameCard from '$lib/CommitteeNameCard.svelte';
 	import Navbar from '$lib/Navbar.svelte';
 	import { base } from '$app/paths';
 	import HeroHeader from '$lib/HeroHeader.svelte';
+	import { onMount } from 'svelte';
 
-	const execOfficers = [
-		{
-			name: 'Alexander Jackson',
-			jobTitle: 'Chair',
-			year: 'Junior',
-			major: 'Mechanical Engineering',
-			imageUrl: base + '/officers/alexanderJackson.jpg',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.'
-		},
-		{
-			name: 'Sebastien Pruneau',
-			jobTitle: 'Vice Chair',
-			year: 'Senior',
-			major: 'Mechanical Engineering & Electrical Engineering',
-			imageUrl: base + '/officers/sebastienPruneau.jpg',
-			description: 'Lorem, ipsum dolor sit amet.'
-		},
-		{
-			name: 'Rachel la Madrid',
-			jobTitle: 'Secretary',
-			year: 'Senior',
-			major: 'Computer Science',
-			imageUrl: '/officers/rachelMadrid.jpg',
-			description: 'Expert in agile workflows.'
-		},
-		{
-			name: 'Elizabeth Horn',
-			jobTitle: 'Assistant Secretary',
-			year: 'Freshman',
-			major: 'Electrical Engineering',
-			imageUrl: '/officers/elizabethHorn.jpg',
-			description: 'Passionate about user experience.'
-		},
-		{
-			name: 'Anthony Hurlston',
-			jobTitle: 'Treasurer',
-			year: 'Junior',
-			major: 'Electrical Engineering',
-			imageUrl: '/officers/anthonyHurlston.jpg',
-			description:
-				'Anthony Hurlston budgets branch activities and is in charge of managing the branch funds. If you want to get on his good side, please offer him a can of Black Cherry Soda!'
-		},
-		{
-			name: 'Yuzuria Liu',
-			jobTitle: 'Activities Director',
-			year: 'Junior',
-			major: 'Electrical Engineering',
-			imageUrl: '/officers/yuzuriaLiu.jpg',
-			description: 'Finds patterns in chaos.'
-		},
-		{
-			name: 'Isaac Castor',
-			jobTitle: 'Chaplain',
-			year: 'Sophomore',
-			major: 'Electrical Engineering',
-			imageUrl: '/officers/isaacCastor.jpg',
-			description: 'Creates engaging campaigns.'
-		}
-	];
+	interface Leaders {
+		execOfficers: Officer[];
+		committeeOfficers: Officer[];
+		councilor: Officer[];
+	}
 
-	const committeeOfficers = [
-		{
-			name: 'Gabriel Cioroch',
-			jobTitle: 'Program Chair',
-			year: 'Senior',
-			major: 'Mechanical Engineering',
-			imageUrl: base + '/officers/gabrielCioroch.jpg',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.'
-		},
-		{
-			name: 'Amelia Wu',
-			jobTitle: 'Publicity',
-			year: 'Freshman',
-			major: 'Cybersecurity',
-			imageUrl: base + '/officers/ameliaWu.jpg',
-			description: 'Lorem, ipsum dolor sit amet.'
-		},
-		{
-			name: 'Christopher Nabeta',
-			jobTitle: 'Membership',
-			year: 'Junior',
-			major: 'Mechanical Engineering',
-			imageUrl: '/officers/christopherNabeta.jpg',
-			description: 'Expert in agile workflows.'
-		},
-		{
-			name: 'Amber Wong',
-			jobTitle: 'History',
-			year: 'Sophomore',
-			major: 'Mechanical Engineering',
-			imageUrl: '/officers/amberWong.jpg',
-			description: 'Passionate about user experience.'
-		},
-		{
-			name: 'Christian Kahnke',
-			jobTitle: 'Prayer',
-			year: 'Senior',
-			major: 'Computer Science',
-			imageUrl: '/officers/christianKahnke.jpg',
-			description: 'Knows how to code.'
-		}
-	];
+	interface Officer {
+		name: string;
+		jobTitle: string;
+		year: string;
+		major: string;
+		imageUrl: string;
+		description: string;
+	}
 
-	const councilors = [
-		{
-			name: 'Mr. Joseph Coffey',
-			jobTitle: 'Branch Councilor',
-			year: "He's done with school!",
-			major: 'Engineering Broski',
-			imageUrl: base + '/officers/josephCoffey.jpg',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.'
-		}
-	];
+	let officers: Leaders = { execOfficers: [], committeeOfficers: [], councilor: [] };
+
+	// Fetch the JSON officer data
+	onMount(async () => {
+		const response = await fetch('/api/officers');
+		officers = (await response.json()) as Leaders;
+	});
 </script>
 
 <Navbar page="Officers" />
 
+<!-- Blurry blue header -->
 <HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
 	{#snippet title()}
 		<p>Officers</p>
 	{/snippet}
 	{#snippet description()}
-		<p>Lorem Ipsum yada yada yada</p>
+		<p>Meet your IEEE PCC Student Branch Officers!</p>
 	{/snippet}
 </HeroHeader>
 
+<!-- Executive Committee Chairs Section -->
 <section class="mb-12">
 	<br />
-	<h2 class="mb-8 text-center text-3xl font-bold">Executive Committee Officers</h2>
+	<div class="flex items-center">
+		<h2 class="text-primary-500 mr-4 mb-8 ml-40 text-4xl font-bold font-bold">
+			Executive Committee Officers
+		</h2>
+		<div class="bg-primary-500 mr-42 mb-5 h-2 flex-grow rounded"></div>
+	</div>
 	<div
-		class="med:px-20 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 lg:grid-cols-4 lg:px-40"
+		class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 md:px-20 lg:grid-cols-4 lg:px-40"
 	>
-		{#each execOfficers as execOfficer}
-			<NameCard
+		{#each officers.execOfficers as execOfficer}
+			<ExecutiveNameCard
 				name={execOfficer.name}
 				jobTitle={execOfficer.jobTitle}
 				year={execOfficer.year}
@@ -150,7 +65,7 @@
 				{#snippet description()}
 					<p>{execOfficer.description}</p>
 				{/snippet}
-			</NameCard>
+			</ExecutiveNameCard>
 		{/each}
 	</div>
 
@@ -158,33 +73,69 @@
 	<br />
 	<br />
 
-	<h2 class="mb-8 text-center text-3xl font-bold">Committee Officers</h2>
-	<div
-		class="med:px-20 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 lg:grid-cols-4 lg:px-40"
-	>
-		{#each committeeOfficers as committeeOfficer}
-			<NameCard
+	<!-- Committee Chairs Section -->
+	<div class="flex items-center">
+		<h2 class="text-primary-500 mr-4 mb-8 ml-40 text-4xl font-bold font-bold">Committee Chairs</h2>
+		<div class="bg-primary-500 mr-42 mb-5 h-2 flex-grow rounded"></div>
+	</div>
+
+	<section class="mr-40 mb-12 ml-40">
+		<div class="border-primary-500 rounded-xl border-t-4 p-8 shadow-lg">
+			<h2 class="text-primary-700 mb-6 flex items-center text-2xl font-bold">
+				<span class="mr-2">
+					<i class="fas fa-info-circle"></i>
+				</span>
+				WHAT ARE COMMITTEE CHAIRS?
+			</h2>
+			<div class="prose dark:prose-invert max-w-none">
+				<ul>
+					<li><strong>Program Committee</strong> - Plans and hosts IEEE meetings.</li>
+					<li>
+						<strong>Publicity Committee</strong> - Designs the aesthetics and publicizes the branch.
+					</li>
+					<li>
+						<strong>Membership Committee</strong> - Supports student efforts such as study halls and
+						other questions a member might have about the IEEE PCC branch.
+					</li>
+					<li>
+						<strong>History Committee</strong> - Keeps everything the IEEE PCC branch has done preserved
+						and within the archives.
+					</li>
+					<li>
+						<strong>Prayer Committee</strong> - Keeps the whole IEEE PCC branch together and offers support
+						of the kind that only God can provide.
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<div class="grid grid-cols-1 gap-6 sm:px-10 md:px-20 lg:px-40">
+		{#each officers.committeeOfficers as committeeOfficer}
+			<CommitteeNameCard
 				name={committeeOfficer.name}
 				jobTitle={committeeOfficer.jobTitle}
-				year={committeeOfficer.year}
-				major={committeeOfficer.major}
 				imageUrl={committeeOfficer.imageUrl}
 			>
 				{#snippet description()}
 					<p>{committeeOfficer.description}</p>
 				{/snippet}
-			</NameCard>
+			</CommitteeNameCard>
 		{/each}
 	</div>
 
 	<br />
 	<br />
 
-	<h2 class="mb-8 text-center text-3xl font-bold">Branch Councilor</h2>
-	<div class="flex h-100 items-center justify-center">
+	<!-- Student Branch Councilor Section -->
+	<div class="flex items-center">
+		<h2 class="text-primary-500 mr-4 mb-8 ml-40 text-4xl font-bold font-bold">Branch Councilor</h2>
+		<div class="bg-primary-500 mr-42 mb-5 h-2 flex-grow rounded"></div>
+	</div>
+	<div class="flex h-120 items-center justify-center">
 		<div class="mx-auto grid grid-cols-1 gap-6">
-			{#each councilors as councilor}
-				<NameCard
+			{#each officers.councilor as councilor}
+				<ExecutiveNameCard
 					name={councilor.name}
 					jobTitle={councilor.jobTitle}
 					year={councilor.year}
@@ -194,7 +145,7 @@
 					{#snippet description()}
 						<p>{councilor.description}</p>
 					{/snippet}
-				</NameCard>
+				</ExecutiveNameCard>
 			{/each}
 		</div>
 	</div>

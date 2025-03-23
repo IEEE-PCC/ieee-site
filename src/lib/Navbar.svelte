@@ -2,8 +2,6 @@
 	import { AppBar, Switch } from '@skeletonlabs/skeleton-svelte';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
-	import Countdown from '$lib/Countdown.svelte';
-
 	let { page } = $props();
 
 	const routes = [
@@ -51,7 +49,6 @@
 >
 	{#snippet lead()}
 		<img class="h-10 w-auto object-scale-down" src="{base}/images/ieee-pcc.png" alt="IEEE logo" />
-		<!-- Countdown targetDate="2025-03-26T00:00:00" / -->
 	{/snippet}
 
 	{#snippet children()}
