@@ -32,20 +32,20 @@
 			<div class="text-3xl font-bold">
 				<p>WELCOME TO THE</p>
 			</div>
-			<div class="text-5xl font-bold mb-4">
+			<div class="mb-4 text-5xl font-bold">
 				<p>IEEE PCC STUDENT BRANCH</p>
 			</div>
 		{/snippet}
 		{#snippet description()}
 			<div class="flex items-center justify-center">
-				<div class="mx-4 h-px flex rounded border-3 bg-white px-30"></div>
+				<div class="mx-4 flex h-px rounded border-3 bg-white px-30"></div>
 				<a href={base + '\about'} class="inline-block">
 					<button
 						class="bg-primary-500 hover:bg-primary-700 w-50 border-4 border-white py-2 font-bold"
 						>ABOUT US</button
 					>
 				</a>
-				<div class="mx-4 h-px flex rounded border-3 bg-white px-30"></div>
+				<div class="mx-4 flex h-px rounded border-3 bg-white px-30"></div>
 			</div>
 		{/snippet}
 	</HeroHeader>
@@ -80,7 +80,7 @@
 			<p>Officers</p>
 		{/snippet}
 		{#snippet description()}
-			<div class="font-semibold text-lg justify-center mt-5">
+			<div class="mt-5 justify-center text-lg font-semibold">
 				<p>Want to see who runs the IEEE PCC Student Branch and how they do it?</p>
 				<p>Click the button below to meet them!</p>
 			</div>

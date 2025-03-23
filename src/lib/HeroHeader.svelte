@@ -17,10 +17,10 @@
 
 	<!-- Content Box -->
 	<div
-		class="relative rounded-4xl box-border border-8 border-white text-center shadow-lg dark:border-white lg:w-350 lg:h-120"
+		class="relative box-border rounded-4xl border-8 border-white text-center shadow-lg lg:h-120 lg:w-350 dark:border-white"
 	>
-		<div class="font-arial mt-40 font-bold text-6xl">{@render title?.()}</div>
-		<div class="font-arial font-semibold text-lg">
+		<div class="font-arial mt-40 text-6xl font-bold">{@render title?.()}</div>
+		<div class="font-arial text-lg font-semibold">
 			{@render description?.()}
 		</div>
 	</div>
