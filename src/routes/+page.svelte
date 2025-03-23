@@ -13,15 +13,15 @@
 	onMount(async () => {
 		const response = await fetch(base + '/api/events');
 		records = await response.json();
-		displayedRecords = records.slice(0,3); // Select the top three events
+		displayedRecords = records.slice(0, 3); // Select the top three events
 	});
 
 	// Function to load more events
 	function loadMore() {
-        const nextIndex = currentIndex + increment;
-        displayedRecords = [...displayedRecords, ...records.slice(currentIndex, nextIndex)];
-        currentIndex = nextIndex;
-    }
+		const nextIndex = currentIndex + increment;
+		displayedRecords = [...displayedRecords, ...records.slice(currentIndex, nextIndex)];
+		currentIndex = nextIndex;
+	}
 </script>
 
 <Navbar page="Home" />
@@ -38,16 +38,18 @@
 		{/snippet}
 		{#snippet description()}
 			<div class="flex items-center">
-				<div class="flex-grow h-px bg-white mx-4 border-3 rounded px-30"></div>
-					<a href={base + '\about'} class="inline-block">
-						<button class="bg-primary-500 hover:bg-primary-700 py-2 border-4 border-white w-35 font-bold">ABOUT US</button>
-					</a>
-				<div class="flex-grow h-px bg-white mx-4 border-3 rounded px-30"></div>
+				<div class="mx-4 h-px flex-grow rounded border-3 bg-white px-30"></div>
+				<a href={base + '\about'} class="inline-block">
+					<button
+						class="bg-primary-500 hover:bg-primary-700 w-35 border-4 border-white py-2 font-bold"
+						>ABOUT US</button
+					>
+				</a>
+				<div class="mx-4 h-px flex-grow rounded border-3 bg-white px-30"></div>
 			</div>
 		{/snippet}
 	</HeroHeader>
 </div>
-
 
 <!-- Event Highlights Section -->
 <div class="flex items-center">
@@ -61,12 +63,14 @@
 			title={eventRecord.title}
 			date={eventRecord.date}
 			location={eventRecord.location}
-		>
-		</EventHighlight>
+		></EventHighlight>
 	{/each}
 </div>
 
-<button class="mt-4 ml-20 bg-primary-500 hover:bg-primary-700 py-2 w-35 font-bold text-white" on:click={loadMore}>
+<button
+	class="bg-primary-500 hover:bg-primary-700 mt-4 ml-20 w-35 py-2 font-bold text-white"
+	on:click={loadMore}
+>
 	View More
 </button>
 
@@ -80,7 +84,10 @@
 			<p>Click the button below to meet them!</p>
 			<div class="flex items-center">
 				<a href={base + '\officers'} class="inline-block">
-					<button class="ml-24 mt-10 bg-primary-500 hover:bg-primary-700 py-2 border-4 border-white w-65 font-bold">MEET THE OFFICERS</button>
+					<button
+						class="bg-primary-500 hover:bg-primary-700 mt-10 ml-24 w-65 border-4 border-white py-2 font-bold"
+						>MEET THE OFFICERS</button
+					>
 				</a>
 			</div>
 		{/snippet}
@@ -93,7 +100,21 @@
 		<h2 class="text-primary-500 mr-4 mb-8 ml-20 text-4xl font-bold font-bold">Our Story</h2>
 		<div class="bg-primary-500 mr-20 mb-5 h-2 flex-grow rounded"></div>
 	</div>
-	<div>
-		<img src={base + 'officers/josephCoffey.jpg'} alt="Example Image" class="w-auto h-auto rounded ml-20">
+	<div class="flex items-center">
+		<img
+			src={base + 'images/pcc_charter_plaque.png'}
+			alt="Example Image"
+			class="ml-20 h-auto w-200 max-w-full rounded"
+		/>
+		<div class="p-40 font-bold">
+			<p>Want to know how the branch started?</p>
+			<p>Learn more about the history of our branch here!</p>
+
+			<a href={base + '/history'} class="inline-block">
+				<button class="bg-primary-500 hover:bg-primary-700 mt-10 w-35 py-2 font-bold text-white">
+					View More
+				</button>
+			</a>
+		</div>
 	</div>
 </div>
