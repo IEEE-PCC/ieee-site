@@ -7,10 +7,21 @@
 <Navbar page="Home" />
 <HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
 	{#snippet title()}
-		<p>Default Content</p>
+		<div class="text-3xl">
+			<p>WELCOME TO THE</p>
+		</div>
+		<div class="h-10 text-4xl tracking-widest">
+			<p>IEEE PCC STUDENT BRANCH</p>
+		</div>
 	{/snippet}
 	{#snippet description()}
-		<p>Lorem Ipsum yada yada yada</p>
+		<div class="flex items-center">
+			<div class="flex-grow h-px bg-white mx-4 border-3 rounded px-30"></div>
+			<a href="\about" class="inline-block">
+				<button class="bg-primary-500 hover:bg-primary-700 py-2 border-4 border-white w-50 font-bold">ABOUT US</button>
+			</a>
+			<div class="flex-grow h-px bg-white mx-4 border-3 rounded px-30"></div>
+		</div>
 	{/snippet}
 </HeroHeader>
 
