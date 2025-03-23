@@ -1,0 +1,112 @@
+{
+    "execOfficers": [
+    {
+      "name": "Alexander Jackson",
+      "jobTitle": "Chair",
+      "year": "Junior",
+      "major": "Mechanical Engineering",
+      "imageUrl": "/officers/alexanderJackson.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna."
+    },
+    {
+      "name": "Sebastien Pruneau",
+      "jobTitle": "Vice Chair",
+      "year": "Senior",
+      "major": "Mechanical Engineering & Electrical Engineering",
+      "imageUrl": "/officers/sebastienPruneau.jpg",
+      "description": "Lorem, ipsum dolor sit amet."
+    },
+    {
+      "name": "Rachel la Madrid",
+      "jobTitle": "Co-Secretary",
+      "year": "Senior",
+      "major": "Computer Science",
+      "imageUrl": "/officers/rachelMadrid.jpg",
+      "description": "Expert in agile workflows."
+    },
+    {
+      "name": "Elizabeth Horn",
+      "jobTitle": "Co-Secretary",
+      "year": "Freshman",
+      "major": "Electrical Engineering",
+      "imageUrl": "/officers/elizabethHorn.jpg",
+      "description": "Passionate about user experience."
+    },
+    {
+      "name": "Anthony Hurlston",
+      "jobTitle": "Treasurer",
+      "year": "Junior",
+      "major": "Electrical Engineering",
+      "imageUrl": "/officers/anthonyHurlston.jpg",
+      "description": "Anthony Hurlston budgets branch activities and is in charge of managing the branch funds. If you want to get on his good side, please offer him a can of Black Cherry Soda!"
+    },
+    {
+      "name": "Yuzuria Liu",
+      "jobTitle": "Activities Director",
+      "year": "Junior",
+      "major": "Electrical Engineering",
+      "imageUrl": "/officers/yuzuriaLiu.jpg",
+      "description": "Finds patterns in chaos."
+    },
+    {
+      "name": "Isaac Castor",
+      "jobTitle": "Chaplain",
+      "year": "Sophomore",
+      "major": "Electrical Engineering",
+      "imageUrl": "/officers/isaacCastor.jpg",
+      "description": "Creates engaging campaigns."
+    }
+  ],
+    "committeeOfficers": [
+    {
+      "name": "Gabriel Cioroch",
+      "jobTitle": "Program Committee Chair",
+      "year": "Senior",
+      "major": "Mechanical Engineering",
+      "imageUrl": "/officers/gabrielCioroch.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+    },
+    {
+      "name": "Amelia Wu",
+      "jobTitle": "Publicity Committee Chair",
+      "year": "Freshman",
+      "major": "Cybersecurity",
+      "imageUrl": "/officers/ameliaWu.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+    },
+    {
+      "name": "Christopher Nabeta",
+      "jobTitle": "Membership Committee Chair",
+      "year": "Junior",
+      "major": "Mechanical Engineering",
+      "imageUrl": "/officers/christopherNabeta.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+    },
+    {
+      "name": "Amber Wong",
+      "jobTitle": "History Committee Chair",
+      "year": "Sophomore",
+      "major": "Mechanical Engineering",
+      "imageUrl": "/officers/amberWong.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+    },
+    {
+      "name": "Christian Kahnke",
+      "jobTitle": "Prayer Committee Chair",
+      "year": "Senior",
+      "major": "Computer Science",
+      "imageUrl": "/officers/christianKahnke.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+    }
+  ],
+  "councilor": [
+    {
+      "name": "Mr. Joseph Coffey",
+      "jobTitle": "Branch Councilor",
+      "year": "He's done with school!",
+      "major": "Engineering Broski",
+      "imageUrl": "/officers/josephCoffey.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+    }
+  ]
+}

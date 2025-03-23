@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import ExecutiveNameCard from '$lib/ExecutiveNameCard.svelte';
 	import CommitteeNameCard from '$lib/CommitteeNameCard.svelte';
 	import Navbar from '$lib/Navbar.svelte';
@@ -6,12 +6,27 @@
 	import HeroHeader from '$lib/HeroHeader.svelte';
 	import { onMount } from 'svelte';
 
-	let officers = [];
+	interface Leaders {
+		execOfficers: Officer[],
+		committeeOfficers: Officer[],
+		councilor: Officer[]
+	}
+
+	interface Officer {
+		name: string;
+		jobTitle: string;
+		year: string;
+		major: string;
+		imageUrl: string;
+		description: string;
+	}
+
+	let officers: Leaders = { execOfficers: [], committeeOfficers: [], councilor: [] };
 
 	// Fetch the JSON officer data
 	onMount(async () => {
-		const response = await fetch('src/routes/officers/officers.json');
-		officers = await response.json();
+		const response = await fetch('/api/officers');
+		officers = (await response.json()) as Leaders;
 	});
 </script>
 
@@ -37,7 +52,7 @@
 		<div class="bg-primary-500 mr-42 mb-5 h-2 flex-grow rounded"></div>
 	</div>
 	<div
-		class="med:px-20 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 lg:grid-cols-4 lg:px-40"
+		class="md:px-20 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 lg:grid-cols-4 lg:px-40"
 	>
 		{#each officers.execOfficers as execOfficer}
 			<ExecutiveNameCard
@@ -73,27 +88,29 @@
 				WHAT ARE COMMITTEE CHAIRS?
 			</h2>
 			<div class="prose dark:prose-invert max-w-none">
-				<li><strong>Program Committee</strong> - Plans and hosts IEEE meetings.</li>
-				<li>
-					<strong>Publicity Committee</strong> - Designs the aesthetics and publicizes the branch.
-				</li>
-				<li>
-					<strong>Membership Committee</strong> - Supports student efforts such as study halls and other
-					questions a member might have about the IEEE PCC branch.
-				</li>
-				<li>
-					<strong>History Committee</strong> - Keeps everything the IEEE PCC branch has done preserved
-					and within the archives.
-				</li>
-				<li>
-					<strong>Prayer Committee</strong> - Keeps the whole IEEE PCC branch together and offers support
-					of the kind that only God can provide.
-				</li>
+				<ul>
+					<li><strong>Program Committee</strong> - Plans and hosts IEEE meetings.</li>
+					<li>
+						<strong>Publicity Committee</strong> - Designs the aesthetics and publicizes the branch.
+					</li>
+					<li>
+						<strong>Membership Committee</strong> - Supports student efforts such as study halls and other
+						questions a member might have about the IEEE PCC branch.
+					</li>
+					<li>
+						<strong>History Committee</strong> - Keeps everything the IEEE PCC branch has done preserved
+						and within the archives.
+					</li>
+					<li>
+						<strong>Prayer Committee</strong> - Keeps the whole IEEE PCC branch together and offers support
+						of the kind that only God can provide.
+					</li>
+				</ul>
 			</div>
 		</div>
 	</section>
 
-	<div class="med:px-20 med:px-20 grid grid-cols-1 gap-6 sm:px-10 lg:px-40">
+	<div class="md:px-20 grid grid-cols-1 gap-6 sm:px-10 lg:px-40">
 		{#each officers.committeeOfficers as committeeOfficer}
 			<CommitteeNameCard
 				name={committeeOfficer.name}
