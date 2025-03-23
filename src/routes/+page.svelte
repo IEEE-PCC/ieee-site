@@ -29,23 +29,23 @@
 <div class="mb-40">
 	<HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
 		{#snippet title()}
-			<div class="text-3xl">
+			<div class="text-3xl font-bold">
 				<p>WELCOME TO THE</p>
 			</div>
-			<div class="h-10 text-4xl tracking-widest">
+			<div class="text-5xl font-bold mb-4">
 				<p>IEEE PCC STUDENT BRANCH</p>
 			</div>
 		{/snippet}
 		{#snippet description()}
-			<div class="flex items-center">
-				<div class="mx-4 h-px flex-grow rounded border-3 bg-white px-30"></div>
+			<div class="flex items-center justify-center">
+				<div class="mx-4 h-px flex rounded border-3 bg-white px-30"></div>
 				<a href={base + '\about'} class="inline-block">
 					<button
-						class="bg-primary-500 hover:bg-primary-700 w-35 border-4 border-white py-2 font-bold"
+						class="bg-primary-500 hover:bg-primary-700 w-50 border-4 border-white py-2 font-bold"
 						>ABOUT US</button
 					>
 				</a>
-				<div class="mx-4 h-px flex-grow rounded border-3 bg-white px-30"></div>
+				<div class="mx-4 h-px flex rounded border-3 bg-white px-30"></div>
 			</div>
 		{/snippet}
 	</HeroHeader>
@@ -80,12 +80,14 @@
 			<p>Officers</p>
 		{/snippet}
 		{#snippet description()}
-			<p>Want to see who runs the IEEE PCC Student Branch and how they do it?</p>
-			<p>Click the button below to meet them!</p>
-			<div class="flex items-center">
-				<a href={base + '\officers'} class="inline-block">
+			<div class="font-semibold text-lg justify-center mt-5">
+				<p>Want to see who runs the IEEE PCC Student Branch and how they do it?</p>
+				<p>Click the button below to meet them!</p>
+			</div>
+			<div class="flex justify-center">
+				<a href={base + '/officers'} class="inline-block">
 					<button
-						class="bg-primary-500 hover:bg-primary-700 mt-10 ml-24 w-65 border-4 border-white py-2 font-bold"
+						class="bg-primary-500 hover:bg-primary-700 mt-10 w-65 border-4 border-white py-2 font-bold"
 						>MEET THE OFFICERS</button
 					>
 				</a>
