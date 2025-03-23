@@ -39,7 +39,7 @@
 		{#snippet description()}
 			<div class="flex items-center">
 				<div class="flex-grow h-px bg-white mx-4 border-3 rounded px-30"></div>
-					<a href="\about" class="inline-block">
+					<a href={base + '\about'} class="inline-block">
 						<button class="bg-primary-500 hover:bg-primary-700 py-2 border-4 border-white w-35 font-bold">ABOUT US</button>
 					</a>
 				<div class="flex-grow h-px bg-white mx-4 border-3 rounded px-30"></div>
@@ -79,7 +79,7 @@
 			<p>Want to see who runs the IEEE PCC Student Branch and how they do it?</p>
 			<p>Click the button below to meet them!</p>
 			<div class="flex items-center">
-				<a href="\officers" class="inline-block">
+				<a href={base + '\officers'} class="inline-block">
 					<button class="ml-24 mt-10 bg-primary-500 hover:bg-primary-700 py-2 border-4 border-white w-65 font-bold">MEET THE OFFICERS</button>
 				</a>
 			</div>
@@ -87,6 +87,13 @@
 	</HeroHeader>
 </div>
 
+<!-- Our Story Section -->
 <div class="mt-40">
-	
+	<div class="flex items-center">
+		<h2 class="text-primary-500 mr-4 mb-8 ml-20 text-4xl font-bold font-bold">Our Story</h2>
+		<div class="bg-primary-500 mr-20 mb-5 h-2 flex-grow rounded"></div>
+	</div>
+	<div>
+		<img src={base + 'officers/josephCoffey.jpg'} alt="Example Image" class="w-auto h-auto rounded ml-20">
+	</div>
 </div>
