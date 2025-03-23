@@ -39,7 +39,7 @@
 		{#snippet description()}
 			<div class="flex items-center justify-center">
 				<div class="mx-4 flex h-px rounded border-3 bg-white px-30"></div>
-				<a href={base + '\about'} class="inline-block">
+				<a href={base + '/about'} class="inline-block">
 					<button
 						class="bg-primary-500 hover:bg-primary-700 w-50 border-4 border-white py-2 font-bold"
 						>ABOUT US</button
@@ -105,7 +105,7 @@
 	<div class="flex items-center">
 		<img
 			src={base + 'images/pcc_charter_plaque.png'}
-			alt="Example Image"
+			alt="IEEE Plaque"
 			class="ml-20 h-auto w-200 max-w-full rounded"
 		/>
 		<div class="p-40 font-bold">
