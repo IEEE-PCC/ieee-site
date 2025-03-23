@@ -1,190 +1,50 @@
 <script lang="ts">
-	let month = 'March 2025';
 </script>
 
 <!-- Full-page container -->
-<div class="flex min-h-screen flex-col items-center justify-center bg-white p-4">
-	<!-- Month Title -->
-	<h2 class="mb-6 border-b-4 border-blue-500 pb-2 text-4xl font-bold text-black">{month}</h2>
+<div class="min-h-screen flex flex-col items-center justify-center bg-white p-4">
 
-	<!-- Calendar Grid with border around the whole calendar -->
-	<div class="w-full max-w-5xl border-4 border-blue-500 p-4">
+	<h1 class = "text-6xl font-bold text-black border-b-4 border-blue-500 pb-2 mb-6 pl-6">
+		UPCOMING EVENTS</h1>
+	<!-- Month Title -->
+	<h2 class="text-4xl font-bold text-black border-b-4 border-blue-500 pb-2 mb-6">March 2025</h2>
+
+	<!-- Calendar Grid with connected grid lines -->
+	<div class="border-4 border-blue-500 p-4 w-full max-w-5xl rounded">
 		<!-- Days of the week -->
-		<div class="mb-4 grid grid-cols-7 gap-2">
-			<div class="text-center font-bold text-black">Sun</div>
-			<div class="text-center font-bold text-black">Mon</div>
-			<div class="text-center font-bold text-black">Tue</div>
-			<div class="text-center font-bold text-black">Wed</div>
-			<div class="text-center font-bold text-black">Thu</div>
-			<div class="text-center font-bold text-black">Fri</div>
-			<div class="text-center font-bold text-black">Sat</div>
+		<div class="grid grid-cols-7 text-center font-bold text-black mb-2">
+			<button class="bg-gray-400 text-white py-0.5 px-4 text-lg font-semibold w-full">Sunday</button>
+			<button class="bg-gray-400 text-white py-0.5 px-4 text-lg font-semibold w-full">Monday</button>
+			<button class="bg-gray-400 text-white py-0.5 px-4 text-lg font-semibold w-full">Tuesday</button>
+			<button class="bg-gray-400 text-white py-0.5 px-4 text-lg font-semibold w-full">Wednesday</button>
+			<button class="bg-gray-400 text-white py-0.5 px- text-lg font-semibold w-full">Thursday</button>
+			<button class="bg-gray-400 text-white py-0.5 px-4 text-lg font-semibold w-full">Friday</button>
+			<button class="bg-gray-400 text-white py-0.5 px-4 text-lg font-semibold w-full">Saturday</button>
 		</div>
 
-		<!-- Empty spaces before March 1st (March starts on a Saturday) -->
-		<div class="grid grid-cols-7 gap-2">
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
+		<!-- Calendar Grid -->
+		<div class="grid grid-cols-7 border border-gray-400 divide-x divide-y divide-gray-300">
+			<!-- Empty spaces before March 1st (March starts on Saturday) -->
+			 
+			<div></div><div></div><div></div><div></div><div></div><div></div>
 
 			<!-- Hardcoded Days -->
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				1
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				2
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				3
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				4
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				5
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				6
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				7
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				8
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				9
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				10
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				11
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				12
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				13
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				14
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				15
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				16
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				17
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				18
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				19
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				20
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				21
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				22
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				23
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				24
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				25
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				26
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				27
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				28
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				29
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				30
-			</div>
-			<div
-				class="items-top flex h-24 w-full border-2 border-blue-500 bg-white text-xl font-semibold text-black"
-			>
-				31
-			</div>
+			{#each Array(31).fill(0).map((_, i) => i + 1) as day}
+			<div class="w-full h-24 relative">
+				<!-- Blue Circle behind the number -->
+				<button class="absolute top-0 left -0 w-7 h-7 bg-blue-500 rounded-full text-black font-semibold">{day}</button>
+				
+				{#if day === 22}
+            <button class="mt-15 ml-2 px-2 py-0 w-30 bg-blue-500 text-white text-sm">
+                IEEE Meeting
+            </button>
+        {/if}
+		  </div>
+			{/each}
+			<!-- Fill remaining empty spaces -->
+		{#each Array(42 - (31 + 6)).fill(0) as _}
+		<div></div>
+		{/each}
 		</div>
 	</div>
 </div>
