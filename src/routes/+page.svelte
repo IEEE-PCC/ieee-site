@@ -104,7 +104,7 @@
 	</div>
 	<div class="flex items-center">
 		<img
-			src={base + 'images/pcc_charter_plaque.png'}
+			src={base + 'images/executive_committee.jpg'}
 			alt="IEEE Plaque"
 			class="ml-20 h-auto w-200 max-w-full rounded"
 		/>
