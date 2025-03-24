@@ -20,7 +20,7 @@
 		icon: string;
 		color: string;
 	}
-	let timeline: timeline[] = [];
+	let timeline: timeline[] = $state([]);
 
 	// Fetch timeline data from the API
 	onMount(async () => {
@@ -43,18 +43,21 @@
 	<Timeline position="alternate">
 		{#each timeline as { date, title, description, icon, color }}
 			<TimelineItem>
+				<!-- @migration-task: migrate this slot by hand, `opposite-content` is an invalid identifier -->
 				<TimelineOppositeContent slot="opposite-content">
 					<div class="">{date}</div>
 				</TimelineOppositeContent>
-				<TimelineSeparator>
-					<TimelineDot style="background-color: {color};">
+				<TimelineSeparator style={'height: 120px;'}>
+					<TimelineDot
+						style="background-color: {color}; width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; border-color: transparent;"
+					>
 						<i class={icon}></i>
 					</TimelineDot>
 					<TimelineConnector />
 				</TimelineSeparator>
 				<TimelineContent>
-					<h3>{title}</h3>
-					<p>{description}</p>
+					<h3 class="font-bold">{title}</h3>
+					<div>{description}</div>
 				</TimelineContent>
 			</TimelineItem>
 		{/each}
@@ -63,11 +66,15 @@
 		id="sub_footer"
 		class="bg-primary-500 grid min-h-148 w-full items-center justify-center px-8 md:grid-cols-3"
 	>
-		<img
-			class="place-self-center p-8"
-			src={base + '/images/pcc_charter_plaque.png'}
-			alt="a man"
-		/>
+		<div class="place-self-center p-8">
+			<div class="z-10 flex items-center justify-center">
+				<img
+					class="transition-transform duration-100"
+					src={base + '/images/pcc_charter_plaque.png'}
+					alt="a man"
+				/>
+			</div>
+		</div>
 		<div class="col-span-2 flex-col gap-6 space-y-8">
 			<Blockquote class="text-2xl text-white"
 				>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. "</Blockquote

@@ -86,7 +86,6 @@
 						</button>
 						<div class="absolute bottom-0 left-0 w-full p-1">
 							{#each eventsForDay(i) as event}
-
 								<Tooltip
 									triggerClasses="w-full max-w-full rounded-sm text-white overflow-hidden whitespace-nowrap text-ellipsis inline-block"
 									positioning={{ placement: 'top' }}
@@ -126,7 +125,6 @@
 										</div>
 									{/snippet}
 								</Tooltip>
-
 							{/each}
 						</div>
 					{/if}
