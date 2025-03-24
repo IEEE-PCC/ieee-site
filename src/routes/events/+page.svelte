@@ -25,11 +25,10 @@
 </HeroHeader>
 
 <div class="flex min-h-screen flex-col items-center justify-center p-4">
-	<h1 class="px-45 relative mb-6 flex items-center text-left text-6xl font-semibold w-full">
-		<span class="whitespace-nowrap">UPCOMING EVENTS</span>
-		<span class="ml-6 flex-1 border-t-4 border-blue-500 relative top-1"></span>
+	<h1 class="mb-6 border-b-4 border-blue-500 pb-2 pl-6 text-6xl font-bold">
+		UPCOMING EVENTS
 	</h1>
-
+	<!-- Month Title -->
 	<table class="table-fixed">
 		<tbody>
 			{#each eventsData as event}
