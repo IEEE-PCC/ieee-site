@@ -6,7 +6,7 @@
 	import type { Event } from '$lib/Calendar.svelte';
 	import { onMount } from 'svelte';
 
-	let eventsData: Event[] = [];
+	let eventsData: Event[] = $state([]);
 
 	onMount(async () => {
 		let response = await fetch(base + '/api/events');

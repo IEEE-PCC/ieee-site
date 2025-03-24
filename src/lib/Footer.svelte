@@ -3,7 +3,7 @@
 </script>
 
 <main>
-	<footer class="mt-14 bg-[#1e73ae] p-6 shadow-md">
+	<footer class="bg-[#1e73ae] p-6 shadow-md">
 		<div class="flex items-start gap-16">
 			<!-- Logo -->
 			<img
