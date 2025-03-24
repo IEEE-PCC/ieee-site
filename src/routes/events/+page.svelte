@@ -17,93 +17,54 @@
 <Navbar page="Events" />
 <HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
 	{#snippet title()}
-		<p>Content</p>
+		<p>Events</p>
 	{/snippet}
 	{#snippet description()}
-		<p>Lorem Ipsum yada yada yada</p>
+		<p>Events for all IEEE members to participate and enjoy!</p>
 	{/snippet}
 </HeroHeader>
 
-<!-- Full-page container -->
 <div class="flex min-h-screen flex-col items-center justify-center p-4">
-	<h1 class="mb-6 border-b-4 border-blue-500 pb-2 pl-6 text-6xl ">
-		UPCOMING EVENTS
+	<h1 class="px-45 relative mb-6 flex items-center text-left text-6xl font-semibold w-full">
+		<span class="whitespace-nowrap">UPCOMING EVENTS</span>
+		<span class="ml-6 flex-1 border-t-4 border-blue-500 relative top-1"></span>
 	</h1>
-	<!-- Month Title -->
-	<table class="table-fixed text-black">
+
+	<table class="table-fixed">
 		<tbody>
-			<tr>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-globe text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">Event Name</p>
-					</div>
-					PCC Student Meeting
-				</td>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-calendar-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">DATE</p>
-					</div>
-					March 22, 2025</td
-				>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-map-marker-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">LOCATION</p>
-					</div>
-					Pensacola Christian College</td
-				>
-			</tr>
-		</tbody>
-		<tbody>
-			<tr>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-globe text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">EVENT NAME</p>
-					</div>
-					PCC Student Meeting</td
-				>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-calendar-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">DATE</p>
-					</div>
-					March 22, 2025</td
-				>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-map-marker-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">LOCATION</p>
-					</div>
-					Pensacola Christian College</td
-				>
-			</tr>
-			<tr>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-globe text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">Event Name</p>
-					</div>
-					PCC Student Meeting</td
-				>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-calendar-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">DATE</p>
-					</div>
-					March 22, 2025</td
-				>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-map-marker-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">LOCATION</p>
-					</div>
-					Pensacola Christian College</td
-				>
-			</tr>
+			{#each eventsData as event}
+				<tr>
+					<td class = "w-1/2 px-6 pr-16 py-5">
+						<div class="flex items-center gap-2">
+							<i class="fas fa-globe text-xl text-blue-500"></i>
+							<p class="text-lg font-semibold">Event Name</p>
+						</div>
+						{event.title}
+					</td>
+					<td>
+						<div class="flex items-center gap-2">
+							<i class="fas fa-calendar-alt text-xl text-blue-500"></i>
+							<p class="text-lg font-semibold">DATE</p>
+						</div>
+						{event.date}
+					</td>
+					<td>
+						<div class="flex items-center gap-2">
+							<i class="fas fa-map-marker-alt text-xl text-blue-500"></i>
+							<p class="text-lg font-semibold">LOCATION</p>
+						</div>
+						{#if event.location.startsWith("http")}
+							<a href="{event.location}" target="_blank" class="text-blue-600 underline">
+								View Map
+							</a>
+						{:else}
+							{event.location}
+						{/if}
+					</td>
+				</tr>
+			{/each}
 		</tbody>
 	</table>
+	
 	<Calendar events={eventsData} />
 </div>
