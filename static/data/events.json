@@ -1,7 +1,6 @@
 [
-	{ "title": "Event 1", "date": "2025-03-15", "location": "https://www.reddit.com/r/sveltejs/comments/18pk804/serverts_for_every_api_route/" },
-	{ "title": "Event 2", "date": "2025-03-20", "location": "Lyceum" },
-	{ "title": "Event 3", "date": "2025-04-10", "location": "Lyceum" },
-	{ "title": "Officer Elections", "date": "2025-03-22", "location": "Lyceum" },
-	{ "title": "hyrnh", "date": "2025-03-22", "location": "https://www.reddit.com/r/sveltejs/comments/18pk804/serverts_for_every_api_route/" }
+	{ "title": "NWF Professional Section Meeting", "date": "2025-03-11", "location": "https://maps.app.goo.gl/URh57kARQNdwQCYd6"},
+	{ "title": "Student Officer Nominations", "date": "2025-03-22", "location": "Lyceum" },
+	{ "title": "Student Branch Meeting - Mr. Goncalves/ Embraer Aerospace", "date": "2025-04-04", "location": "Lyceum" },
+	{ "title": "Field Trip to Institute of Human and Machine Cognition", "date": "2025-04-11", "location": "https://maps.app.goo.gl/GLcdEVCWJbJ9ojbUA"}
 ]
