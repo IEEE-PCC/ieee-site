@@ -24,7 +24,7 @@
 
 	// Fetch timeline data from the API
 	onMount(async () => {
-		const response = await fetch('/api/timeline');
+		const response = await fetch(base + '/api/timeline.json');
 		timeline = await response.json();
 	});
 </script>
