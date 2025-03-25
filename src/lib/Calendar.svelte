@@ -75,7 +75,7 @@
 				<div class="relative h-24 w-full">
 					{#if isValidDay(i)}
 						<button
-							class="absolute top-0 h-7 w-7 overflow-auto rounded-full text-black {currentDay ===
+							class="absolute top-0 h-7 w-7 overflow-auto rounded-full  {currentDay ===
 								dayForIndex(i) && currentMonth === new Date().getMonth()
 								? 'bg-red-500'
 								: 'bg-blue-500'}"
@@ -122,7 +122,7 @@
 			{/each}
 		</div>
 
-		<footer class="mt-4 flex justify-between text-lg font-bold text-black">
+		<footer class="mt-4 flex justify-end gap-4 text-lg font-bold text-black">
 			<button onclick={() => changeMonth(-1)}>
 				<ArrowLeftOutline />
 			</button>
