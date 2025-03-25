@@ -7,13 +7,55 @@
 <Navbar page="About" />
 <HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
 	{#snippet title()}
-		<p>Default Content</p>
+		<h1 class="text-4xl font-bold">About Our IEEE Student Branch</h1>
 	{/snippet}
 	{#snippet description()}
-		<p>Lorem Ipsum yada yada yada</p>
+		<p class="text-xl">Empowering Future Technology Leaders</p>
 	{/snippet}
 </HeroHeader>
 <div class="container mx-auto p-6">
+	<div class="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+		<div
+			class="rounded-xl border-2 border-yellow-500 p-6 shadow-lg transition-transform hover:scale-105"
+		>
+			<h2 class="mb-4 text-2xl font-bold">CHRISTIAN WITNESS</h2>
+			<p class="text-gray-600 dark:text-gray-300">
+				Demonstrating our values through service and leadership in the engineering community, while
+				fostering an inclusive environment that respects diverse perspectives and beliefs.
+			</p>
+		</div>
+
+		<div
+			class="rounded-xl border-2 border-red-500 p-6 shadow-lg transition-transform hover:scale-105"
+		>
+			<h2 class="mb-4 text-2xl font-bold">MUTUAL SUPPORT</h2>
+			<p class="text-gray-600 dark:text-gray-300">
+				Building a strong community where members help each other grow technically and
+				professionally through mentorship, collaboration, and shared learning experiences.
+			</p>
+		</div>
+
+		<div
+			class="rounded-xl border-2 border-orange-500 p-6 shadow-lg transition-transform hover:scale-105"
+		>
+			<h2 class="mb-4 text-2xl font-bold">CAMPUS EXCITEMENT</h2>
+			<p class="text-gray-600 dark:text-gray-300">
+				Creating engaging technical events, workshops, and social activities that spark enthusiasm
+				for engineering and technology across the university community.
+			</p>
+		</div>
+
+		<div
+			class="rounded-xl border-2 border-green-500 p-6 shadow-lg transition-transform hover:scale-105"
+		>
+			<h2 class="mb-4 text-2xl font-bold">CAREER SUCCESS</h2>
+			<p class="text-gray-600 dark:text-gray-300">
+				Providing resources, networking opportunities, and professional development activities that
+				prepare members for successful careers in engineering and technology.
+			</p>
+		</div>
+	</div>
+
 	<section class="mb-12">
 		<div class="border-primary-500 rounded-xl border-t-4 p-8 shadow-lg">
 			<h2 class="text-primary-700 mb-6 flex items-center text-2xl font-bold">
