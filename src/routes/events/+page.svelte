@@ -5,12 +5,18 @@
 	import Calendar from '$lib/Calendar.svelte';
 	import type { Event } from '$lib/Calendar.svelte';
 	import { onMount } from 'svelte';
-
+	
 	let eventsData: Event[] = [];
+	let upcomingEvents: Event[] = [];  // Only upcoming events
 
 	onMount(async () => {
 		let response = await fetch(base + '/api/events');
 		eventsData = await response.json();
+
+		const today = new Date().toISOString().split('T')[0];
+		upcomingEvents = eventsData.filter(event => 
+            event.date >= today && !event.title.includes("STEM Study Hall") // ← Key change
+        );	
 	});
 </script>
 
@@ -32,7 +38,7 @@
 	<!-- Month Title -->
 	<table class="table-fixed">
 		<tbody>
-			{#each eventsData as event}
+			{#each upcomingEvents as event}
 				<tr>
 					<td class = "w-1/2 px-6 pr-16 py-5">
 						<div class="flex items-center gap-2">

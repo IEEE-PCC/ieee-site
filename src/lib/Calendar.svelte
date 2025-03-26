@@ -9,6 +9,7 @@
 		location: string;
 	}
 
+
 	interface Props {
 		events: Event[];
 	}
@@ -19,6 +20,8 @@
 	let currentDay: number = $state(new Date().getDate());
 	let showModal: boolean = $state(false);
 	let eventModal: Event = $state({ date: '', title: '', location: '' });
+
+	const todayISO = new Date().toISOString().split('T')[0];
 
 	const monthYear = $derived(
 		new Date(currentYear, currentMonth).toLocaleDateString('en-US', {
@@ -76,7 +79,8 @@
 					{#if isValidDay(i)}
 						<button
 							class="absolute top-0 h-7 w-7 overflow-auto rounded-full  {currentDay ===
-								dayForIndex(i) && currentMonth === new Date().getMonth()
+								dayForIndex(i) && currentMonth === new Date().getMonth()&&
+								currentYear === new Date().getFullYear()
 								? 'bg-red-500'
 								: 'bg-blue-500'}"
 						>
