@@ -6,10 +6,10 @@
 	import type { Event } from '$lib/Calendar.svelte';
 	import { onMount } from 'svelte';
 
-	let eventsData: Event[] = [];
+	let eventsData: Event[] = $state([]);
 
 	onMount(async () => {
-		let response = await fetch(base + '/api/events');
+		let response = await fetch(base + '/api/events.json');
 		eventsData = await response.json();
 	});
 </script>
@@ -17,93 +17,50 @@
 <Navbar page="Events" />
 <HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
 	{#snippet title()}
-		<p>Content</p>
+		<p>Events</p>
 	{/snippet}
 	{#snippet description()}
-		<p>Lorem Ipsum yada yada yada</p>
+		<p>Events for all IEEE members to participate and enjoy!</p>
 	{/snippet}
 </HeroHeader>
 
-<!-- Full-page container -->
-<div class="flex min-h-screen flex-col items-center justify-center p-4">
-	<h1 class="mb-6 border-b-4 border-blue-500 pb-2 pl-6 text-6xl font-bold text-black">
-		UPCOMING EVENTS
-	</h1>
-	<!-- Month Title -->
-	<table class="table-fixed text-black">
-		<tbody>
-			<tr>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-globe text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">Event Name</p>
-					</div>
-					PCC Student Meeting
-				</td>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-calendar-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">DATE</p>
-					</div>
-					March 22, 2025</td
-				>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-map-marker-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">LOCATION</p>
-					</div>
-					Pensacola Christian College</td
-				>
-			</tr>
-		</tbody>
-		<tbody>
-			<tr>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-globe text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">EVENT NAME</p>
-					</div>
-					PCC Student Meeting</td
-				>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-calendar-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">DATE</p>
-					</div>
-					March 22, 2025</td
-				>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-map-marker-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">LOCATION</p>
-					</div>
-					Pensacola Christian College</td
-				>
-			</tr>
-			<tr>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-globe text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">Event Name</p>
-					</div>
-					PCC Student Meeting</td
-				>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-calendar-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">DATE</p>
-					</div>
-					March 22, 2025</td
-				>
-				<td>
-					<div class="flex items-center gap-2">
-						<i class="fas fa-map-marker-alt text-xl text-blue-500"></i>
-						<p class="text-lg font-semibold">LOCATION</p>
-					</div>
-					Pensacola Christian College</td
-				>
-			</tr>
-		</tbody>
-	</table>
+<div class="min-h-screen p-6">
+	<div class="mb-6 items-center justify-center">
+		<h1 class="border-b-4 border-blue-500 pb-2 text-center text-6xl font-bold">UPCOMING EVENTS</h1>
+	</div>
+
+	<div class="overflow-x-auto pb-8">
+		<table class="mx-auto table-auto border-collapse text-left">
+			<thead>
+				<tr class="bg-gray-300 dark:bg-gray-700">
+					<th class="px-4 py-2 text-lg font-semibold">Event Name</th>
+					<th class="px-4 py-2 text-lg font-semibold">Date</th>
+					<th class="px-4 py-2 text-lg font-semibold">Location</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#each eventsData as event}
+					<tr class="border-b dark:border-gray-600">
+						<td class="px-4 py-2">{event.title}</td>
+						<td class="px-4 py-2">{event.date}</td>
+						<td class="px-4 py-2">
+							{#if event.location.startsWith('http')}
+								<a
+									href={event.location}
+									target="_blank"
+									class="text-blue-600 underline dark:text-blue-400"
+								>
+									View Map
+								</a>
+							{:else}
+								<p>{event.location}</p>
+							{/if}
+						</td>
+					</tr>
+				{/each}
+			</tbody>
+		</table>
+	</div>
+
 	<Calendar events={eventsData} />
 </div>

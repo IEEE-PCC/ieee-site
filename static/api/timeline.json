@@ -1,0 +1,44 @@
+[
+	{
+		"date": "September 27, 2024",
+		"title": "First Kickoff Meeting",
+		"description": "Our initial gathering to launch the IEEE Student Branch.",
+		"icon": "fas fa-flag",
+		"color": "#4CAF50"
+	},
+	{
+		"date": "October 25, 2024",
+		"title": "Student Officers Elections",
+		"description": "Election of student officers for the branch leadership.",
+		"icon": "fas fa-users",
+		"color": "#2196F3"
+	},
+	{
+		"date": "November 4, 2024",
+		"title": "First Executive Meeting",
+		"description": "Our first formal executive team meeting to discuss goals.",
+		"icon": "fas fa-clipboard-list",
+		"color": "#FF5722"
+	},
+	{
+		"date": "November 22, 2024",
+		"title": "First Student Led Meeting",
+		"description": "Our first meeting led by the student officers, setting goals.",
+		"icon": "fas fa-users-cog",
+		"color": "#FFEB3B"
+	},
+	{
+		"date": "December 6, 2024",
+		"title": "Charter Ceremony",
+		"description": "Charter ceremony by the Northwestern Florida Section.",
+		"icon": "fas fa-award",
+		"color": "#9C27B0"
+	},
+	{
+		"date": "February 14, 2025",
+		"title": "IEEE Website Launch",
+		"description": "Established our IEEE-hosted website.",
+		"icon": "fas fa-laptop-code",
+		"color": "#FFC107"
+	}
+]

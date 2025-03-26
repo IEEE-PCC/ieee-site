@@ -21,11 +21,11 @@
 		description: string;
 	}
 
-	let officers: Leaders = { execOfficers: [], committeeOfficers: [], councilor: [] };
+	let officers: Leaders = $state({ execOfficers: [], committeeOfficers: [], councilor: [] });
 
 	// Fetch the JSON officer data
 	onMount(async () => {
-		const response = await fetch('/api/officers');
+		const response = await fetch(base + '/api/officers.json');
 		officers = (await response.json()) as Leaders;
 	});
 </script>
