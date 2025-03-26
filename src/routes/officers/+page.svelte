@@ -25,7 +25,7 @@
 
 	// Fetch the JSON officer data
 	onMount(async () => {
-		const response = await fetch('/api/officers');
+		const response = await fetch(base + '/api/officers.json');
 		officers = (await response.json()) as Leaders;
 	});
 </script>

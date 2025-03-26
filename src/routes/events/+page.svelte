@@ -9,7 +9,7 @@
 	let eventsData: Event[] = $state([]);
 
 	onMount(async () => {
-		let response = await fetch(base + '/api/events');
+		let response = await fetch(base + '/api/events.json');
 		eventsData = await response.json();
 	});
 </script>
