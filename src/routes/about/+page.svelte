@@ -57,7 +57,7 @@
 	</div>
 
 	<section class="mb-12">
-		<div class="border-primary-500 rounded-xl border-t-4 p-8 shadow-lg">
+		<div class="border-primary-500 rounded-xl border-t-4 p-8 dark:inset-shadow-sm inset-shadow-primary-500 shadow shadow-primary-500">
 			<h2 class="text-primary-700 mb-6 flex items-center text-2xl font-bold">
 				<span class="mr-2">
 					<i class="fas fa-info-circle"></i>
@@ -76,7 +76,7 @@
 	</section>
 
 	<section class="mb-12">
-		<div class="border-secondary-500 rounded-xl border-t-4 p-8 shadow-lg">
+		<div class="border-secondary-500 rounded-xl border-t-4 p-8 dark:inset-shadow-sm inset-shadow-secondary-500 shadow shadow-secondary-500">
 			<h2 class="text-secondary-700 mb-6 flex items-center text-2xl font-bold">
 				<span class="mr-2">
 					<i class="fas fa-users"></i>
@@ -94,7 +94,7 @@
 	</section>
 
 	<section class="mb-12">
-		<div class="border-tertiary-500 rounded-xl border-t-4 p-8 shadow-lg">
+		<div class="border-tertiary-500 rounded-xl border-t-4 p-8 dark:inset-shadow-sm inset-shadow-tertiary-500 shadow shadow-tertiary-500">
 			<h2 class="text-tertiary-700 mb-6 flex items-center text-2xl font-bold">
 				<span class="mr-2">
 					<i class="fas fa-tasks"></i>
@@ -114,7 +114,7 @@
 	</section>
 
 	<section class="mb-12">
-		<div class="border-success-500 rounded-xl border-t-4 p-8 shadow-lg">
+		<div class="border-success-500 rounded-xl border-t-4 p-8 dark:inset-shadow-sm inset-shadow-success-500 shadow shadow-success-500">
 			<h2 class="text-success-700 mb-6 flex items-center text-2xl font-bold">
 				<span class="mr-2">
 					<i class="fas fa-sign-in-alt"></i>
