@@ -8,7 +8,8 @@
 		{ name: 'Home', path: '/' },
 		{ name: 'Events', path: '/events' },
 		{ name: 'Officers', path: '/officers' },
-		{ name: 'About', path: '/about' }
+		{ name: 'About', path: '/about' },
+		{ name: 'History', path: '/history' }
 	];
 	let menuOpen = $state(false);
 	let darkMode = $state(false);
