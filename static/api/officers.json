@@ -6,7 +6,7 @@
 			"year": "Junior",
 			"major": "Mechanical Engineering",
 			"imageUrl": "/officers/alexanderJackson.jpg",
-			"description": "Provides direction, manages non-delegated tasks, appoints committee chairs, oversees information transfer post-elections, and is ultimately responsible for the branch's success."
+			"description": "The Branch Chair provides vision and direction to the branch through bold leadership."
 		},
 		{
 			"name": "Sebastien Pruneau",
@@ -14,7 +14,7 @@
 			"year": "Senior",
 			"major": "Mechanical Engineering & Electrical Engineering",
 			"imageUrl": "/officers/sebastienPruneau.jpg",
-			"description": "Oversees the day-to-day operations and manages committees by providing support and accountability, allowing the Chair to pursue new initiatives."
+			"description": "The Vice Chair manages regular branch operations in support of the Branch Chair."
 		},
 		{
 			"name": "Rachel la Madrid",
@@ -22,7 +22,7 @@
 			"year": "Senior",
 			"major": "Computer Science",
 			"imageUrl": "/officers/rachelMadrid.jpg",
-			"description": "."
+			"description": "The Secretary serves as the knowledge bank and chief correspondent of the Executive Committee."
 		},
 		{
 			"name": "Elizabeth Horn",
@@ -30,7 +30,7 @@
 			"year": "Freshman",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/elizabethHorn.jpg",
-			"description": "Passionate about user experience."
+			"description": "The Secretary serves as the knowledge bank and chief correspondent of the Executive Committee."
 		},
 		{
 			"name": "Anthony Hurlston",
@@ -38,7 +38,7 @@
 			"year": "Junior",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/anthonyHurlston.jpg",
-			"description": "Anthony Hurlston budgets branch activities and is in charge of managing the branch funds. If you want to get on his good side, please offer him a can of Black Cherry Soda!"
+			"description": "The Treasurer is responsible for managing funds and conducting fundraising for the branch."
 		},
 		{
 			"name": "Yuzuria Liu",
@@ -46,7 +46,7 @@
 			"year": "Junior",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/yuzuriaLiu.jpg",
-			"description": "Finds patterns in chaos."
+			"description": "The Activities Director organizes and handles logistics for branch events while also serving as a hospitality host to branch guests."
 		},
 		{
 			"name": "Isaac Castor",
@@ -54,7 +54,7 @@
 			"year": "Sophomore",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/isaacCastor.jpg",
-			"description": "Creates engaging campaigns."
+			"description": "The Chaplain Provides spiritual support to our branch while keeping the Executive Committee focused on our mission."
 		}
 	],
 	"committeeOfficers": [
