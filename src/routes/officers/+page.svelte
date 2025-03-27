@@ -35,10 +35,10 @@
 <!-- Blurry blue header -->
 <HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
 	{#snippet title()}
-		<p>Officers</p>
+		<div>Officers</div>
 	{/snippet}
 	{#snippet description()}
-		<p>Meet your IEEE PCC Student Branch Officers!</p>
+		<div>Meet your IEEE PCC Student Branch Officers!</div>
 	{/snippet}
 </HeroHeader>
 
@@ -52,7 +52,7 @@
 		<div class="bg-primary-500 mr-42 mb-5 h-2 flex-grow rounded"></div>
 	</div>
 	<div
-		class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 md:px-20 lg:grid-cols-4 lg:px-40"
+		class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 md:px-20 lg:grid-cols-3 lg:px-40"
 	>
 		{#each officers.execOfficers as execOfficer}
 			<ExecutiveNameCard
@@ -63,7 +63,7 @@
 				imageUrl={execOfficer.imageUrl}
 			>
 				{#snippet description()}
-					<p>{execOfficer.description}</p>
+					<div>{execOfficer.description}</div>
 				{/snippet}
 			</ExecutiveNameCard>
 		{/each}

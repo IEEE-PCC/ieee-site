@@ -17,11 +17,13 @@
 
 	<!-- Content Box -->
 	<div
-		class="relative box-border rounded-4xl border-8 border-white text-center shadow-lg lg:h-120 lg:w-350 dark:border-white"
+		class="relative box-border h-120 w-350 rounded-4xl border-6 border-white text-center shadow-lg dark:border-white"
 	>
-		<div class="font-arial mt-40 text-6xl font-bold">{@render title?.()}</div>
-		<div class="font-arial text-lg font-semibold">
-			{@render description?.()}
+		<div class="relative h-screen items-center justify-center">
+			<div class="font-arial mt-40 text-6xl font-bold">{@render title?.()}</div>
+			<div class="font-arial text-lg font-semibold">
+				{@render description?.()}
+			</div>
 		</div>
 	</div>
 </div>
