@@ -48,6 +48,7 @@
 		"@tailwindcss/vite": "^4.0.14",
 		"clsx": "^2.1.1",
 		"fontawesome-free": "^1.0.4",
+		"leaflet": "^1.9.4",
 		"prettier-plugin-tailwindcss": "^0.6.11",
 		"svelte-motion": "^0.12.2",
 		"tailwind-merge": "^3.0.2"
