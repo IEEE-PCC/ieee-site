@@ -64,60 +64,6 @@
 						</li>
 					</ul>
 				</li>
-				<li>
-					<strong>Program Committee</strong>
-					<ul>
-						<li>
-							The Program committee plans and hosts all regular branch meetings and some regular
-							branch events. The program committee is responsible for all arrangements for these
-							meetings and for conducting regular advertisements related to these activities.
-						</li>
-					</ul>
-				</li>
-				<li>
-					<strong>Publicity Committee</strong>
-					<ul>
-						<li>
-							The Publicity Committee is a team specializing in writing and graphical art that
-							focuses on polishing our branch aesthetics. The publicity committee is also
-							responsible for increasing public awareness of our branch by conducting special
-							advertising campaigns, by writing articles, and by creating promotional materials.
-						</li>
-					</ul>
-				</li>
-				<li>
-					<strong>Membership Committee</strong>
-					<ul>
-						<li>
-							The Membership Committee serves our members on a more personal level by operating our
-							member support activities such as our STEM study hall. The Membership Committee also
-							serves as the branch recruitment wing by representing the branch at college events.
-						</li>
-					</ul>
-				</li>
-				<li>
-					<strong>History Committee</strong>
-					<ul>
-						<li>
-							The History committee is dedicated to preserving our story for future generations of
-							students. The committee gathers, writes, and stores records of branch activities. The
-							History Committee is also responsible for writing an ongoing narrative history of the
-							branch.
-						</li>
-					</ul>
-				</li>
-				<li>
-					<strong>Prayer Committee</strong>
-					<ul>
-						<li>
-							The Prayer Committee is the power source of all branch efforts. We believe firmly in a
-							personal God who created the universe, earth, and humanity. As a team of Christians,
-							our prayer committee is tasked with organizing dedicated times to ask our God for
-							wisdom, strength, and help as we seek to advance technology for the benefit of
-							humanity.
-						</li>
-					</ul>
-				</li>
 			</ul>
 		</div>
 	</div>
