@@ -33,7 +33,10 @@
 				<p>WELCOME TO THE</p>
 			</div>
 			<div class="mb-4 text-5xl font-bold">
-				<p>IEEE PCC STUDENT BRANCH</p>
+				<p>Pensacola Christian College</p>
+			</div>
+			<div class="mb-4 text-5xl font-bold">
+				<p>IEEE STUDENT BRANCH</p>
 			</div>
 		{/snippet}
 		{#snippet description()}
@@ -81,7 +84,7 @@
 		{/snippet}
 		{#snippet description()}
 			<div class="mt-5 justify-center text-lg font-semibold">
-				<p>Want to see who runs the IEEE PCC Student Branch and how they do it?</p>
+				<p>Want to see who runs the Student Branch and how they do it?</p>
 				<p>Click the button below to meet them!</p>
 			</div>
 			<div class="flex justify-center">
