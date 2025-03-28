@@ -6,7 +6,7 @@
 			"year": "Junior",
 			"major": "Mechanical Engineering",
 			"imageUrl": "/officers/alexanderJackson.jpg",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna."
+			"description": "The Branch Chair provides vision and direction to the branch through bold leadership."
 		},
 		{
 			"name": "Sebastien Pruneau",
@@ -14,7 +14,7 @@
 			"year": "Senior",
 			"major": "Mechanical Engineering & Electrical Engineering",
 			"imageUrl": "/officers/sebastienPruneau.jpg",
-			"description": "Lorem, ipsum dolor sit amet."
+			"description": "The Vice Chair manages regular branch operations in support of the Branch Chair."
 		},
 		{
 			"name": "Rachel la Madrid",
@@ -22,7 +22,7 @@
 			"year": "Senior",
 			"major": "Computer Science",
 			"imageUrl": "/officers/rachelMadrid.jpg",
-			"description": "Expert in agile workflows."
+			"description": "The Secretary serves as the knowledge bank and chief correspondent of the Executive Committee."
 		},
 		{
 			"name": "Elizabeth Horn",
@@ -30,7 +30,7 @@
 			"year": "Freshman",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/elizabethHorn.jpg",
-			"description": "Passionate about user experience."
+			"description": "The Secretary serves as the knowledge bank and chief correspondent of the Executive Committee."
 		},
 		{
 			"name": "Anthony Hurlston",
@@ -38,7 +38,7 @@
 			"year": "Junior",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/anthonyHurlston.jpg",
-			"description": "Anthony Hurlston budgets branch activities and is in charge of managing the branch funds. If you want to get on his good side, please offer him a can of Black Cherry Soda!"
+			"description": "The Treasurer is responsible for managing funds and conducting fundraising for the branch."
 		},
 		{
 			"name": "Yuzuria Liu",
@@ -46,7 +46,7 @@
 			"year": "Junior",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/yuzuriaLiu.jpg",
-			"description": "Finds patterns in chaos."
+			"description": "The Activities Director organizes and handles logistics for branch events while also serving as a hospitality host to branch guests."
 		},
 		{
 			"name": "Isaac Castor",
@@ -54,49 +54,49 @@
 			"year": "Sophomore",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/isaacCastor.jpg",
-			"description": "Creates engaging campaigns."
+			"description": "The Chaplain provides spiritual support to our branch while keeping the Executive Committee focused on our mission."
 		}
 	],
 	"committeeOfficers": [
 		{
 			"name": "Gabriel Cioroch",
-			"jobTitle": "Program Committee Chair",
+			"jobTitle": "Program Committee",
 			"year": "Senior",
 			"major": "Mechanical Engineering",
 			"imageUrl": "/officers/gabrielCioroch.jpg",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+			"description": "The Program Committee plans and hosts all regular branch meetings and some regular branch events. The program committee is responsible for all arrangements for these meetings and for conducting regular advertisements related to these activities."
 		},
 		{
 			"name": "Amelia Wu",
-			"jobTitle": "Publicity Committee Chair",
+			"jobTitle": "Publicity Committee",
 			"year": "Freshman",
 			"major": "Cybersecurity",
 			"imageUrl": "/officers/ameliaWu.jpg",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+			"description": "The Publicity Committee is a team specializing in writing and graphical art that focuses on polishing our branch aesthetics. The publicity committee is also responsible for increasing public awareness of our branch by conducting special advertising campaigns, by writing articles, and by creating promotional materials."
 		},
 		{
 			"name": "Christopher Nabeta",
-			"jobTitle": "Membership Committee Chair",
+			"jobTitle": "Membership Committee",
 			"year": "Junior",
 			"major": "Mechanical Engineering",
 			"imageUrl": "/officers/christopherNabeta.jpg",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+			"description": "The Membership Committee serves our members on a more personal level by operating our member support activities such as our STEM study hall. The Membership Committee also serves as the branch recruitment wing by representing the branch at college events."
 		},
 		{
 			"name": "Amber Wong",
-			"jobTitle": "History Committee Chair",
+			"jobTitle": "History Committee ",
 			"year": "Sophomore",
 			"major": "Mechanical Engineering",
 			"imageUrl": "/officers/amberWong.jpg",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+			"description": "The History committee is dedicated to preserving our story for future generations of students. The committee gathers, writes, and stores records of branch activities. The History Committee is also responsible for writing an ongoing narrative history of the branch."
 		},
 		{
 			"name": "Christian Kahnke",
-			"jobTitle": "Prayer Committee Chair",
+			"jobTitle": "Prayer Committee",
 			"year": "Senior",
 			"major": "Computer Science",
 			"imageUrl": "/officers/christianKahnke.jpg",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+			"description": "The Prayer Committee is the power source of all branch efforts. We believe firmly in a personal God who created the universe, earth, and humanity. As a team of Christians, our prayer committee is tasked with organizing dedicated times to ask our God for wisdom, strength, and help as we seek to advance technology for the benefit of humanity."
 		}
 	],
 	"councilor": [

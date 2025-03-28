@@ -20,7 +20,7 @@
 	}: Props = $props();
 </script>
 
-<div class="border-primary-500 max-w-xs rounded rounded-lg border-3 shadow-lg">
+<div class="border-primary-500 max-w-sm rounded rounded-lg border-3 shadow-lg">
 	<div class="flex h-30 w-full items-center justify-center">
 		<!-- Placeholder for profile picture -->
 		<div class="relative mt-15 flex w-25 items-center justify-center">
@@ -36,7 +36,7 @@
 	<div class="items-center px-8 py-2">
 		<p class="py-1"><strong>YEAR:</strong> {year}</p>
 		<p class="py-1"><strong>MAJOR:</strong> {major}</p>
-		<p class="py-1"><strong>BIO:</strong> {@render description?.()}</p>
+		<p class="py-1"><strong>DESCRIPTION:</strong> {@render description?.()}</p>
 		<br />
 	</div>
 </div>
