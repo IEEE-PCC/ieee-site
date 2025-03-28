@@ -22,7 +22,6 @@
 	}
 
 	let officers: Leaders = $state({ execOfficers: [], committeeOfficers: [], councilor: [] });
-	let isOpen = false;
 
 	// Fetch the JSON officer data
 	onMount(async () => {
