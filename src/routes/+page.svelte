@@ -11,7 +11,7 @@
 	const increment = 3;
 
 	onMount(async () => {
-		const response = await fetch(base + '/api/events');
+		const response = await fetch(base + '/api/events.json');
 		records = await response.json();
 		displayedRecords = records.slice(0, 3); // Select the top three events
 	});
@@ -55,27 +55,21 @@
 </div>
 
 <!-- Event Highlights Section -->
-<div class="flex items-center">
+<div class="flex items-center justify-center pb-4">
 	<h2 class="text-primary-500 mr-4 mb-8 ml-20 text-4xl font-bold font-bold">Event Highlights</h2>
 	<div class="bg-primary-500 mr-20 mb-5 h-2 flex-grow rounded"></div>
 </div>
+<div class="flex flex-col items-center">
+	<div></div>
 
-<div>
-	{#each displayedRecords as eventRecord}
-		<EventHighlight
-			title={eventRecord.title}
-			date={eventRecord.date}
-			location={eventRecord.location}
-		></EventHighlight>
-	{/each}
+	<EventHighlight eventsData={displayedRecords} />
+	<button
+		class="bg-primary-500 hover:bg-primary-700 mt-4 ml-20 w-35 justify-center self-center py-2 font-bold text-white"
+		on:click={loadMore}
+	>
+		View More
+	</button>
 </div>
-
-<button
-	class="bg-primary-500 hover:bg-primary-700 mt-4 ml-20 w-35 py-2 font-bold text-white"
-	on:click={loadMore}
->
-	View More
-</button>
 
 <div class="mt-40">
 	<HeroHeader bg_image={base + '/images/coding_people.jpg'}>
