@@ -20,7 +20,7 @@
 		<p>Events</p>
 	{/snippet}
 	{#snippet description()}
-		<p>Events for all IEEE members to participate and enjoy!</p>
+		<p>Events for all students to participate and enjoy!</p>
 	{/snippet}
 </HeroHeader>
 

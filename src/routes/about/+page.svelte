@@ -13,7 +13,7 @@
 <Navbar page="About" />
 <HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
 	{#snippet title()}
-		<h1 class="text-4xl font-bold">About Our IEEE Student Branch</h1>
+		<h1 class="text-4xl font-bold">About Our Student Branch</h1>
 	{/snippet}
 	{#snippet description()}
 		<p class="text-xl">Empowering Future Technology Leaders</p>
@@ -47,7 +47,7 @@
 			<h2 class="mb-4 text-2xl font-bold">CAMPUS EXCITEMENT</h2>
 			<p class="text-gray-600 dark:text-gray-300">
 				Creating engaging technical events, workshops, and social activities that spark enthusiasm
-				for engineering and technology across the university community.
+				for engineering and technology across the campus community.
 			</p>
 		</div>
 
