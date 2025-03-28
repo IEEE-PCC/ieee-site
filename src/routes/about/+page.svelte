@@ -19,6 +19,12 @@
 		<p class="text-xl">Empowering Future Technology Leaders</p>
 	{/snippet}
 </HeroHeader>
+
+<div class="flex items-center">
+	<h2 class="text-primary-500 mr-4 mb-8 ml-20 text-4xl font-bold font-bold">Our Vision</h2>
+	<div class="bg-primary-500 mr-20 mb-5 h-2 flex-grow rounded"></div>
+</div>
+
 <div class="container mx-auto p-6">
 	<div class="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
 		<div
