@@ -38,7 +38,7 @@
 		<div>Officers</div>
 	{/snippet}
 	{#snippet description()}
-		<div>Meet your IEEE PCC Student Branch Officers!</div>
+		<div>Meet your Student Branch Officers!</div>
 	{/snippet}
 </HeroHeader>
 
