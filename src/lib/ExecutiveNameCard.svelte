@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Avatar } from '@skeletonlabs/skeleton-svelte';
+	import { base } from '$app/paths';
 
 	interface Props {
 		name?: string;
@@ -7,6 +8,8 @@
 		year?: string;
 		major?: string;
 		imageUrl?: string;
+		linkedIn?: string;
+		email?: string;
 		description?: import('svelte').Snippet;
 	}
 
@@ -16,6 +19,8 @@
 		year = '',
 		major = '',
 		imageUrl = '',
+		linkedIn = '',
+		email = '',
 		description
 	}: Props = $props();
 </script>
@@ -33,10 +38,21 @@
 		{name}
 		<p class="text-primary-500">{jobTitle}</p>
 	</div>
-	<div class="items-center px-8 py-2">
+	<div class="mx-auto block w-max">
+		<a href={'mailto:' + email} class="inline-block" aria-hidden="true">
+			<button class="h-10 w-10 font-bold" aria-hidden="true">
+				<i class="fas fa-envelope fa-lg text-primary-500"></i>
+			</button>
+		</a>
+		<a href={linkedIn} class="inline-block" aria-hidden="true">
+			<button class="h-10 w-10 font-bold" aria-hidden="true">
+				<i class="fab fa-linkedin fa-lg text-primary-500"></i>
+			</button>
+		</a>
+	</div>
+	<div class="mb-5 items-center px-8 py-2">
 		<p class="py-1"><strong>YEAR:</strong> {year}</p>
 		<p class="py-1"><strong>MAJOR:</strong> {major}</p>
 		<p class="py-1"><strong>DESCRIPTION:</strong> {@render description?.()}</p>
-		<br />
 	</div>
 </div>

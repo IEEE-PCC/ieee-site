@@ -18,6 +18,8 @@
 		year: string;
 		major: string;
 		imageUrl: string;
+		linkedIn: string;
+		email: string;
 		description: string;
 	}
 
@@ -87,6 +89,8 @@
 				year={execOfficer.year}
 				major={execOfficer.major}
 				imageUrl={execOfficer.imageUrl}
+				linkedIn={execOfficer.linkedIn}
+				email={execOfficer.email}
 			>
 				{#snippet description()}
 					<div>{execOfficer.description}</div>
@@ -135,6 +139,8 @@
 					year={councilor.year}
 					major={councilor.major}
 					imageUrl={councilor.imageUrl}
+					linkedIn={councilor.linkedIn}
+					email={councilor.email}
 				>
 					{#snippet description()}
 						<p>{councilor.description}</p>
