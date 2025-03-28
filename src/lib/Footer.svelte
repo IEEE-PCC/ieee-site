@@ -3,45 +3,76 @@
 </script>
 
 <main>
-	<footer class="bg-[#1e73ae] p-10 shadow-lg">
-		<div class="grid grid-cols-1 gap-8 text-white sm:grid-cols-3">
+	<footer class="bg-[#1e73ae] p-10 text-white shadow-lg">
+		<div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
 			<!-- Logo and Description -->
-			<div>
+			<div class="flex flex-col items-center sm:items-start">
 				<img src="{base}/images/ieee-mb-white.png" alt="IEEE Logo" class="mb-4 h-24" />
-				<p class="text-sm leading-relaxed">
+				<p class="text-center text-sm leading-relaxed sm:text-left">
 					IEEE Student Branch – Empowering future engineers through innovation, learning, and
 					professional development.
 				</p>
 			</div>
 
 			<!-- Quick Links -->
-			<div>
+			<div class="flex flex-col items-center sm:items-start">
 				<h3 class="mb-3 text-lg font-semibold">Quick Links</h3>
 				<ul class="space-y-2 text-sm">
-					<li><a href="/" class="hover:underline">Home</a></li>
-					<li><a href="{base}/calendar" class="hover:underline">Calendar</a></li>
-					<li><a href="{base}/officers" class="hover:underline">Officers</a></li>
-					<li><a href="{base}/about" class="hover:underline">About</a></li>
-					<li><a href="{base}/membership" class="hover:underline">Membership</a></li>
+					<li>
+						<a
+							href="{base}/"
+							class="transition-all duration-200 hover:text-gray-300 hover:underline">Home</a
+						>
+					</li>
+					<li>
+						<a
+							href="{base}/calendar"
+							class="transition-all duration-200 hover:text-gray-300 hover:underline">Calendar</a
+						>
+					</li>
+					<li>
+						<a
+							href="{base}/officers"
+							class="transition-all duration-200 hover:text-gray-300 hover:underline">Officers</a
+						>
+					</li>
+					<li>
+						<a
+							href="{base}/about"
+							class="transition-all duration-200 hover:text-gray-300 hover:underline">About</a
+						>
+					</li>
+					<li>
+						<a
+							href="{base}/history"
+							class="transition-all duration-200 hover:text-gray-300 hover:underline">History</a
+						>
+					</li>
 				</ul>
 			</div>
 
 			<!-- Contact Info and Social Media -->
-			<div>
+			<div class="flex flex-col items-center sm:items-start">
 				<h3 class="mb-3 text-lg font-semibold">Contact</h3>
 				<ul class="space-y-1 text-sm">
 					<li>250 Brent Lane, Pensacola, FL 32503</li>
-					<li>(123) 146-7890</li>
-					<li><a href="mailto:email@email.com" class="hover:underline">email@email.com</a></li>
+					<li>
+						<a
+							href="mailto:email@email.com"
+							class="transition-all duration-200 hover:text-gray-300 hover:underline"
+							>pcc.ieee@gmail.com</a
+						>
+					</li>
 				</ul>
 				<div class="mt-4">
 					<h3 class="mb-3 text-lg font-semibold">Follow Us</h3>
-					<div class="flex space-x-4">
-						<a href="#" aria-label="Discord" class="hover:text-gray-300">
+					<div class="flex space-x-6">
+						<a
+							href="https://discord.gg/yuGwMKaPAJ"
+							aria-label="Discord"
+							class="transition-all duration-200 hover:text-gray-300"
+						>
 							<i class="fa-brands fa-discord fa-xl"></i>
-						</a>
-						<a href="#" aria-label="Instagram" class="hover:text-gray-300">
-							<i class="fa-brands fa-instagram fa-xl"></i>
 						</a>
 					</div>
 				</div>
@@ -50,7 +81,7 @@
 
 		<!-- Copyright -->
 		<p class="mt-8 border-t border-white/20 pt-4 text-center text-xs text-white">
-			© 2025 IEEE Student Branch – All rights reserved.
+			© 2025 PCC Student Branch of IEEE – All rights reserved.
 		</p>
 	</footer>
 </main>
