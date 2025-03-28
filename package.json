@@ -28,7 +28,7 @@
 		"flowbite": "^3.1.2",
 		"flowbite-svelte": "^0.48.4",
 		"flowbite-svelte-icons": "^2.0.3",
-		"globals": "^15.0.0",
+		"globals": "^16.0.0",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.2.6",
 		"svelte": "^5.23.0",
