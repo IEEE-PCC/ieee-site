@@ -39,14 +39,14 @@
 		<p class="text-primary-500">{jobTitle}</p>
 	</div>
 	<div class="mx-auto block w-max">
-		<a href={'mailto:' + email} class="inline-block">
-			<button class="h-10 w-10 bg-white font-bold text-white">
-				<img src={base + '/images/emailIcon.png'} alt="Email Logo" />
+		<a href={'mailto:' + email} class="inline-block" aria-hidden="true">
+			<button class="h-10 w-10 font-bold" aria-hidden="true">
+				<i class="fas fa-envelope fa-lg text-primary-500"></i>
 			</button>
 		</a>
-		<a href={linkedIn} class="inline-block">
-			<button class="h-10 w-10 bg-white font-bold text-white">
-				<img src={base + '/images/linkedInLogo.png'} alt="Linked In Logo" />
+		<a href={linkedIn} class="inline-block" aria-hidden="true">
+			<button class="h-10 w-10 font-bold" aria-hidden="true">
+				<i class="fab fa-linkedin fa-lg text-primary-500"></i>
 			</button>
 		</a>
 	</div>
