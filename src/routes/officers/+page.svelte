@@ -35,12 +35,38 @@
 <!-- Blurry blue header -->
 <HeroHeader bg_image={base + '/images/circuit_board.jpg'}>
 	{#snippet title()}
-		<p>Officers</p>
+		<div>Officers</div>
 	{/snippet}
 	{#snippet description()}
-		<p>Meet your IEEE PCC Student Branch Officers!</p>
+		<div>Meet your IEEE PCC Student Branch Officers!</div>
 	{/snippet}
 </HeroHeader>
+
+<!-- Branch Committee Explanations -->
+<section class="mr-40 mb-12 ml-40">
+	<div class="border-primary-500 rounded-xl border-t-4 p-8 shadow-lg">
+		<h2 class="text-primary-700 mb-6 flex items-center text-2xl font-bold">
+			<span class="mr-2">
+				<i class="fas fa-info-circle"></i>
+			</span>
+			WHAT ARE THE BRANCH COMMITTEES?
+		</h2>
+		<div class="prose dark:prose-invert max-w-none">
+			<ul>
+				<li>
+					<strong>Executive Committee</strong>
+					<ul>
+						<li>
+							The Executive Committee is the governing body of the branch and is comprised of the
+							elected branch officers. The Executive Committee determines the direction of the
+							branch in accordance with our four-fold vision.
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
 
 <!-- Executive Committee Chairs Section -->
 <section class="mb-12">
@@ -52,7 +78,7 @@
 		<div class="bg-primary-500 mr-42 mb-5 h-2 flex-grow rounded"></div>
 	</div>
 	<div
-		class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 md:px-20 lg:grid-cols-4 lg:px-40"
+		class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 md:px-20 lg:grid-cols-3 lg:px-40"
 	>
 		{#each officers.execOfficers as execOfficer}
 			<ExecutiveNameCard
@@ -63,7 +89,7 @@
 				imageUrl={execOfficer.imageUrl}
 			>
 				{#snippet description()}
-					<p>{execOfficer.description}</p>
+					<div>{execOfficer.description}</div>
 				{/snippet}
 			</ExecutiveNameCard>
 		{/each}
@@ -78,38 +104,6 @@
 		<h2 class="text-primary-500 mr-4 mb-8 ml-40 text-4xl font-bold font-bold">Committee Chairs</h2>
 		<div class="bg-primary-500 mr-42 mb-5 h-2 flex-grow rounded"></div>
 	</div>
-
-	<section class="mr-40 mb-12 ml-40">
-		<div class="border-primary-500 rounded-xl border-t-4 p-8 shadow-lg">
-			<h2 class="text-primary-700 mb-6 flex items-center text-2xl font-bold">
-				<span class="mr-2">
-					<i class="fas fa-info-circle"></i>
-				</span>
-				WHAT ARE COMMITTEE CHAIRS?
-			</h2>
-			<div class="prose dark:prose-invert max-w-none">
-				<ul>
-					<li><strong>Program Committee</strong> - Plans and hosts IEEE meetings.</li>
-					<li>
-						<strong>Publicity Committee</strong> - Designs the aesthetics and publicizes the branch.
-					</li>
-					<li>
-						<strong>Membership Committee</strong> - Supports student efforts such as study halls and
-						other questions a member might have about the IEEE PCC branch.
-					</li>
-					<li>
-						<strong>History Committee</strong> - Keeps everything the IEEE PCC branch has done preserved
-						and within the archives.
-					</li>
-					<li>
-						<strong>Prayer Committee</strong> - Keeps the whole IEEE PCC branch together and offers support
-						of the kind that only God can provide.
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-
 	<div class="grid grid-cols-1 gap-6 sm:px-10 md:px-20 lg:px-40">
 		{#each officers.committeeOfficers as committeeOfficer}
 			<CommitteeNameCard
