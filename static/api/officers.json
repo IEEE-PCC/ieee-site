@@ -6,6 +6,8 @@
 			"year": "Junior",
 			"major": "Mechanical Engineering",
 			"imageUrl": "/officers/alexanderJackson.jpg",
+			"linkedIn": "https://www.linkedin.com/in/alexander-jackson-a4a05933b/",
+			"email": "alexander.jackson@ieee.org",
 			"description": "The Branch Chair provides vision and direction to the branch through bold leadership."
 		},
 		{
@@ -14,6 +16,8 @@
 			"year": "Senior",
 			"major": "Mechanical Engineering & Electrical Engineering",
 			"imageUrl": "/officers/sebastienPruneau.jpg",
+			"linkedIn": "https://www.linkedin.com/in/sebastien-z/",
+			"email": "spruneau@ieee.org",
 			"description": "The Vice Chair manages regular branch operations in support of the Branch Chair."
 		},
 		{
@@ -22,6 +26,8 @@
 			"year": "Senior",
 			"major": "Computer Science",
 			"imageUrl": "/officers/rachelMadrid.jpg",
+			"linkedIn": "https://www.linkedin.com/in/rlmadridvelez",
+			"email": "rmadrid@ieee.org",
 			"description": "The Secretary serves as the knowledge bank and chief correspondent of the Executive Committee."
 		},
 		{
@@ -30,6 +36,8 @@
 			"year": "Freshman",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/elizabethHorn.jpg",
+			"linkedIn": "https://www.linkedin.com/in/elizabeth-horne",
+			"email": "elizabeth.horne@ieee.org",
 			"description": "The Secretary serves as the knowledge bank and chief correspondent of the Executive Committee."
 		},
 		{
@@ -38,6 +46,8 @@
 			"year": "Junior",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/anthonyHurlston.jpg",
+			"linkedIn": "https://www.linkedin.com/in/anthony-hurlston",
+			"email": "anthonyhurlston@ieee.org",
 			"description": "The Treasurer is responsible for managing funds and conducting fundraising for the branch."
 		},
 		{
@@ -46,6 +56,8 @@
 			"year": "Junior",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/yuzuriaLiu.jpg",
+			"linkedIn": "https://www.linkedin.com/in/shuhan-liu-yuzu58/",
+			"email": "yuzuria.liu@ieee.org",
 			"description": "The Activities Director organizes and handles logistics for branch events while also serving as a hospitality host to branch guests."
 		},
 		{
@@ -54,6 +66,8 @@
 			"year": "Sophomore",
 			"major": "Electrical Engineering",
 			"imageUrl": "/officers/isaacCastor.jpg",
+			"linkedIn": "officers",
+			"email": "isaac.castor@ieee.org",
 			"description": "The Chaplain provides spiritual support to our branch while keeping the Executive Committee focused on our mission."
 		}
 	],
@@ -106,7 +120,9 @@
 			"year": "He's done with school!",
 			"major": "Engineering Broski",
 			"imageUrl": "/officers/josephCoffey.jpg",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue"
+			"linkedIn": "https://www.linkedin.com/in/josephcoffey/",
+			"email": "jcoffey.jc55@gmail.com",
+			"description": "The branch councilor supports our branch by providing guidance to branch leadership, by assisting branch efforts to collaborate with our college, and by providing a crucial connection to the North-West Florida professional section."
 		}
 	]
 }
