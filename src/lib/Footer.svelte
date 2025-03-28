@@ -3,49 +3,54 @@
 </script>
 
 <main>
-	<footer class="bg-[#1e73ae] p-6 shadow-md">
-		<div class="flex items-start gap-16">
-			<!-- Logo -->
-			<img
-				src="{base}/images/ieee-mb-white.png"
-				alt="ieee-mb-white"
-				class="h-32 justify-self-start pr-8"
-			/>
+	<footer class="bg-[#1e73ae] p-10 shadow-lg">
+		<div class="grid grid-cols-1 gap-8 text-white sm:grid-cols-3">
+			<!-- Logo and Description -->
+			<div>
+				<img src="{base}/images/ieee-mb-white.png" alt="IEEE Logo" class="mb-4 h-24" />
+				<p class="text-sm leading-relaxed">
+					IEEE Student Branch – Empowering future engineers through innovation, learning, and
+					professional development.
+				</p>
+			</div>
 
-			<!-- First Column -->
-			<ul class="flex flex-col space-y-2 text-lg font-medium text-white">
-				<li><a href="/" class="hover:underline">HOME</a></li>
-				<li><a href="{base}/calendar" class="hover:underline">CALENDAR</a></li>
-				<li><a href="{base}/officers" class="hover:underline">OFFICERS</a></li>
-				<li><a href="{base}/about" class="hover:underline">ABOUT</a></li>
-				<li><a href="{base}/membership" class="hover:underline">MEMBERSHIP</a></li>
-			</ul>
+			<!-- Quick Links -->
+			<div>
+				<h3 class="mb-3 text-lg font-semibold">Quick Links</h3>
+				<ul class="space-y-2 text-sm">
+					<li><a href="/" class="hover:underline">Home</a></li>
+					<li><a href="{base}/calendar" class="hover:underline">Calendar</a></li>
+					<li><a href="{base}/officers" class="hover:underline">Officers</a></li>
+					<li><a href="{base}/about" class="hover:underline">About</a></li>
+					<li><a href="{base}/membership" class="hover:underline">Membership</a></li>
+				</ul>
+			</div>
 
-			<!-- Second Column (Empty for now) -->
-			<ul class="flex flex-col space-y-0 text-lg font-medium text-white">
-				<li class="pb-8">CONTACT</li>
-				<li>250 Brent Lane</li>
-				<li>Pensacola, FL 32503</li>
-				<li>(123) 146-7890</li>
-				<li>email@email.com</li>
-			</ul>
-
-			<!-- Third Column (Empty for now) -->
-			<ul class="flex flex-col space-y-2 text-lg font-medium text-white">
-				<li class="pb-8">SOCIAL MEDIA</li>
-				<li>
-					<div class="flex flex-row space-x-4">
-						<i class="fa-brands fa-discord"></i>
-						<i class="fa-brands fa-instagram"></i>
+			<!-- Contact Info and Social Media -->
+			<div>
+				<h3 class="mb-3 text-lg font-semibold">Contact</h3>
+				<ul class="space-y-1 text-sm">
+					<li>250 Brent Lane, Pensacola, FL 32503</li>
+					<li>(123) 146-7890</li>
+					<li><a href="mailto:email@email.com" class="hover:underline">email@email.com</a></li>
+				</ul>
+				<div class="mt-4">
+					<h3 class="mb-3 text-lg font-semibold">Follow Us</h3>
+					<div class="flex space-x-4">
+						<a href="#" aria-label="Discord" class="hover:text-gray-300">
+							<i class="fa-brands fa-discord fa-xl"></i>
+						</a>
+						<a href="#" aria-label="Instagram" class="hover:text-gray-300">
+							<i class="fa-brands fa-instagram fa-xl"></i>
+						</a>
 					</div>
-				</li>
-				<li></li>
-			</ul>
+				</div>
+			</div>
 		</div>
 
 		<!-- Copyright -->
-		<p class="mt-6 w-full text-center text-sm text-white">
-			© 2025 PLACEHOLDER – All rights reserved.
+		<p class="mt-8 border-t border-white/20 pt-4 text-center text-xs text-white">
+			© 2025 IEEE Student Branch – All rights reserved.
 		</p>
 	</footer>
 </main>
