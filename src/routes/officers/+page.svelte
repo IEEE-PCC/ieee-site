@@ -45,15 +45,15 @@
 </HeroHeader>
 
 <!-- Branch Committee Explanations -->
-<section class="mr-40 mb-12 ml-40">
-	<div class="border-primary-500 rounded-xl border-t-4 p-8 shadow-lg">
-		<h2 class="text-primary-700 mb-6 flex items-center text-2xl font-bold">
+<section class="px-4 sm:px-8 lg:px-40 mb-12">
+	<div class="border-primary-500 rounded-xl border-t-4 p-6 sm:p-8 shadow-lg">
+		<h2 class="text-primary-700 mb-6 flex items-center text-xl sm:text-2xl font-bold">
 			<span class="mr-2">
 				<i class="fas fa-info-circle"></i>
 			</span>
 			WHAT ARE THE BRANCH COMMITTEES?
 		</h2>
-		<div class="prose dark:prose-invert max-w-none">
+		<div class="prose dark:prose-invert max-w-full sm:max-w-none">
 			<ul>
 				<li>
 					<strong>Executive Committee</strong>
