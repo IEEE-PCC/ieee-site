@@ -86,7 +86,7 @@
 				jobTitle={execOfficer.jobTitle}
 				year={execOfficer.year}
 				major={execOfficer.major}
-				imageUrl={execOfficer.imageUrl}
+				imageUrl={base + execOfficer.imageUrl}
 				linkedIn={execOfficer.linkedIn}
 				email={execOfficer.email}
 			>
@@ -113,7 +113,7 @@
 			<CommitteeNameCard
 				name={committeeOfficer.name}
 				jobTitle={committeeOfficer.jobTitle}
-				imageUrl={committeeOfficer.imageUrl}
+				imageUrl={base + committeeOfficer.imageUrl}
 			>
 				{#snippet description()}
 					<p>{committeeOfficer.description}</p>
@@ -140,7 +140,7 @@
 					jobTitle={councilor.jobTitle}
 					year={councilor.year}
 					major={councilor.major}
-					imageUrl={councilor.imageUrl}
+					imageUrl={base + councilor.imageUrl}
 					linkedIn={councilor.linkedIn}
 					email={councilor.email}
 				>
