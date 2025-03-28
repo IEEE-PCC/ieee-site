@@ -29,7 +29,7 @@
 		<h1 class="border-b-4 border-blue-500 pb-2 text-center text-6xl font-bold">UPCOMING EVENTS</h1>
 	</div>
 
-	<EventHighlight eventsData={eventsData} />
+	<EventHighlight {eventsData} />
 
 	<Calendar events={eventsData} />
 </div>
