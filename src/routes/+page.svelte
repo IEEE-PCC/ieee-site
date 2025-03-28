@@ -98,19 +98,19 @@
 
 <!-- Our Story Section -->
 <div class="mt-40">
-	<div class="flex items-center">
+	<div class="relative flex items-center">
 		<h2 class="text-primary-500 mr-4 mb-8 ml-20 text-4xl font-bold font-bold">Our Story</h2>
 		<div class="bg-primary-500 mr-20 mb-5 h-2 flex-grow rounded"></div>
 	</div>
-	<div class="flex items-center">
+	<div class="mb-20 flex items-center">
 		<img
 			src={base + '/images/executive_committee.jpg'}
 			alt="IEEE Plaque"
-			class="ml-20 h-auto w-200 max-w-full rounded"
+			class="border-primary-500 ml-21 h-auto w-175 max-w-full rounded border-3 shadow-lg"
 		/>
-		<div class="p-40 font-bold">
-			<p>Want to know how the branch started?</p>
-			<p>Learn more about the history of our branch here!</p>
+		<div class="p-20 font-bold">
+			<div class="text-xl">Want to know how the branch started?</div>
+			<div class="text-xl">Learn more about the history of our branch here!</div>
 
 			<a href={base + '/history'} class="inline-block">
 				<button class="bg-primary-500 hover:bg-primary-700 mt-10 w-35 py-2 font-bold text-white">
