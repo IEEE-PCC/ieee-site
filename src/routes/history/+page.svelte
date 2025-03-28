@@ -66,34 +66,36 @@
 		id="sub_footer"
 		class="bg-primary-500 grid min-h-148 w-full items-center justify-center px-8 md:grid-cols-3"
 	>
-		<div class="place-self-center p-8">
+		<div class="flex flex-col items-center justify-center place-self-center p-8">
 			<div class="z-10 flex items-center justify-center">
 				<img
-					class="transition-transform duration-100"
-					src={base + '/images/pcc_charter_plaque.png'}
+					class="h-80 w-auto rounded-2xl border-2 border-black transition-transform duration-100"
+					src={base + '/officers/josephCoffey.jpg'}
 					alt="a man"
 				/>
 			</div>
+			<div class="flex items-center justify-center py-2 text-2xl">Joseph Coffey</div>
+			<div class=" text-md flex items-center justify-center italic">Branch Councilor</div>
 		</div>
 		<div class="col-span-2 flex-col gap-6 space-y-8">
-			<Blockquote class="text-2xl text-white"
-				>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. "</Blockquote
-			>
-			<div class="text-white">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto aspernatur veritatis
-				debitis atque odio praesentium! Sunt dolorum blanditiis, deleniti tenetur veniam dicta odit,
-				reiciendis ipsum velit placeat ullam, cum officiis! Lorem ipsum dolor sit amet consectetur
-				adipisicing elit. Corporis esse delectus quos dolore ab illo. Magnam quibusdam commodi
-				provident itaque atque! Nobis, autem porro numquam dolore minus error sequi similique. Lorem
-				ipsum, dolor sit amet consectetur adipisicing elit. Veniam ea assumenda voluptatem quae
-				quidem, nobis, optio, officiis aperiam atque sit a necessitatibus nemo placeat temporibus
-				fugit odio deleniti unde? Modi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Earum, ratione exercitationem. Eveniet nisi fugiat aut reprehenderit voluptate, architecto
-				excepturi ea in fugit, iste eius ullam culpa maxime maiores vitae sed? Lorem ipsum dolor sit
-				amet consectetur adipisicing elit. Quam rem adipisci temporibus omnis error ratione suscipit
-				nam dolores minima possimus animi facere eos in maiores, perferendis dignissimos amet nulla
-				velit!
-			</div>
+			<Blockquote class="text-2xl text-white">Origins of the PCC IEEE Student Branch</Blockquote>
+			<Blockquote class="text-md text-wrap text-white not-italic">
+				I have been a professional member of IEEE for 31 years and it has been a very important part
+				of my career. Now, as a PCC engineering faculty member, I wanted to see a student branch
+				become a reality at PCC. IEEE provides numerous opportunities for student members beyond the
+				classroom and helps to start their professional development. Starting in 2022, I had
+				numerous discussions with faculty about starting a student branch and in September 2023, I
+				submitted the first formal proposal to start a PCC IEEE Student Branch. It was forwarded to
+				the Academic Committee, where it was approved on November 8, 2023. After the approval
+				Student Activities was engaged and during this process, I began the membership drive and
+				petition process with IEEE. Once we had 12 Paid members, I was able to submit the petition
+				to IEEE. Once the petition was submitted momentum built rapidly and we had our initial
+				kickoff meeting on September 27, 2024. This was followed by officer nominations at the
+				October 25, 2024, meeting. The first official meeting with the new officers was held on
+				November 22, 2024. At the IEEE Northwest Florida Section Christmas Dinner on December 6,
+				2024, the PCC IEEE Branch was officially chartered, and a plaque was presented to the
+				student branch. The plaque now resides in the 5th floor hallway in McKenzie.
+			</Blockquote>
 		</div>
 	</section>
 </main>
