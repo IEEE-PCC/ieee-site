@@ -6,7 +6,7 @@
       "dependencies": {
         "@floating-ui/dom": "1.6.13",
         "@fortawesome/fontawesome-free": "^6.7.2",
-        "@lucide/svelte": "^0.484.0",
+        "@lucide/svelte": "^0.539.0",
         "@tailwindcss/vite": "^4.0.14",
         "clsx": "^2.1.1",
         "fontawesome-free": "^1.0.4",
@@ -145,7 +145,7 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.25", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ=="],
 
-    "@lucide/svelte": ["@lucide/svelte@0.484.0", "", { "peerDependencies": { "svelte": "^5" } }, "sha512-yuHwfJxE1n3kOg/4hIsvAUrBv3Mood/8BCcugUyRhxyr4EJDtjHJiiCpjJmtnk1gqkCYAEREKoGPaSGilcjYKw=="],
+    "@lucide/svelte": ["@lucide/svelte@0.539.0", "", { "peerDependencies": { "svelte": "^5" } }, "sha512-OWhw4BhHO+owmOE/ijSNLnw/flbW2/DsLzMHAeM8oEjLsO0xE6glX0ADCDwxKItTs5ZJYssfyGNXxMXrea173w=="],
 
     "@nodelib/fs.scandir": ["@nodelib/fs.scandir@2.1.5", "", { "dependencies": { "@nodelib/fs.stat": "2.0.5", "run-parallel": "^1.1.9" } }, "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="],
 
