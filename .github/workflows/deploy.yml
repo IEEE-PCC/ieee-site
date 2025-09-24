@@ -39,7 +39,7 @@ jobs:
 
       - name: Build static files
         env:
-          BASE_PATH: '/${{ github.event.repository.name }}'
+          BASE_PATH: '/'
         run: bun run build
 
       - name: Upload Artifacts
