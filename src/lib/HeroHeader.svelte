@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class="relative mb-20 flex min-h-0 items-center justify-center bg-cover bg-center text-white md:min-h-144"
+	class="relative mb-10 flex min-h-0 items-center justify-center bg-cover bg-center px-4 text-white sm:mb-20 md:min-h-144"
 	style="background-image: url({bg_image})"
 >
 	<!-- Overlay -->
@@ -17,11 +17,14 @@
 
 	<!-- Content Box -->
 	<div
-		class="relative box-border h-120 w-350 rounded-4xl border-6 border-white text-center shadow-lg dark:border-white"
+		class="relative box-border w-full max-w-7xl rounded-2xl border-4 py-12 text-center shadow-lg sm:rounded-4xl sm:border-6 sm:py-16 md:py-20"
+		style="border-color: white;"
 	>
-		<div class="relative h-screen items-center justify-center">
-			<div class="font-arial mt-40 text-6xl font-bold">{@render title?.()}</div>
-			<div class="font-arial text-lg font-semibold">
+		<div class="flex flex-col items-center justify-center px-4">
+			<div class="font-arial text-2xl font-bold sm:text-4xl md:text-6xl">
+				{@render title?.()}
+			</div>
+			<div class="font-arial mt-4 text-sm font-semibold sm:text-base md:text-lg">
 				{@render description?.()}
 			</div>
 		</div>

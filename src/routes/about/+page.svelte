@@ -7,7 +7,33 @@
 	import Users from '@lucide/svelte/icons/users';
 	import Tasks from '@lucide/svelte/icons/list-check';
 	import SignIn from '@lucide/svelte/icons/log-in';
+	import type { FaqItem } from '$lib/types';
+
+	let { data } = $props();
+	let about = $derived(data.about);
 	let value = $state(['what-is-ieee']);
+
+	const iconMap: Record<string, typeof InfoCircle> = {
+		info: InfoCircle,
+		users: Users,
+		'list-check': Tasks,
+		'log-in': SignIn
+	};
+
+	function getIcon(name: string) {
+		return iconMap[name] || InfoCircle;
+	}
+
+	function parseContent(item: FaqItem): { intro?: string; items: string[] } {
+		if (item.contentType === 'text') {
+			return { items: [], intro: item.content };
+		}
+		const parts = item.content.split('|');
+		if (item.value === 'how-do-i-join') {
+			return { intro: parts[0], items: parts.slice(1) };
+		}
+		return { items: parts };
+	}
 </script>
 
 <Navbar page="About" />
@@ -20,117 +46,59 @@
 	{/snippet}
 </HeroHeader>
 
-<div class="flex items-center">
-	<h2 class="text-primary-500 mr-4 mb-8 ml-20 text-4xl font-bold font-bold">Our Vision</h2>
-	<div class="bg-primary-500 mr-20 mb-5 h-2 flex-grow rounded"></div>
+<div class="flex items-center px-4 sm:px-8 md:px-16 lg:px-20">
+	<h2 class="text-primary-500 mr-4 mb-8 text-2xl font-bold sm:text-3xl md:text-4xl">Our Vision</h2>
+	<div class="bg-primary-500 mb-5 h-2 flex-grow rounded"></div>
 </div>
 
-<div class="container mx-auto p-6">
+<div class="container mx-auto px-4 pb-6 sm:p-6">
 	<div class="mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-		<div
-			class="rounded-xl border-2 border-yellow-500 p-6 shadow-lg transition-transform hover:scale-105"
-		>
-			<h2 class="mb-4 text-2xl font-bold">CHRISTIAN WITNESS</h2>
-			<p class="text-gray-600 dark:text-gray-300">
-				Demonstrating our values through service and leadership in the engineering community, while
-				fostering an inclusive environment that respects diverse perspectives and beliefs.
-			</p>
-		</div>
-
-		<div
-			class="rounded-xl border-2 border-red-500 p-6 shadow-lg transition-transform hover:scale-105"
-		>
-			<h2 class="mb-4 text-2xl font-bold">MUTUAL SUPPORT</h2>
-			<p class="text-gray-600 dark:text-gray-300">
-				Building a strong community where members help each other grow technically and
-				professionally through mentorship, collaboration, and shared learning experiences.
-			</p>
-		</div>
-
-		<div
-			class="rounded-xl border-2 border-orange-500 p-6 shadow-lg transition-transform hover:scale-105"
-		>
-			<h2 class="mb-4 text-2xl font-bold">CAMPUS EXCITEMENT</h2>
-			<p class="text-gray-600 dark:text-gray-300">
-				Creating engaging technical events, workshops, and social activities that spark enthusiasm
-				for engineering and technology across the campus community.
-			</p>
-		</div>
-
-		<div
-			class="rounded-xl border-2 border-green-500 p-6 shadow-lg transition-transform hover:scale-105"
-		>
-			<h2 class="mb-4 text-2xl font-bold">CAREER SUCCESS</h2>
-			<p class="text-gray-600 dark:text-gray-300">
-				Providing resources, networking opportunities, and professional development activities that
-				prepare members for successful careers in engineering and technology.
-			</p>
-		</div>
+		{#each about.visionCards as card}
+			<div
+				class="rounded-xl border-2 {card.borderColor} p-6 shadow-lg transition-transform hover:scale-105"
+			>
+				<h2 class="mb-4 text-2xl font-bold">{card.title}</h2>
+				<p class="text-gray-600 dark:text-gray-300">{card.description}</p>
+			</div>
+		{/each}
 	</div>
 
 	<Accordion {value} onValueChange={(e) => (value = e.value)} collapsible>
-		<Accordion.Item value="what-is-ieee">
-			{#snippet lead()}<InfoCircle size={24} />{/snippet}
-			{#snippet control()}WHAT IS IEEE?{/snippet}
-			{#snippet panel()}
-				<p>
-					IEEE, the Institute of Electrical and Electronics Engineers, is the world's largest
-					technical professional organization dedicated to advancing technology for the benefit of
-					humanity. Our student branch connects you directly to this global community of innovators
-					and thought leaders.
-				</p>
-			{/snippet}
-		</Accordion.Item>
-		<hr class="hr" />
-
-		<Accordion.Item value="who-are-we">
-			{#snippet lead()}<Users size={24} />{/snippet}
-			{#snippet control()}WHO ARE WE?{/snippet}
-			{#snippet panel()}
-				<p>
-					We are a dynamic student organization at our university, bringing together students
-					passionate about electrical engineering, computer science, and related fields. Our branch
-					serves as a bridge between academic learning and professional development.
-				</p>
-			{/snippet}
-		</Accordion.Item>
-		<hr class="hr" />
-
-		<Accordion.Item value="what-do-we-do">
-			{#snippet lead()}<Tasks size={24} />{/snippet}
-			{#snippet control()}WHAT DO WE DO?{/snippet}
-			{#snippet panel()}
-				<ul class="list-inside list-disc space-y-2">
-					<li>Organize technical workshops and seminars</li>
-					<li>Host industry expert talks and networking events</li>
-					<li>Provide hands-on project experience</li>
-					<li>Facilitate research opportunities</li>
-					<li>Connect students with industry professionals</li>
-				</ul>
-			{/snippet}
-		</Accordion.Item>
-		<hr class="hr" />
-
-		<Accordion.Item value="how-do-i-join">
-			{#snippet lead()}<SignIn size={24} />{/snippet}
-			{#snippet control()}HOW DO I JOIN?{/snippet}
-			{#snippet panel()}
-				<p class="mb-6">
-					Joining our IEEE Student Branch is your first step toward a successful career in
-					technology. Membership benefits include:
-				</p>
-				<ul class="mb-6 list-inside list-disc space-y-2">
-					<li>Access to IEEE's vast digital library</li>
-					<li>Networking opportunities with industry professionals</li>
-					<li>Exclusive workshop and event participation</li>
-					<li>Leadership and volunteer opportunities</li>
-				</ul>
-				<a
-					href="/membership"
-					class="bg-primary-600 hover:bg-primary-700 inline-block rounded-lg px-6 py-3 font-bold text-white transition-colors"
-					>JOIN TODAY!</a
-				>
-			{/snippet}
-		</Accordion.Item>
+		{#each about.faqItems as item, i}
+			{@const IconComponent = getIcon(item.icon)}
+			{@const parsed = parseContent(item)}
+			<Accordion.Item value={item.value}>
+				{#snippet lead()}<IconComponent size={24} />{/snippet}
+				{#snippet control()}{item.title}{/snippet}
+				{#snippet panel()}
+					{#if item.contentType === 'text'}
+						<p>{item.content}</p>
+					{:else if parsed.intro}
+						<p class="mb-6">{parsed.intro}</p>
+						<ul class="mb-6 list-inside list-disc space-y-2">
+							{#each parsed.items as listItem}
+								<li>{listItem}</li>
+							{/each}
+						</ul>
+						{#if item.value === 'how-do-i-join'}
+							<a
+								href="/membership"
+								class="bg-primary-600 hover:bg-primary-700 inline-block rounded-lg px-6 py-3 font-bold text-white transition-colors"
+								>JOIN TODAY!</a
+							>
+						{/if}
+					{:else}
+						<ul class="list-inside list-disc space-y-2">
+							{#each parsed.items as listItem}
+								<li>{listItem}</li>
+							{/each}
+						</ul>
+					{/if}
+				{/snippet}
+			</Accordion.Item>
+			{#if i < about.faqItems.length - 1}
+				<hr class="hr" />
+			{/if}
+		{/each}
 	</Accordion>
 </div>

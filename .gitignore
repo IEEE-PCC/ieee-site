@@ -22,3 +22,6 @@ vite.config.ts.timestamp-*
 
 /.idea
 /.vscode
+
+# Wrangler
+.wrangler/

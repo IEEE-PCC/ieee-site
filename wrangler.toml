@@ -1,0 +1,8 @@
+name = "ieee-pcc"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = ".svelte-kit/cloudflare"
+
+[[kv_namespaces]]
+binding = "SITE_DATA"
+id = "placeholder"
+preview_id = "placeholder"
