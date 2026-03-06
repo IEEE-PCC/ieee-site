@@ -6,7 +6,7 @@ export const load: PageServerLoad = async ({ cookies, platform }) => {
 	const adminPassword =
 		platform?.env?.ADMIN_PASSWORD || (import.meta.env.DEV ? 'admin' : undefined);
 	if (adminPassword) {
-		const expectedToken = getSessionToken(adminPassword);
+		const expectedToken = await getSessionToken(adminPassword);
 		if (cookies.get('admin_session') === expectedToken) {
 			throw redirect(303, '/admin');
 		}
@@ -26,7 +26,7 @@ export const actions: Actions = {
 			return fail(401, { error: 'Invalid password' });
 		}
 
-		const token = getSessionToken(adminPassword);
+		const token = await getSessionToken(adminPassword);
 		cookies.set('admin_session', token, {
 			path: '/',
 			httpOnly: true,

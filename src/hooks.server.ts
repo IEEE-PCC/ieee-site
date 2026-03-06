@@ -2,19 +2,22 @@ import { redirect, type Handle } from '@sveltejs/kit';
 
 const SESSION_COOKIE = 'admin_session';
 
-function hashToken(password: string): string {
-	// Simple deterministic token from password (not crypto-grade, but sufficient for session cookie)
-	let hash = 0;
-	for (let i = 0; i < password.length; i++) {
-		const char = password.charCodeAt(i);
-		hash = (hash << 5) - hash + char;
-		hash |= 0;
-	}
-	return 'sess_' + Math.abs(hash).toString(36);
+async function hmacSign(password: string): Promise<string> {
+	const encoder = new TextEncoder();
+	const key = await crypto.subtle.importKey(
+		'raw',
+		encoder.encode(password),
+		{ name: 'HMAC', hash: 'SHA-256' },
+		false,
+		['sign']
+	);
+	const signature = await crypto.subtle.sign('HMAC', key, encoder.encode('admin_session'));
+	const bytes = new Uint8Array(signature);
+	return 'sess_' + Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-export function getSessionToken(password: string): string {
-	return hashToken(password);
+export async function getSessionToken(password: string): Promise<string> {
+	return hmacSign(password);
 }
 
 export const handle: Handle = async ({ event, resolve }) => {
@@ -30,7 +33,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 			throw redirect(303, '/admin/login');
 		}
 
-		const expectedToken = getSessionToken(adminPassword);
+		const expectedToken = await getSessionToken(adminPassword);
 
 		if (sessionCookie !== expectedToken) {
 			throw redirect(303, '/admin/login');

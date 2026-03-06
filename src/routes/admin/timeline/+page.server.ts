@@ -50,7 +50,7 @@ export const actions: Actions = {
 		}
 
 		const timeline = await getTimeline(platform, fetch);
-		if (index < 0 || index >= timeline.length) {
+		if (!Number.isInteger(index) || index < 0 || index >= timeline.length) {
 			return fail(400, { error: 'Invalid index' });
 		}
 
@@ -65,7 +65,7 @@ export const actions: Actions = {
 		const index = parseInt(formData.get('index') as string);
 
 		const timeline = await getTimeline(platform, fetch);
-		if (index < 0 || index >= timeline.length) {
+		if (!Number.isInteger(index) || index < 0 || index >= timeline.length) {
 			return fail(400, { error: 'Invalid index' });
 		}
 
@@ -81,7 +81,14 @@ export const actions: Actions = {
 		const to = parseInt(formData.get('to') as string);
 
 		const timeline = await getTimeline(platform, fetch);
-		if (from < 0 || from >= timeline.length || to < 0 || to >= timeline.length) {
+		if (
+			!Number.isInteger(from) ||
+			!Number.isInteger(to) ||
+			from < 0 ||
+			from >= timeline.length ||
+			to < 0 ||
+			to >= timeline.length
+		) {
 			return fail(400, { error: 'Invalid index' });
 		}
 

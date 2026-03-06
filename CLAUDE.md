@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-IEEE PCC Student Branch website — a statically pre-rendered SvelteKit site deployed to GitHub Pages.
+IEEE PCC Student Branch website — a server-side rendered SvelteKit site deployed to Cloudflare Pages.
 
 **Stack**: SvelteKit 2 + Svelte 5, TypeScript, Tailwind CSS 4, Skeleton Labs UI, Bun package manager.
 
@@ -13,7 +13,7 @@ IEEE PCC Student Branch website — a statically pre-rendered SvelteKit site dep
 | Command               | Purpose                           |
 | --------------------- | --------------------------------- |
 | `bun dev --open`      | Start dev server (localhost:5173) |
-| `bun run build`       | Build static site to `/build`     |
+| `bun run build`       | Build for Cloudflare Pages        |
 | `bun run preview`     | Preview production build          |
 | `bun run check`       | Svelte type-checking              |
 | `bun run check:watch` | Type-checking in watch mode       |
@@ -24,9 +24,9 @@ No test framework is configured.
 
 ## Architecture
 
-### Static Site Generation
+### Server-Side Rendering
 
-All pages are pre-rendered at build time via `@sveltejs/adapter-static`. The `+layout.ts` sets `prerender = true` globally. Output goes to `/build`. No server-side runtime.
+Pages are rendered on Cloudflare Workers via `@sveltejs/adapter-cloudflare`. Each page has a `+page.server.ts` that loads data at request time. Output goes to `.svelte-kit/cloudflare`.
 
 ### Routing (file-based)
 
@@ -35,15 +35,22 @@ All pages are pre-rendered at build time via `@sveltejs/adapter-static`. The `+l
 - `/events` — Events table + interactive calendar
 - `/officers` — Officer directory (exec, committee, councilor)
 - `/history` — Timeline of branch milestones
+- `/admin` — Authenticated admin panel (CRUD for events, officers, timeline)
 
 ### Data Pattern
 
-All content is stored as static JSON in `static/api/` (events.json, officers.json, timeline.json). Pages fetch these client-side in `onMount()` using `fetch(base + '/api/<file>.json')` and store results in `$state()` variables. No CMS or database.
+Content is stored in Cloudflare KV (`SITE_DATA` namespace) in production. In dev, the data layer (`src/lib/server/data.ts`) falls back to static JSON in `static/api/`. On first production load, KV auto-seeds from the static JSON files. Shared TypeScript types live in `src/lib/types.ts`.
+
+### Admin Panel
+
+Protected by session-cookie auth via `src/hooks.server.ts`. Password is set via `ADMIN_PASSWORD` environment variable (Cloudflare secret); defaults to `admin` in dev. CRUD operations for events, officers, and timeline use SvelteKit form actions.
 
 ### Component Organization
 
 - `src/routes/` — Pages and layouts (SvelteKit file-based routing)
 - `src/lib/` — Reusable components (Navbar, Footer, HeroHeader, Calendar, name cards, etc.)
+- `src/lib/server/data.ts` — KV data access layer with dev fallback
+- `src/lib/types.ts` — Shared TypeScript interfaces
 - `src/lib/utils.ts` — `cn()` utility (clsx + tailwind-merge)
 - `static/` — Images, officer photos, JSON data, favicon
 
@@ -52,10 +59,6 @@ All content is stored as static JSON in `static/api/` (events.json, officers.jso
 - `src/ieeetheme.css` — Custom Skeleton theme (oklch color tokens, applied via `data-theme="ieeetheme"`)
 - `src/app.css` — Global styles, Tailwind/Skeleton imports, nav animation effects
 - Dark mode on by default (`<html class="dark">`), toggled via Navbar switch, persisted in localStorage
-
-### Base Path
-
-`svelte.config.js` uses `BASE_PATH` env var for production and empty string for dev. All internal fetches use SvelteKit's `base` import from `$app/paths`.
 
 ## Code Conventions
 
@@ -67,5 +70,5 @@ All content is stored as static JSON in `static/api/` (events.json, officers.jso
 
 ## CI/CD
 
-- **deploy.yml**: On push to `main` → `bun install --frozen-lockfile` → `bun run build` → deploy to GitHub Pages
+- **deploy.yml**: On push to `main` → `bun install --frozen-lockfile` → `bun run build` → deploy to Cloudflare Pages via Wrangler
 - **pretty.yml**: On every push → runs `bun run lint`

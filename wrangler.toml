@@ -2,6 +2,9 @@ name = "ieee-pcc"
 compatibility_date = "2025-01-01"
 pages_build_output_dir = ".svelte-kit/cloudflare"
 
+# KV namespace IDs must be set to real values from the Cloudflare dashboard:
+#   wrangler kv namespace create SITE_DATA
+# Then replace the placeholder values below with the returned IDs.
 [[kv_namespaces]]
 binding = "SITE_DATA"
 id = "placeholder"

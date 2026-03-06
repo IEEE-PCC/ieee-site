@@ -44,7 +44,7 @@ export const actions: Actions = {
 		}
 
 		const events = await getEvents(platform, fetch);
-		if (index < 0 || index >= events.length) {
+		if (!Number.isInteger(index) || index < 0 || index >= events.length) {
 			return fail(400, { error: 'Invalid event index' });
 		}
 
@@ -59,7 +59,7 @@ export const actions: Actions = {
 		const index = parseInt(formData.get('index') as string);
 
 		const events = await getEvents(platform, fetch);
-		if (index < 0 || index >= events.length) {
+		if (!Number.isInteger(index) || index < 0 || index >= events.length) {
 			return fail(400, { error: 'Invalid event index' });
 		}
 

@@ -1,7 +1,5 @@
 <script lang="ts">
-	/* eslint-disable @typescript-eslint/no-unused-vars */
 	import { ArrowLeftOutline, ArrowRightOutline } from 'flowbite-svelte-icons';
-	import { Tooltip } from '@skeletonlabs/skeleton-svelte';
 	import type { EventData } from '$lib/types';
 
 	interface Props {
@@ -75,6 +73,7 @@
 		</div>
 
 		<div class="grid grid-cols-7 divide-x divide-y divide-gray-300 border border-gray-400">
+			<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
 			{#each Array(42) as _, i}
 				<!-- Create 42 grid cells for a full month -->
 				<div class="relative h-14 w-full sm:h-24 dark:border-gray-600">

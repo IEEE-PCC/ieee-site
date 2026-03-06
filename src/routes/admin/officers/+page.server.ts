@@ -8,7 +8,10 @@ export const load: PageServerLoad = async ({ platform, fetch }) => {
 	return { officers };
 };
 
-function extractOfficer(formData: FormData): Officer | null {
+function extractOfficer(
+	formData: FormData,
+	existingId?: string
+): (Omit<Officer, 'id'> & { id: string }) | null {
 	const name = formData.get('name') as string;
 	const jobTitle = formData.get('jobTitle') as string;
 	const year = formData.get('year') as string;
@@ -23,7 +26,7 @@ function extractOfficer(formData: FormData): Officer | null {
 	}
 
 	return {
-		id: crypto.randomUUID(),
+		id: existingId ?? crypto.randomUUID(),
 		name,
 		jobTitle,
 		year,
@@ -65,17 +68,23 @@ export const actions: Actions = {
 		const category = formData.get('category') as OfficerCategory;
 		const index = parseInt(formData.get('index') as string);
 
-		const officer = extractOfficer(formData);
+		const officers = await getOfficers(platform, fetch);
+		if (
+			!officers[category] ||
+			!Number.isInteger(index) ||
+			index < 0 ||
+			index >= officers[category].length
+		) {
+			return fail(400, { error: 'Invalid category or index' });
+		}
+
+		const existingId = officers[category][index].id;
+		const officer = extractOfficer(formData, existingId);
 		if (!officer) {
 			return fail(400, { error: 'Required fields missing' });
 		}
 
-		const officers = await getOfficers(platform, fetch);
-		if (!officers[category] || index < 0 || index >= officers[category].length) {
-			return fail(400, { error: 'Invalid category or index' });
-		}
-
-		officers[category][index] = { ...officers[category][index], ...officer };
+		officers[category][index] = officer;
 		await setOfficers(platform, officers);
 
 		return { success: true };
@@ -87,7 +96,12 @@ export const actions: Actions = {
 		const index = parseInt(formData.get('index') as string);
 
 		const officers = await getOfficers(platform, fetch);
-		if (!officers[category] || index < 0 || index >= officers[category].length) {
+		if (
+			!officers[category] ||
+			!Number.isInteger(index) ||
+			index < 0 ||
+			index >= officers[category].length
+		) {
 			return fail(400, { error: 'Invalid category or index' });
 		}
 

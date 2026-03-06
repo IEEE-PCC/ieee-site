@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class="-webkit-overflow-scrolling-touch overflow-x-auto rounded-lg px-2 pb-8 shadow-lg sm:px-8"
+	class="overflow-x-auto rounded-lg px-2 pb-8 shadow-lg [-webkit-overflow-scrolling:touch] sm:px-8"
 >
 	<table
 		class="mx-auto w-full max-w-5xl table-auto border-separate border-spacing-0 rounded-lg shadow-sm"
