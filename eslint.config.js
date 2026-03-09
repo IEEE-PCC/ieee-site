@@ -27,6 +27,16 @@ export default tseslint.config(
 		}
 	},
 	{
+		files: ['**/*.svelte'],
+		rules: {
+			// TODO: fix these pre-existing patterns
+			'svelte/require-each-key': 'warn',
+			'svelte/no-navigation-without-resolve': 'warn',
+			'svelte/no-useless-children-snippet': 'warn',
+			'svelte/no-useless-mustaches': 'warn'
+		}
+	},
+	{
 		ignores: ['build/', '.svelte-kit/', 'dist/']
 	}
 );

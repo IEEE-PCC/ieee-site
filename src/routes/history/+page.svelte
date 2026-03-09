@@ -2,7 +2,6 @@
 	import { base } from '$app/paths';
 	import Navbar from '$lib/Navbar.svelte';
 	import HeroHeader from '$lib/HeroHeader.svelte';
-	import { onMount } from 'svelte';
 	import {
 		Timeline,
 		TimelineItem,
@@ -13,20 +12,9 @@
 		TimelineOppositeContent
 	} from 'svelte-vertical-timeline';
 	import { Blockquote } from 'flowbite-svelte';
-	interface timeline {
-		date: string;
-		title: string;
-		description: string;
-		icon: string;
-		color: string;
-	}
-	let timeline: timeline[] = $state([]);
 
-	// Fetch timeline data from the API
-	onMount(async () => {
-		const response = await fetch(base + '/api/timeline.json');
-		timeline = await response.json();
-	});
+	let { data } = $props();
+	let timeline = $derived(data.timeline);
 </script>
 
 <Navbar page="History" />
