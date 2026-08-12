@@ -4,32 +4,9 @@
 	import Navbar from '$lib/Navbar.svelte';
 	import { base } from '$app/paths';
 	import HeroHeader from '$lib/HeroHeader.svelte';
-	import { onMount } from 'svelte';
 
-	interface Leaders {
-		execOfficers: Officer[];
-		committeeOfficers: Officer[];
-		councilor: Officer[];
-	}
-
-	interface Officer {
-		name: string;
-		jobTitle: string;
-		year: string;
-		major: string;
-		imageUrl: string;
-		linkedIn: string;
-		email: string;
-		description: string;
-	}
-
-	let officers: Leaders = $state({ execOfficers: [], committeeOfficers: [], councilor: [] });
-
-	// Fetch the JSON officer data
-	onMount(async () => {
-		const response = await fetch(base + '/api/officers.json');
-		officers = (await response.json()) as Leaders;
-	});
+	let { data } = $props();
+	let officers = $derived(data.officers);
 </script>
 
 <Navbar page="Officers" />
@@ -45,9 +22,9 @@
 </HeroHeader>
 
 <!-- Branch Committee Explanations -->
-<section class="mr-40 mb-12 ml-40">
-	<div class="border-primary-500 rounded-xl border-t-4 p-8 shadow-lg">
-		<h2 class="text-primary-700 mb-6 flex items-center text-2xl font-bold">
+<section class="mb-12 px-4 sm:px-8 md:px-16 lg:px-40">
+	<div class="border-primary-500 rounded-xl border-t-4 p-4 shadow-lg sm:p-8">
+		<h2 class="text-primary-700 mb-6 flex items-center text-xl font-bold sm:text-2xl">
 			<span class="mr-2">
 				<i class="fas fa-info-circle"></i>
 			</span>
@@ -73,15 +50,13 @@
 <!-- Executive Committee Chairs Section -->
 <section class="mb-12">
 	<br />
-	<div class="flex items-center">
-		<h2 class="text-primary-500 mr-4 mb-8 ml-40 text-4xl font-bold font-bold">
+	<div class="flex items-center px-4 sm:px-8 md:px-16 lg:px-40">
+		<h2 class="text-primary-500 mr-4 mb-8 text-2xl font-bold sm:text-3xl md:text-4xl">
 			Executive Committee Officers
 		</h2>
-		<div class="bg-primary-500 mr-42 mb-5 h-2 flex-grow rounded"></div>
+		<div class="bg-primary-500 mb-5 h-2 flex-grow rounded"></div>
 	</div>
-	<div
-		class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:px-10 md:grid-cols-3 md:px-20 lg:grid-cols-3 lg:px-40"
-	>
+	<div class="grid grid-cols-1 gap-6 px-4 sm:grid-cols-2 sm:px-10 md:grid-cols-3 md:px-20 lg:px-40">
 		{#each officers.execOfficers as execOfficer}
 			<ExecutiveNameCard
 				name={execOfficer.name}
@@ -104,11 +79,13 @@
 	<br />
 
 	<!-- Committee Chairs Section -->
-	<div class="flex items-center">
-		<h2 class="text-primary-500 mr-4 mb-8 ml-40 text-4xl font-bold font-bold">Committee Chairs</h2>
-		<div class="bg-primary-500 mr-42 mb-5 h-2 flex-grow rounded"></div>
+	<div class="flex items-center px-4 sm:px-8 md:px-16 lg:px-40">
+		<h2 class="text-primary-500 mr-4 mb-8 text-2xl font-bold sm:text-3xl md:text-4xl">
+			Committee Chairs
+		</h2>
+		<div class="bg-primary-500 mb-5 h-2 flex-grow rounded"></div>
 	</div>
-	<div class="grid grid-cols-1 gap-6 sm:px-10 md:px-20 lg:px-40">
+	<div class="grid grid-cols-1 gap-6 px-4 sm:px-10 md:px-20 lg:px-40">
 		{#each officers.committeeOfficers as committeeOfficer}
 			<CommitteeNameCard
 				name={committeeOfficer.name}
@@ -126,12 +103,14 @@
 	<br />
 
 	<!-- Student Branch Councilor Section -->
-	<div class="flex items-center">
-		<h2 class="text-primary-500 mr-4 mb-8 ml-40 text-4xl font-bold font-bold">Branch Councilor</h2>
-		<div class="bg-primary-500 mr-42 mb-5 h-2 flex-grow rounded"></div>
+	<div class="flex items-center px-4 sm:px-8 md:px-16 lg:px-40">
+		<h2 class="text-primary-500 mr-4 mb-8 text-2xl font-bold sm:text-3xl md:text-4xl">
+			Branch Councilor
+		</h2>
+		<div class="bg-primary-500 mb-5 h-2 flex-grow rounded"></div>
 	</div>
-	<div class="flex h-120 items-center justify-center">
-		<div class="mx-auto grid grid-cols-1 gap-6">
+	<div class="flex items-center justify-center py-8">
+		<div class="mx-auto grid grid-cols-1 gap-6 px-4">
 			{#each officers.councilor as councilor}
 				<ExecutiveNameCard
 					name={councilor.name}

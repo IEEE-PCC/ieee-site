@@ -1,9 +1,22 @@
+/// <reference types="@cloudflare/workers-types" />
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
-// and what to do when importing types
-declare namespace App {
-	// interface Locals {}
-	// interface PageData {}
-	// interface Error {}
-	// interface Platform {}
+declare global {
+	namespace App {
+		interface Locals {
+			authenticated?: boolean;
+		}
+		// interface PageData {}
+		// interface Error {}
+		interface Platform {
+			env: {
+				SITE_DATA: KVNamespace;
+				ADMIN_PASSWORD?: string;
+			};
+			context: { waitUntil(promise: Promise<unknown>): void };
+			caches: CacheStorage & { default: Cache };
+		}
+	}
 }
+
+export {};

@@ -3,15 +3,10 @@
 	import Navbar from '$lib/Navbar.svelte';
 	import HeroHeader from '$lib/HeroHeader.svelte';
 	import Calendar from '$lib/Calendar.svelte';
-	import { onMount } from 'svelte';
 	import EventHighlight from '$lib/EventHighlight.svelte';
 
-	let eventsData: Event[] = $state([]);
-
-	onMount(async () => {
-		let response = await fetch(base + '/api/events.json');
-		eventsData = await response.json();
-	});
+	let { data } = $props();
+	let eventsData = $derived(data.events);
 </script>
 
 <Navbar page="Events" />

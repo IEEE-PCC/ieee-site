@@ -1,0 +1,54 @@
+{
+	"visionCards": [
+		{
+			"title": "CHRISTIAN WITNESS",
+			"description": "Demonstrating our values through service and leadership in the engineering community, while fostering an inclusive environment that respects diverse perspectives and beliefs.",
+			"borderColor": "border-yellow-500"
+		},
+		{
+			"title": "MUTUAL SUPPORT",
+			"description": "Building a strong community where members help each other grow technically and professionally through mentorship, collaboration, and shared learning experiences.",
+			"borderColor": "border-red-500"
+		},
+		{
+			"title": "CAMPUS EXCITEMENT",
+			"description": "Creating engaging technical events, workshops, and social activities that spark enthusiasm for engineering and technology across the campus community.",
+			"borderColor": "border-orange-500"
+		},
+		{
+			"title": "CAREER SUCCESS",
+			"description": "Providing resources, networking opportunities, and professional development activities that prepare members for successful careers in engineering and technology.",
+			"borderColor": "border-green-500"
+		}
+	],
+	"faqItems": [
+		{
+			"value": "what-is-ieee",
+			"icon": "info",
+			"title": "WHAT IS IEEE?",
+			"content": "IEEE, the Institute of Electrical and Electronics Engineers, is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. Our student branch connects you directly to this global community of innovators and thought leaders.",
+			"contentType": "text"
+		},
+		{
+			"value": "who-are-we",
+			"icon": "users",
+			"title": "WHO ARE WE?",
+			"content": "We are a dynamic student organization at our university, bringing together students passionate about electrical engineering, computer science, and related fields. Our branch serves as a bridge between academic learning and professional development.",
+			"contentType": "text"
+		},
+		{
+			"value": "what-do-we-do",
+			"icon": "list-check",
+			"title": "WHAT DO WE DO?",
+			"content": "Organize technical workshops and seminars|Host industry expert talks and networking events|Provide hands-on project experience|Facilitate research opportunities|Connect students with industry professionals",
+			"contentType": "list"
+		},
+		{
+			"value": "how-do-i-join",
+			"icon": "log-in",
+			"title": "HOW DO I JOIN?",
+			"content": "Joining our IEEE Student Branch is your first step toward a successful career in technology. Membership benefits include:|Access to IEEE's vast digital library|Networking opportunities with industry professionals|Exclusive workshop and event participation|Leadership and volunteer opportunities",
+			"contentType": "list"
+		}
+	]
+}

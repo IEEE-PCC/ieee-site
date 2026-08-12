@@ -12,14 +12,11 @@
 </script>
 
 <div class="border-primary-500 relative flex rounded rounded-lg border-3 shadow-lg">
-	<div class="justify-left flex h-40">
+	<div class="flex min-h-40">
 		<!-- Placeholder for profile picture -->
-
-		<div class="flex h-screen">
-			<div class="bg-primary-500 h-40 w-25">
-				<div class="relative mt-6 ml-2 flex h-28 w-20">
-					<Avatar src={imageUrl} {name} size="md" rounded="rounded-full" shadow="sm" />
-				</div>
+		<div class="bg-primary-500 flex h-full w-25 shrink-0 items-start justify-center pt-6">
+			<div class="flex h-28 w-20">
+				<Avatar src={imageUrl} {name} size="md" rounded="rounded-full" shadow="sm" />
 			</div>
 		</div>
 		<div class="relative mt-2 ml-3 text-lg">
